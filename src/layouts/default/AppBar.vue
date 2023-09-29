@@ -1,5 +1,6 @@
 <template>
   <v-app-bar flat>
+    <v-btn link to="/experiences/1">Test Experience</v-btn>
     <v-container class="mx-auto d-flex align-center justify-center">
       <v-avatar
         class="me-4 "

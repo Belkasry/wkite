@@ -1,49 +1,49 @@
 <template>
   <v-app id="inspire">
-    <v-main class="bg-grey-lighten-3">
-      <v-container>
-        <v-row>
-          <v-col cols="2">
-            <v-sheet rounded="lg">
-              <v-list rounded="lg">
-                <v-list-item
-                  v-for="n in 5"
-                  :key="n"
-                  link
-                  :title="`List Item ${n}`"
-                ></v-list-item>
+    <v-btn link to="/experience/1">Test Experience</v-btn>
+    <!--    <v-main class="bg-grey-lighten-3">-->
+    <!--      <v-container>-->
+    <!--        <v-row>-->
+    <!--          <v-col cols="2">-->
+    <!--            <v-sheet rounded="lg">-->
+    <!--              <v-list rounded="lg">-->
+    <!--                <v-list-item-->
+    <!--                  v-for="n in 5"-->
+    <!--                  :key="n"-->
+    <!--                  link-->
+    <!--                  :title="`List Item ${n}`"-->
+    <!--                ></v-list-item>-->
 
-                <v-divider class="my-2"></v-divider>
+    <!--                <v-divider class="my-2"></v-divider>-->
 
-                <v-list-item
-                  color="grey-lighten-4"
-                  link
-                  title="Refresh"
-                ></v-list-item>
-              </v-list>
-            </v-sheet>
-          </v-col>
-          <v-col>
-            <v-sheet
-              min-height="70vh"
-              rounded="lg"
-              class="pa-2 pt-0"
-            >
+    <!--                <v-list-item-->
+    <!--                  color="grey-lighten-4"-->
+    <!--                  link-->
+    <!--                  title="Refresh"-->
+    <!--                ></v-list-item>-->
+    <!--              </v-list>-->
+    <!--            </v-sheet>-->
+    <!--          </v-col>-->
+    <!--          <v-col>-->
+    <!--            <v-sheet-->
+    <!--              min-height="70vh"-->
+    <!--              rounded="lg"-->
+    <!--              class="pa-2 pt-0"-->
+    <!--            >-->
 
-              <v-row>
-                <experience-card v-for="i in 12" :key="i" :expanded="false" :experience="experience"/>
-              </v-row>
+    <!--              <v-row>-->
+    <!--                <experience-card v-for="i in 12" :key="i" :expanded="false" :experience="experience"/>-->
+    <!--              </v-row>-->
 
-            </v-sheet>
-          </v-col>
-        </v-row>
-      </v-container>
-    </v-main>
+    <!--            </v-sheet>-->
+    <!--          </v-col>-->
+    <!--        </v-row>-->
+    <!--      </v-container>-->
+    <!--    </v-main>-->
   </v-app>
 </template>
 
 <script setup>
-import ExperienceCard from "@/components/experience/card.vue";
 
 const links = [
   'Dashboard',
