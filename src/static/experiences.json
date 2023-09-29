@@ -1,0 +1,321 @@
+[
+  {
+    "id": 1,
+    "title": "Mountain Trekking in the Atlas Mountains",
+    "description": "Join us for a challenging mountain trek through the stunning Atlas Mountains in Morocco...",
+    "start_at": "2023-06-01",
+    "end_at": "2023-06-05",
+    "price": 899,
+    "max_participants": 20,
+    "difficulty": 3,
+    "rating": 4.7,
+    "flexible": true,
+    "duration": "5 days",
+    "activities": [
+      {
+        "id": 1,
+        "name": "Hiking"
+      },
+      {
+        "id": 2,
+        "name": "Sightseeing"
+      }
+    ],
+    "requirements": [
+      {
+        "id": 1,
+        "name": "Passport"
+      },
+      {
+        "id": 2,
+        "name": "Visa"
+      },
+      {
+        "id": 3,
+        "name": "Travel Insurance"
+      }
+    ],
+    "notices": [
+      {
+        "id": 1,
+        "name": "Altitude sickness is a risk at high elevations."
+      },
+      {
+        "id": 2,
+        "name": "The trek can be physically demanding."
+      }
+    ],
+    "take_into_account": [
+      {
+        "id": 1,
+        "name": "Bring warm clothing as temperatures can drop significantly at high elevations."
+      },
+      {
+        "id": 2,
+        "name": "Bring sunscreen and a hat to protect from the sun."
+      }
+    ],
+    "guide": {
+      "id": 1,
+      "name": "John Smith",
+      "bio": "I am an experienced mountain guide with over 10 years...",
+      "expertise": [
+        "Mountain Trekking",
+        "Survival Training"
+      ],
+      "languages": [
+        "English",
+        "French"
+      ],
+      "contact": {
+        "email": "john.smith@example.com",
+        "phone": "123-456-7890"
+      },
+      "certification": "Certified Mountain guide",
+      "years_experience": 10
+    },
+    "destination": {
+      "id": 1,
+      "label": "Mount Toubkal",
+      "description": "Mount Toubkal is the highest peak in the Atlas Mountains...",
+      "location": {
+        "id": 1,
+        "label": "Mount Toubkal",
+        "country": "Morocco",
+        "city": "Marrakesh",
+        "address": "Toubkal National Park, Morocco",
+        "lat": 31.0600714,
+        "lon": -7.9147482
+      }
+    },
+    "pictures": [
+      {
+        "id": 1,
+        "url": "https://picsum.photos/800/600?random=1"
+      },
+      {
+        "id": 2,
+        "url": "https://picsum.photos/800/600?random=2"
+      },
+      {
+        "id": 3,
+        "url": "https://picsum.photos/800/600?random=3"
+      }
+    ],
+    "steps": [
+      {
+        "id": 1,
+        "label": "Day 1: Marrakesh to Imlil",
+        "description": "On the first day, we will drive from Marrakesh to Imlil...",
+        "duration": "PT5H",
+        "activities": [
+          {
+            "id": 1,
+            "name": "Hiking"
+          }
+        ],
+        "start_at": "2023-06-01T08:00:00Z"
+      }
+    ],
+    "pricing_details": [
+      {
+        "id": 1,
+        "description": "Accommodation and Meals",
+        "amount": 50
+      },
+      {
+        "id": 2,
+        "description": "Transport",
+        "amount": 40
+      }
+    ],
+    "meetingPoint": {
+      "location": {
+        "lat": 34.0522,
+        "lon": -118.2437,
+        "address": "123 Main St, Los Angeles, CA"
+      },
+      "time": "2023-06-01T08:00:00Z",
+      "instructions": "We will meet at the main entrance..."
+    },
+    "cancellation_policy": {
+      "notice_period": "48 hours",
+      "refund_percentage": 50
+    },
+    "userReviews": [
+      {
+        "userId": "a123",
+        "username": "MountainExplorer",
+        "rating": 5,
+        "comment": "This trekking experience was unforgettable! The guide was knowledgeable and the scenery was breathtaking. Highly recommend!",
+        "date": "2023-06-10"
+      },
+      {
+        "userId": "b456",
+        "username": "AdventureSeeker",
+        "rating": 4,
+        "comment": "Great experience overall. The food could have been better, but the trek itself was amazing!",
+        "date": "2023-06-12"
+      },
+      {
+        "userId": "c789",
+        "username": "NatureLover",
+        "rating": 5,
+        "comment": "Absolutely loved it! The guide, the trek, the landscapes – everything was top-notch!",
+        "date": "2023-06-15"
+      }
+    ]
+
+  },
+  {
+    "id": 2,
+    "title": "Scuba Diving in the Great Barrier Reef",
+    "description": "Explore the underwater wonders of the Great Barrier Reef...",
+    "start_at": "2023-07-15",
+    "end_at": "2023-07-20",
+    "price": 1299,
+    "max_participants": 20,
+    "difficulty": 2,
+    "rating": 4.9,
+    "flexible": false,
+    "duration": "6 days",
+    "activities": [
+      { "id": 3, "name": "Scuba Diving" },
+      { "id": 4, "name": "Snorkeling" },
+      { "id": 5, "name": "Wildlife Watching" }
+    ],
+    "requirements": [
+      { "id": 1, "name": "Passport" },
+      { "id": 4, "name": "Diving certification" },
+      { "id": 5, "name": "Medical Clearance" }
+    ],
+    "notices": [
+      { "id": 3, "name": "Interaction with wildlife should be respectful and non-disruptive." }
+    ],
+    "take_into_account": [
+      { "id": 3, "name": "Reef-safe sunscreen is mandatory." },
+      { "id": 4, "name": "Hydrate well and avoid alcohol the night before diving." }
+    ],
+    "guide": {
+      "id": 2,
+      "name": "Alice Johnson",
+      "bio": "I am a marine biologist and a certified diving instructor...",
+      "expertise": ["Marine biology", "Scuba Diving"],
+      "languages": ["English"],
+      "contact": {
+        "email": "alice.johnson@example.com",
+        "phone": "098-765-4321"
+      },
+      "certification": "PADI Dive Instructor",
+      "years_experience": 8
+    },
+    "destination": {
+      "id": 2,
+      "label": "Great Barrier Reef",
+      "description": "The Great Barrier Reef is the world's largest coral reef system...",
+      "location": {
+        "id": 2,
+        "label": "Great Barrier Reef",
+        "country": "Australia",
+        "city": "Cairns",
+        "address": "Great Barrier Reef Marine Park, Queensland, Australia",
+        "lat": -18.2861302,
+        "lon": 147.7000083
+      }
+    },
+    "pictures": [
+      { "id": 4, "url": "https://picsum.photos/800/600?random=4" },
+      { "id": 5, "url": "https://picsum.photos/800/600?random=5" }
+    ],
+    "steps": [
+      {
+        "id": 2,
+        "label": "Day 1: Orientation and First Dive",
+        "description": "We will start with an orientation session followed by our first dive...",
+        "duration": "PT3H",
+        "activities": [{ "id": 3, "name": "Scuba Diving" }],
+        "start_at": "2023-07-15T09:00:00Z"
+      }
+    ],
+    "pricingDetails": [
+      { "id": 3, "description": "Dive Gear Rental", "amount": 100 },
+      { "id": 4, "description": "Marine Park Fee", "amount": 20 }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Cycling Tour in Tuscany",
+    "description": "Cycle through the picturesque landscapes of Tuscany, enjoying the vineyards, olive groves...",
+    "start_at": "2023-05-15",
+    "end_at": "2023-05-20",
+    "price": 1199,
+    "max_participants": 20,
+    "difficulty": 2,
+    "rating": 4.8,
+    "flexible": true,
+    "duration": "6 days",
+    "activities": [
+      { "id": 6, "name": "Cycling" },
+      { "id": 7, "name": "Wine Tasting" },
+      { "id": 8, "name": "Cultural Tour" }
+    ],
+    "requirements": [
+      { "id": 1, "name": "Passport" },
+      { "id": 6, "name": "Fitness Level" },
+      { "id": 7, "name": "Cycling Experience" }
+    ],
+    "notices": [
+      { "id": 4, "name": "Weather can be unpredictable, bring appropriate clothing." }
+    ],
+    "take_into_account": [
+      { "id": 5, "name": "Bring your own cycling gear if preferred." },
+      { "id": 6, "name": "Stay hydrated and wear sunscreen." }
+    ],
+    "guide": {
+      "id": 3,
+      "name": "Marco Rossi",
+      "bio": "I am an avid cyclist and a lover of Tuscan landscapes...",
+      "expertise": ["Cycling", "Italian Culture"],
+      "languages": ["Italian", "English"],
+      "contact": {
+        "email": "marco.rossi@example.com",
+        "phone": "321-654-0987"
+      },
+      "certification": "Certified Cycling guide",
+      "years_experience": 5
+    },
+    "destination": {
+      "id": 3,
+      "label": "Tuscany",
+      "description": "Tuscany is known for its landscapes, history, artistic legacy, and its influence on high culture...",
+      "location": {
+        "id": 3,
+        "label": "Tuscany",
+        "country": "Italy",
+        "city": "Florence",
+        "address": "Tuscany Region, Italy",
+        "lat": 43.7695604,
+        "lon": 11.2558136
+      }
+    },
+    "pictures": [
+      { "id": 6, "url": "https://picsum.photos/800/600?random=6" },
+      { "id": 7, "url": "https://picsum.photos/800/600?random=7" },
+      { "id": 8, "url": "https://picsum.photos/800/600?random=8" }
+    ],
+    "steps": [
+      {
+        "id": 3,
+        "label": "Day 1: Florence to Siena",
+        "description": "We will start our cycling tour from Florence and make our way to Siena...",
+        "duration": "PT6H",
+        "activities": [{ "id": 6, "name": "Cycling" }],
+        "start_at": "2023-05-15T07:00:00Z"
+      }
+    ],
+    "pricingDetails": [
+      { "id": 5, "description": "Bike Rental", "amount": 70 },
+      { "id": 6, "description": "Meal Plan", "amount": 150 }
+    ]
+  }
+]

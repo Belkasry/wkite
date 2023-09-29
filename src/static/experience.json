@@ -1,0 +1,224 @@
+{
+  "id": 1,
+  "title": "Mountain Trekking in the Atlas Mountains",
+  "description": "Join us for a challenging mountain trek through the stunning Atlas Mountains in Morocco...",
+  "start_at": "2023-06-01",
+  "end_at": "2023-06-05",
+  "price": 899,
+  "max_participants": 20,
+  "difficulty": 3,
+  "rating": 4.7,
+  "flexible": true,
+  "duration": "5 days",
+  "activities": [
+    {
+      "id": 1,
+      "name": "Hiking"
+    },
+    {
+      "id": 2,
+      "name": "Sightseeing"
+    }
+  ],
+  "requirements": [
+    {
+      "id": 1,
+      "name": "Passport"
+    },
+    {
+      "id": 2,
+      "name": "Visa"
+    },
+    {
+      "id": 3,
+      "name": "Travel Insurance"
+    }
+  ],
+  "notices": [
+    {
+      "id": 1,
+      "name": "Altitude sickness is a risk at high elevations."
+    },
+    {
+      "id": 2,
+      "name": "The trek can be physically demanding."
+    }
+  ],
+  "take_into_account": [
+    {
+      "id": 1,
+      "name": "Bring warm clothing as temperatures can drop significantly at high elevations."
+    },
+    {
+      "id": 2,
+      "name": "Bring sunscreen and a hat to protect from the sun."
+    }
+  ],
+  "guide": {
+    "id": 1,
+    "name": "John Smith",
+    "bio": "I am an experienced mountain guide with over 10 years...",
+    "expertise": [
+      "Mountain Trekking",
+      "Survival Training"
+    ],
+    "languages": [
+      "English",
+      "French"
+    ],
+    "contact": {
+      "email": "john.smith@example.com",
+      "phone": "123-456-7890"
+    },
+    "certification": "Certified Mountain guide",
+    "years_experience": 10
+  },
+  "destination": {
+    "id": 1,
+    "label": "Mount Toubkal",
+    "description": "Mount Toubkal is the highest peak in the Atlas Mountains...",
+    "location": {
+      "id": 1,
+      "label": "Mount Toubkal",
+      "country": "Morocco",
+      "city": "Marrakesh",
+      "address": "Toubkal National Park, Morocco",
+      "lat": 31.0600714,
+      "lon": -7.9147482
+    }
+  },
+  "pictures": [
+    {
+      "id": 1,
+      "url": "https://picsum.photos/800/600?random=1"
+    },
+    {
+      "id": 2,
+      "url": "https://picsum.photos/800/600?random=2"
+    },
+    {
+      "id": 3,
+      "url": "https://picsum.photos/800/600?random=3"
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "label": "Day 1: Marrakesh to Imlil",
+      "description": "On the first day, we will drive from Marrakesh to Imlil, a small village at the base of Mount Toubkal. We will spend the night in a traditional Moroccan guesthouse in Imlil.",
+      "duration": "PT5H",
+      "activities": [
+        {
+          "id": 1,
+          "name": "Hiking"
+        }
+      ],
+      "destination": {
+        "id": 1,
+        "label": "Dar Imlil",
+        "location": {
+          "id": 1,
+          "label": "Imlil",
+          "country": "Morocco",
+          "city": "Marrakesh",
+          "adress": "Imlil rue principale",
+          "lat": 31.0600714,
+          "lon": -7.9147482
+        }
+      },
+      "start_at": "2023-02-01T18:00:00Z"
+    },
+    {
+      "id": 2,
+      "label": "Day 2: Imlil to Toubkal Base Camp",
+      "description": "On the second day, we will begin our hike to Toubkal Base Camp. The hike takes about 6 hours and passes through small villages and beautiful landscapes. We will spend the night in a tent at the base camp.",
+      "duration": "PT24H",
+      "activities": [
+        {
+          "id": 2,
+          "name": "Camping"
+        }
+      ],
+      "start_at": "2023-02-02T18:00:00Z",
+      "destination": {
+        "id": 1,
+        "label": "Refuge Toubkal",
+        "location": {
+          "id": 1,
+          "label": "Toubkal",
+          "country": "Morocco",
+          "city": "Marrakesh",
+          "lat": 31.0600714,
+          "lon": -7.9147482
+        }
+      }
+    },
+    {
+      "id": 3,
+      "label": "Day 3: Toubkal Base Camp to Summit and back to Imlil",
+      "description": "On the third day, we will wake up early to begin our ascent to the summit of Mount Toubkal. The hike to the summit takes about 4-5 hours. We will enjoy the breathtaking views from the summit before descending back to Toubkal Base Camp. In the afternoon, we will hike back to Imlil and spend the night in a guesthouse.",
+      "duration": "PT4H",
+      "activities": [
+        {
+          "id": 1,
+          "name": "Hiking"
+        }
+      ],
+      "start_at": "2023-02-03T10:00:00Z"
+    },
+    {
+      "id": 4,
+      "label": "Day 4: Imlil to Marrakesh",
+      "description": "On the fourth and final day, we will drive back to Marrakesh. The drive takes about 2 hours. The trip ends upon arrival in Marrakesh.",
+      "start_at": "2023-02-04T10:00:00Z"
+    }
+  ],
+  "pricing_details": [
+    {
+      "id": 1,
+      "description": "Accommodation and Meals",
+      "amount": 50
+    },
+    {
+      "id": 2,
+      "description": "Transport",
+      "amount": 40
+    }
+  ],
+  "meetingPoint": {
+    "location": {
+      "lat": 34.0522,
+      "lon": -118.2437,
+      "address": "123 Main St, Los Angeles, CA"
+    },
+    "time": "2023-06-01T08:00:00Z",
+    "instructions": "We will meet at the main entrance..."
+  },
+  "cancellation_policy": {
+    "notice_period": "48 hours",
+    "refund_percentage": 50
+  },
+  "user_reviews": [
+    {
+      "userId": "a123",
+      "username": "MountainExplorer",
+      "rating": 5,
+      "comment": "This trekking experience was unforgettable! The guide was knowledgeable and the scenery was breathtaking. Highly recommend!",
+      "date": "2023-06-10"
+    },
+    {
+      "userId": "b456",
+      "username": "AdventureSeeker",
+      "rating": 4,
+      "comment": "Great experience overall. The food could have been better, but the trek itself was amazing!",
+      "date": "2023-06-12"
+    },
+    {
+      "userId": "c789",
+      "username": "NatureLover",
+      "rating": 5,
+      "comment": "Absolutely loved it! The guide, the trek, the landscapes – everything was top-notch!",
+      "date": "2023-06-15"
+    }
+  ]
+}
