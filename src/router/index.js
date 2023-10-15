@@ -26,14 +26,8 @@ const routes = [
   },
   {
     path: '/experiences/:id',
-    component: () => import('@/layouts/default/Default.vue'),
-    children: [
-      {
-        path: '',
-        name: 'Experience',
-        component: () => import( '@/views/Experience.vue'),
-      },
-    ],
+    name:'experience',
+    component: () => import('@/views/Experience.vue')
   },
 ]
 
