@@ -71,7 +71,21 @@
       "phone": "123-456-7890"
     },
     "certification": "Certified Mountain guide",
-    "years_experience": 10
+    "years_experience": 10,
+    "pictures": [
+      {
+        "id": 1,
+        "url": "https://picsum.photos/800/600?random=1"
+      },
+      {
+        "id": 2,
+        "url": "https://picsum.photos/800/600?random=2"
+      },
+      {
+        "id": 3,
+        "url": "https://picsum.photos/800/600?random=3"
+      }
+    ]
   },
   "destination": {
     "id": 1,
@@ -126,6 +140,20 @@
           "lon": -7.9147482
         }
       },
+      "pictures": [
+        {
+          "id": 1,
+          "url": "https://picsum.photos/800/600?random=1"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/800/600?random=2"
+        },
+        {
+          "id": 3,
+          "url": "https://picsum.photos/800/600?random=3"
+        }
+      ],
       "start_at": "2023-02-01T18:00:00Z"
     },
     {
@@ -151,7 +179,21 @@
           "lat": 31.0600714,
           "lon": -7.9147482
         }
-      }
+      },
+      "pictures": [
+        {
+          "id": 1,
+          "url": "https://picsum.photos/800/600?random=1"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/800/600?random=2"
+        },
+        {
+          "id": 3,
+          "url": "https://picsum.photos/800/600?random=3"
+        }
+      ]
     },
     {
       "id": 3,
@@ -164,7 +206,21 @@
           "name": "Hiking"
         }
       ],
-      "start_at": "2023-02-03T10:00:00Z"
+      "start_at": "2023-02-03T10:00:00Z",
+      "pictures": [
+        {
+          "id": 1,
+          "url": "https://picsum.photos/800/600?random=1"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/800/600?random=2"
+        },
+        {
+          "id": 3,
+          "url": "https://picsum.photos/800/600?random=3"
+        }
+      ]
     },
     {
       "id": 4,
@@ -176,13 +232,82 @@
   "pricing_details": [
     {
       "id": 1,
-      "description": "Accommodation and Meals",
-      "amount": 50
+      "description": "Basic",
+      "amount": 799,
+      "includes": [
+        "Accommodation and Meals",
+        "Transport",
+        "Guiding",
+        "Mules"
+      ],
+      "optional_add_ons": [
+      ],
+      "date_based_pricing": [
+        {
+          "start_date": "2023-04-01",
+          "end_date": "2023-05-31",
+          "amount": 799
+        },
+        {
+          "start_date": "2023-06-01",
+          "end_date": "2023-07-31",
+          "amount": 899
+        },
+        {
+          "start_date": "2023-08-01",
+          "end_date": "2023-09-30",
+          "amount": 999
+        }
+      ]
     },
     {
       "id": 2,
-      "description": "Transport",
-      "amount": 40
+      "description": "Premium",
+      "amount": 1099,
+      "includes": [
+        "Upgraded Accommodation and Meals",
+        "Private Transport",
+        "Guiding",
+        "Mules",
+        "Travel Insurance"
+      ],
+      "date_based_pricing": [
+        {
+          "start_date": "2023-04-01",
+          "end_date": "2023-05-31",
+          "amount": 1099
+        },
+        {
+          "start_date": "2023-06-01",
+          "end_date": "2023-07-31",
+          "amount": 1199
+        },
+        {
+          "start_date": "2023-08-01",
+          "end_date": "2023-09-30",
+          "amount": 1299
+        }
+      ],
+      "excludes": [
+        "Personal Expenses"
+      ],
+      "optional_add_ons": [
+        {
+          "id": 1,
+          "description": "Single Room Supplement",
+          "amount": 150
+        },
+        {
+          "id": 2,
+          "description": "Extra Day of Acclimatization",
+          "amount": 200
+        },
+        {
+          "id": 3,
+          "description": "Local Cultural Experience",
+          "amount": 100
+        }
+      ]
     }
   ],
   "meetingPoint": {

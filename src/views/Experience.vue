@@ -127,7 +127,20 @@
     <v-row>
       <v-col>
         <v-card>
-          <v-card-title><h2 class="ma-4">Destination : {{ experience.destination?.label }}</h2></v-card-title>
+          <v-card-text>
+            <div class="w-100 h-100" v-if="experience.destination?.location">
+              <MapboxMap
+                style="height: 400px"
+                map-style="mapbox://styles/mapbox/streets-v11"
+                :center="[experience.destination?.location?.lon, experience.destination?.location?.lat]"
+                :zoom="10"
+                access-token="pk.eyJ1IjoiYmVsa2FzcnkiLCJhIjoiY2xuaHJ6YnJuMHBpajJsbmt5eGo2czZpeiJ9.bVW5XRWMs49GcvfbpPQg-Q">
+                <MapboxMarker
+                  :lng-lat="[experience.destination?.location?.lon, experience.destination?.location?.lat]"/>
+              </MapboxMap>
+            </div>
+          </v-card-text>
+          <v-card-title><h2 class="ma-4">Destination :{{ experience.destination?.label }}</h2></v-card-title>
           <v-card-text>
             <v-alert class="my-3">{{ experience.destination?.description }}
             </v-alert>
@@ -147,10 +160,15 @@
         <v-card>
           <v-card-title><h2>Steps</h2></v-card-title>
           <v-card-text>
-            <v-timeline>
-              <v-timeline-item v-for="step in experience.steps" :key="step.id">
-                <v-card>
-                  <v-card-title>{{ step.label }}</v-card-title>
+            <v-timeline side="end" align="start">
+              <v-timeline-item v-for="step in experience.steps" :key="step.id" class="w-100">
+                <v-card variant="text">
+                  <v-img
+                    src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+                    height="200px"
+                    cover
+                  ></v-img>
+                  <v-card-title class="text-red-lighten-2">{{ step.label }}</v-card-title>
                   <v-card-text>{{ step.description }}</v-card-text>
                   <v-card-text>
                     <v-chip><strong>Duration: </strong> {{ step.duration }}</v-chip>
@@ -173,17 +191,75 @@
             <h2 class="ma-4">Pricing Details</h2>
           </v-card-title>
           <v-card-text>
-            <v-list>
-              <v-list-item v-for="pricing in experience.pricing_details" :key="pricing.id">
-                <v-list-item prepend-icon="mdi-currency-usd" variant="tonal">
-                  <v-list-item-title>
-                    <v-alert class="my-2">
-                      {{ pricing.description }}: {{ pricing.amount }} DHS
+            <v-row>
+              <v-col
+                v-for="(pricing, index) in experience.pricing_details"
+                :key="index"
+                cols="12"
+                md="6"
+              >
+                <v-card variant="outlined">
+                  <v-card-title>
+                    {{ pricing.description }} Plan A partir de :
+                    <v-chip size="large" label> ${{ pricing.amount }}</v-chip>
+                  </v-card-title>
+                  <v-card-subtitle>
+                    <div>
+                      <h3>Included:</h3>
+                      <v-alert icon="mdi-check" class="ma-4" label v-for="(include, index) in pricing.includes"
+                               :key="index">
+                        {{ include }}
+                      </v-alert>
+                    </div>
+                  </v-card-subtitle>
+                  <v-card-text>
+                    <v-alert v-if="pricing.optional_add_ons.length>0">
+                      <h4> Optional Add-ons:</h4>
+                      <div
+                        class="text-green-darken-1 font-weight-bold ma-4"
+                        v-for="(addOn, index) in pricing.optional_add_ons"
+                        :key="index"
+                      >
+                        <v-icon>mdi-check</v-icon>
+                        {{ addOn?.description }}
+                      </div>
                     </v-alert>
-                  </v-list-item-title>
-                </v-list-item>
-              </v-list-item>
-            </v-list>
+                  </v-card-text>
+                  <v-card-actions class="px-4">
+                    <v-row>
+                      <v-col cols="12" md="12">
+                        <v-alert icon="mdi-calendar">
+                          <Calendar selectionMode="range" v-model="dates" class="border-1 w-100" inline>
+                            <template #date="slotProps">
+                              <strong>
+                                {{ slotProps.date.day }}
+                              </strong>
+                              <br>
+                              <small class="ml-1">
+                                {{
+                                  getAmountByDate(pricing, new Date(slotProps.date.year + "-" + slotProps.date.month + "-" + slotProps.date.day))
+                                }}
+                              </small>
+                            </template>
+                          </Calendar>
+                        </v-alert>
+                      </v-col>
+                      <v-col>
+                        <v-alert icon="mdi-cash" class="row">
+                          <div v-if="dates.length">
+                            Start Date: {{ formatDate(dates[0]) }}
+                            <div v-if="dates.length > 1">End Date: {{ formatDate(dates[1]) }}</div>
+                          </div>
+                          <v-chip append-icon="mdi-currency-usd" class="float-end">
+                            {{ getAmountByDate(pricing, dates[0]) }}
+                          </v-chip>
+                        </v-alert>
+                      </v-col>
+                    </v-row>
+                  </v-card-actions>
+                </v-card>
+              </v-col>
+            </v-row>
           </v-card-text>
         </v-card>
       </v-col>
@@ -254,26 +330,66 @@
 </template>
 
 <script>
+import {MapboxMap, MapboxMarker} from '@studiometa/vue-mapbox-gl';
+import 'mapbox-gl/dist/mapbox-gl.css';
+import Calendar from "primevue/calendar"
+
 export default {
+  components: {
+    MapboxMap, MapboxMarker, Calendar
+  },
   data() {
     return {
+      dates: [],
       experience: {
         // Paste the JSON object here
       },
     };
   },
+  watch: {
+    dates: {
+      handler(newVal) {
+        if (newVal[0] != null && newVal[1] == null) {
+          let secondDate = new Date(newVal[0]);
+          secondDate.setDate(secondDate.getDate() + 3); // Add 3 days to the selected date.
+          this.dates = [newVal[0], secondDate];
+        }
+      },
+      deep: true
+    }
+  },
   mounted() {
     this.getExperience();
   },
   methods: {
+    formatDate(date) {
+      return date.toLocaleDateString();
+    },
+    getAmountByDate(data, date) {
+      const targetDate = new Date(date)
+      let amount = data.amount;
+      for (let pricing of data.date_based_pricing) {
+        const startDate = new Date(pricing.start_date);
+        const endDate = new Date(pricing.end_date);
+
+        if (targetDate >= startDate && targetDate <= endDate) {
+          amount = pricing.amount;
+        }
+      }
+      // Return default basic amount if date not in any range
+      return amount;
+    },
     async getExperience() {
       const experience = await import('@/static/experience.json');
       this.experience = experience;
-      console.log(experience);
     }
   }
 };
 </script>
 
-<style scoped>
+<style>
+.mgl-map {
+  height: 400px;
+  width: 100%;
+}
 </style>
