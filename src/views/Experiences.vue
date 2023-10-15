@@ -29,7 +29,7 @@
               Share
             </v-btn>
 
-            <v-btn color="orange" link :href="'/experiences/'+activity?.id">
+            <v-btn color="orange" link :href="'/experiencesjson/'+activity?.id">
               Explore
             </v-btn>
           </v-card-actions>

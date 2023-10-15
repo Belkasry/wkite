@@ -425,17 +425,13 @@ export default {
       return amount;
     },
     async getExperience() {
-      await axios.get("/experiences/" + this.$route.params.id + ".json")
+      await axios.get("/experiencesjson/" + this.$route.params.id + ".json")
         .then(response => this.experience = response.data)
         .then(data => {
           console.log(data);
         });
       // const module='@/static/experiences/'+this.$route.params.id+'.json';
-
       // console.log(module)
-      const fileName = '1.json';
-      const experience = await import(`src/static/experiences/${fileName}`);
-      this.experience = experience;
     }
   }
 };
