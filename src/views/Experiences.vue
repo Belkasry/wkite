@@ -51,7 +51,7 @@ export default {
   methods: {
     async fetchActivities() {
       for (let i = 1; i < 4; i++) {
-        await axios.get("/experiences/" + i + ".json")
+        await axios.get("/experiencesjson/" + i + ".json")
             .then(response => this.activities.push(response.data))
             .then(data => {
               console.log(data);
