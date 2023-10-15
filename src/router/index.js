@@ -14,6 +14,17 @@ const routes = [
     ],
   },
   {
+    path: '/experience/test',
+    component: () => import('@/layouts/default/Default.vue'),
+    children: [
+      {
+        path: '',
+        name: 'test',
+        component: () => import( '@/views/Experience.vue'),
+      },
+    ],
+  },
+  {
     path: '/experiences/:id',
     component: () => import('@/layouts/default/Default.vue'),
     children: [

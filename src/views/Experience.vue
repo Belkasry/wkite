@@ -404,6 +404,7 @@ export default {
     }
   },
   mounted() {
+    console.log("in");
     this.getExperience();
   },
   methods: {
@@ -425,7 +426,8 @@ export default {
       return amount;
     },
     async getExperience() {
-      const i=this.$route.params.id ?? 1
+      let  i=this.$route.params.id?this.$route.params.id :1;
+
       await axios.get("/experiencesjson/" + i + ".json")
         .then(response => this.experience = response.data)
         .then(data => {
