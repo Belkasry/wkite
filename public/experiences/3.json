@@ -1,0 +1,178 @@
+{
+  "id": 200,
+  "title": "Desert Safari Adventure",
+  "description": "Experience the thrill of a desert safari, including dune bashing, camel riding, and a traditional Arabian dinner under the stars.",
+  "start_at": "2023-12-05",
+  "end_at": "2023-12-05",
+  "price": 150,
+  "max_participants": 30,
+  "booked_nbr": 15,
+  "difficulty": 2,
+  "rating": 4.7,
+  "flexible": false,
+  "duration": 6,
+  "unit_duration": "hours",
+  "activities": [
+    {
+      "id": 21,
+      "name": "Dune Bashing",
+      "icon": "dune_bashing_icon.png"
+    },
+    {
+      "id": 22,
+      "name": "Camel Riding",
+      "icon": "camel_icon.png"
+    },
+    {
+      "id": 23,
+      "name": "Arabian Dinner",
+      "icon": "dinner_icon.png"
+    }
+  ],
+  "requirements": [
+    {
+      "id": 31,
+      "name": "Comfortable Clothing"
+    },
+    {
+      "id": 32,
+      "name": "Sunglasses"
+    }
+  ],
+  "notices": [
+    {
+      "id": 41,
+      "name": "Not suitable for pregnant women"
+    }
+  ],
+  "take_into_account": [
+    {
+      "id": 51,
+      "name": "Temperature can drop in the evening"
+    }
+  ],
+  "guide": {
+    "id": 102,
+    "name": "Ahmed Al-Rashid",
+    "bio": "A local expert with over 10 years of experience in desert adventures.",
+    "expertise": ["Desert Safaris", "Camel Tours"],
+    "languages": ["Arabic", "English"],
+    "contact": {
+      "email": "ahmed.alrashid@example.com",
+      "phone": "+1234567890"
+    },
+    "certification": "Desert Safari Expert",
+    "years_experience": 10,
+    "pictures": [
+      {
+        "id": 301,
+        "url": "ahmed_pic1.jpg"
+      }
+    ]
+  },
+  "destination": {
+    "id": 120,
+    "label": "Sahara Desert",
+    "description": "The world's largest hot desert, offering breathtaking landscapes.",
+    "location": {
+      "id": 130,
+      "label": "Central Sahara",
+      "country": "Algeria",
+      "city": "Tamanrasset",
+      "address": "Unnamed Road, Tamanrasset 11000, Algeria",
+      "lat": 22.7899,
+      "lon": 5.5228
+    }
+  },
+  "pictures": [
+    {
+      "id": 401,
+      "url": "safari_pic1.jpg"
+    },
+    {
+      "id": 402,
+      "url": "safari_pic2.jpg"
+    }
+  ],
+  "steps": [
+    {
+      "id": 210,
+      "label": "Dune Bashing Session",
+      "description": "Experience the thrill as you ride up and down the dunes in a 4x4.",
+      "duration": "2 hours",
+      "start_at": "15:00",
+      "activities": [
+        {
+          "id": 21,
+          "name": "Dune Bashing",
+          "icon": "dune_bashing_icon.png"
+        }
+      ],
+      "destination": {
+        "id": 121,
+        "label": "Dune Site",
+        "description": "A popular spot for dune bashing with high dunes.",
+        "location": {
+          "id": 131,
+          "label": "Dune Site",
+          "country": "Algeria",
+          "city": "Tamanrasset",
+          "address": "Dune Road, Tamanrasset 11001, Algeria",
+          "lat": 22.7905,
+          "lon": 5.5240
+        }
+      },
+      "pictures": [
+        {
+          "id": 403,
+          "url": "dune_bashing_pic.jpg"
+        }
+      ]
+    }
+  ],
+  "pricing_details": [
+    {
+      "id": 250,
+      "description": "Standard Package",
+      "amount": 150,
+      "includes": ["Dune Bashing", "Camel Ride", "Dinner"],
+      "optional_add_ons": [
+        {
+          "id": 251,
+          "description": "Professional Photo Session",
+          "amount": 50
+        }
+      ],
+      "date_based_pricing": [
+        {
+          "start_date": "2023-12-01",
+          "end_date": "2023-12-31",
+          "amount": 160
+        }
+      ],
+      "excludes": ["Drinks"]
+    }
+  ],
+  "meetingPoint": {
+    "location": {
+      "lat": 22.7856,
+      "lon": 5.5197,
+      "address": "Main Gate, Tamanrasset 11000, Algeria"
+    },
+    "time": "14:30",
+    "instructions": "Gather at the main gate, our guide will meet you there."
+  },
+  "cancellation_policy": {
+    "notice_period": "48 hours",
+    "refund_percentage": 50
+  },
+  "user_reviews": [
+    {
+      "userId": "u12345",
+      "username": "Alice",
+      "rating": 5,
+      "comment": "An unforgettable experience! Highly recommended.",
+      "date": "2023-01-10"
+    }
+  ]
+}

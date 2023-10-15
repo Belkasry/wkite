@@ -1,0 +1,200 @@
+{
+  "id": 2,
+  "title": "Desert Camel Safari in the Sahara Desert",
+  "description": "Embark on a memorable journey through the vast Sahara Desert in Morocco, experiencing the golden dunes and the starry nights...",
+  "start_at": "2023-07-01",
+  "end_at": "2023-07-03",
+  "price": 699,
+  "max_participants": 15,
+  "booked_nbr": 10,
+  "difficulty": 2,
+  "rating": 4.9,
+  "flexible": true,
+  "duration": 3,
+  "unit_duration": "day",
+  "activities": [
+    {
+      "id": 3,
+      "name": "Camel Riding",
+      "icon": "mdi-camel"
+    },
+    {
+      "id": 4,
+      "name": "Dune Bashing"
+    }
+  ],
+  "requirements": [
+    {
+      "id": 1,
+      "name": "Passport"
+    },
+    {
+      "id": 4,
+      "name": "Sunscreen"
+    }
+  ],
+  "notices": [
+    {
+      "id": 3,
+      "name": "Be prepared for high daytime temperatures."
+    },
+    {
+      "id": 4,
+      "name": "Nights can get chilly, so bring warm clothing."
+    }
+  ],
+  "take_into_account": [
+    {
+      "id": 3,
+      "name": "Bring enough water to stay hydrated."
+    },
+    {
+      "id": 4,
+      "name": "Wear comfortable clothing and shoes suitable for desert terrain."
+    }
+  ],
+  "guide": {
+    "id": 2,
+    "name": "Sarah Alizadeh",
+    "bio": "An experienced desert guide with over 8 years in the Sahara, ensuring safety and unforgettable memories...",
+    "expertise": [
+      "Desert Expeditions",
+      "Camel Trekking"
+    ],
+    "languages": [
+      "English",
+      "Arabic",
+      "French"
+    ],
+    "contact": {
+      "email": "sarah.alizadeh@example.com",
+      "phone": "321-654-0987"
+    },
+    "certification": "Certified Desert Expedition Guide",
+    "years_experience": 8,
+    "pictures": [
+      {
+        "id": 4,
+        "url": "https://picsum.photos/500/300?random=4"
+      },
+      {
+        "id": 5,
+        "url": "https://picsum.photos/500/300?random=5"
+      }
+    ]
+  },
+  "destination": {
+    "id": 2,
+    "label": "Sahara Desert",
+    "description": "The Sahara Desert is the world's largest hot desert, offering mesmerizing dunes and unique experiences...",
+    "location": {
+      "id": 2,
+      "label": "Sahara Desert",
+      "country": "Morocco",
+      "city": "Merzouga",
+      "address": "Merzouga, Errachidia, Morocco",
+      "lat": 31.099167,
+      "lon": -4.011667
+    }
+  },
+  "pictures": [
+    {
+      "id": 4,
+      "url": "https://picsum.photos/800/600?random=4"
+    },
+    {
+      "id": 5,
+      "url": "https://picsum.photos/800/600?random=5"
+    },
+    {
+      "id": 6,
+      "url": "https://picsum.photos/800/600?random=6"
+    }
+  ],
+  "steps": [
+    {
+      "id": 5,
+      "label": "Day 1: Merzouga to Sahara Desert Camp",
+      "description": "Start the journey from Merzouga on camels, heading to a desert camp while experiencing the vastness of the desert. Camp under the starry sky.",
+      "duration": "PT6H",
+      "activities": [
+        {
+          "id": 3,
+          "name": "Camel Riding"
+        }
+      ],
+      "destination": {
+        "id": 2,
+        "label": "Sahara Desert Camp",
+        "location": {
+          "id": 2,
+          "label": "Sahara Desert",
+          "country": "Morocco",
+          "city": "Merzouga"
+        }
+      },
+      "pictures": [
+        {
+          "id": 4,
+          "url": "https://picsum.photos/800/600?random=4"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "label": "Day 2: Explore Sahara",
+      "description": "Explore the beauty of the desert, go dune bashing and experience local Berber culture. Stay another night under the stars.",
+      "duration": "PT12H",
+      "activities": [
+        {
+          "id": 4,
+          "name": "Dune Bashing"
+        }
+      ],
+      "destination": {
+        "id": 2,
+        "label": "Sahara Desert",
+        "location": {
+          "id": 2,
+          "label": "Sahara Desert",
+          "country": "Morocco",
+          "city": "Merzouga"
+        }
+      },
+      "pictures": [
+        {
+          "id": 5,
+          "url": "https://picsum.photos/800/600?random=5"
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "label": "Day 3: Return to Merzouga",
+      "description": "Return to Merzouga from the desert camp on camels, marking the end of the desert expedition.",
+      "duration": "PT6H",
+      "activities": [
+        {
+          "id": 3,
+          "name": "Camel Riding"
+        }
+      ],
+      "destination": {
+        "id": 2,
+        "label": "Merzouga",
+        "location": {
+          "id": 2,
+          "label": "Merzouga",
+          "country": "Morocco",
+          "city": "Merzouga"
+        }
+      },
+      "pictures": [
+        {
+          "id": 6,
+          "url": "https://picsum.photos/800/600?random=6"
+        }
+      ]
+    }
+  ]
+}

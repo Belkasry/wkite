@@ -8,18 +8,21 @@
           </v-card-title>
           <v-carousel v-if="experience.pictures && experience.pictures.length>0">
             <v-carousel-item
-              v-for="picture in experience?.pictures" :key="picture.url"
-              :src="picture.url"
+              v-for="(picture,n) in experience?.pictures" :key="picture.url"
+              :src="picture.url+'?image='+(n * 5 + 10)"
               cover
             ></v-carousel-item>
           </v-carousel>
           <v-card-text>
             <v-alert>{{ experience.description }}</v-alert>
             <v-alert class="my-3">
-              <p><strong>Duration:</strong> {{ experience.duration }}</p>
-              <p><strong>Start at:</strong> {{ experience.start_at }}</p>
-              <p><strong>End at:</strong> {{ experience.end_at }}</p>
+              <p><strong>Duration:</strong> {{ experience.duration }} {{ experience.unit_duration }}</p>
+              <p v-if="!experience.flexible"><strong>Start at:</strong> {{ experience.start_at }}</p>
+              <p v-if="!experience.flexible"><strong>End at:</strong> {{ experience.end_at }}</p>
               <p><strong>Max Participants:</strong> {{ experience.max_participants }}</p>
+              <p>
+                <v-chip label> {{ experience.booked_nbr }}+ booked</v-chip>
+              </p>
               <v-rating v-model="experience.rating" readonly></v-rating>
             </v-alert>
             <v-chip v-if="experience.flexible" class="float-end my-2">Flexible</v-chip>
@@ -36,9 +39,10 @@
           </v-card-title>
           <v-card-text>
             <div class=" d-flex">
-              <div v-for="activity in experience.activities" :key="activity.id" class="ma-4">
-                <v-chip label>{{ activity.name }}</v-chip>
-              </div>
+              <v-alert v-for="activity in experience.activities" :key="activity.id" class="ma-4"
+                       :icon="activity.icon ?? 'mdi-leaf-circle'">
+                {{ activity.name }}
+              </v-alert>
             </div>
           </v-card-text>
         </v-card>
@@ -110,16 +114,54 @@
             <v-alert class="my-3">{{ experience.guide?.bio }}</v-alert>
           </v-card-text>
 
-          <v-alert class="mx-4 mb-4">
-            <v-card-text><strong>Expertise:</strong> {{ experience.guide?.expertise.join(', ') }}</v-card-text>
-            <v-card-text><strong>Languages:</strong> {{ experience.guide?.languages.join(', ') }}</v-card-text>
-            <v-card-text><strong>Contact:</strong> {{ experience.guide?.contact?.email }} /
-              {{ experience.guide?.contact?.phone }}
+          <v-row>
+            <v-col cols="12" md="6">
+              <v-container>
+                <v-row>
+                  <v-col
+                    v-for="(picture,n) in experience.guide?.pictures"
+                    :key="n"
+                    class="d-flex child-flex"
+                    cols="4"
+                  >
+                    <v-img
+                      :src="`${picture?.url}?image=${n * 5 + 10}`"
+                      :lazy-src="`${picture?.url}?image=${n * 5 + 10}`"
+                      aspect-ratio="1"
+                      cover
+                      class="bg-grey-lighten-2"
+                    >
+                      <template v-slot:placeholder>
+                        <v-row
+                          class="fill-height ma-0"
+                          align="center"
+                          justify="center"
+                        >
+                          <v-progress-circular
+                            indeterminate
+                            color="grey-lighten-5"
+                          ></v-progress-circular>
+                        </v-row>
+                      </template>
+                    </v-img>
+                  </v-col>
+                </v-row>
+              </v-container>
+            </v-col>
+            <v-col cols="12" md="6">
+              <v-alert class="mx-4 mb-4">
+                <v-card-text><strong>Expertise:</strong> {{ experience.guide?.expertise.join(', ') }}</v-card-text>
+                <v-card-text><strong>Languages:</strong> {{ experience.guide?.languages.join(', ') }}</v-card-text>
+                <v-card-text><strong>Contact:</strong> {{ experience.guide?.contact?.email }} /
+                  {{ experience.guide?.contact?.phone }}
+                </v-card-text>
+                <v-card-text><strong>Certification:</strong> {{ experience.guide?.certification }}</v-card-text>
+                <v-card-text><strong>Years of Experience:</strong> {{ experience.guide?.years_experience }}
+                </v-card-text>
+              </v-alert>
+            </v-col>
+          </v-row>
 
-            </v-card-text>
-            <v-card-text><strong>Certification:</strong> {{ experience.guide?.certification }}</v-card-text>
-            <v-card-text><strong>Years of Experience:</strong> {{ experience.guide?.years_experience }}</v-card-text>
-          </v-alert>
         </v-card>
       </v-col>
     </v-row>
@@ -235,7 +277,7 @@
                                 {{ slotProps.date.day }}
                               </strong>
                               <br>
-                              <small class="ml-1">
+                              <small class="mx-1">
                                 {{
                                   getAmountByDate(pricing, new Date(slotProps.date.year + "-" + slotProps.date.month + "-" + slotProps.date.day))
                                 }}
@@ -250,11 +292,13 @@
                             Start Date: {{ formatDate(dates[0]) }}
                             <div v-if="dates.length > 1">End Date: {{ formatDate(dates[1]) }}</div>
                           </div>
-                          <v-chip append-icon="mdi-currency-usd" class="float-end">
+                          <v-btn block append-icon="mdi-currency-usd" class="float-end" variant="tonal">
+                            Book now at
                             {{ getAmountByDate(pricing, dates[0]) }}
-                          </v-chip>
+                          </v-btn>
                         </v-alert>
                       </v-col>
+
                     </v-row>
                   </v-card-actions>
                 </v-card>
@@ -333,6 +377,7 @@
 import {MapboxMap, MapboxMarker} from '@studiometa/vue-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Calendar from "primevue/calendar"
+import axios from "axios";
 
 export default {
   components: {
@@ -380,7 +425,16 @@ export default {
       return amount;
     },
     async getExperience() {
-      const experience = await import('@/static/experience.json');
+      await axios.get("/experiences/" + this.$route.params.id + ".json")
+        .then(response => this.experience = response.data)
+        .then(data => {
+          console.log(data);
+        });
+      // const module='@/static/experiences/'+this.$route.params.id+'.json';
+
+      // console.log(module)
+      const fileName = '1.json';
+      const experience = await import(`src/static/experiences/${fileName}`);
       this.experience = experience;
     }
   }
