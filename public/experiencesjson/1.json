@@ -1,7 +1,8 @@
 {
   "id": 1,
+  "type": "snow",
   "title": "Mountain Trekking in the Atlas Mountains",
-  "description": "Join us for a challenging mountain trek through the stunning Atlas Mountains in Morocco...",
+  "description": "Join us for a challenging mountain trek through the stunning Atlas Mountains in Morocco and summit the highest peak in North Africa. This trek is perfect for those who want to experience the beauty of the Atlas Mountains and the rich culture of Morocco. We will spend 4 days trekking through the mountains, passing through small villages and enjoying the breathtaking views. The trek is led by an experienced mountain guide who will ensure your safety and comfort throughout the trip. This trek is suitable for those with a good level of fitness and some hiking experience.",
   "start_at": "2023-06-01",
   "end_at": "2023-06-05",
   "price": 899,
@@ -9,6 +10,7 @@
   "booked_nbr": 300,
   "difficulty": 3,
   "rating": 4.7,
+  "rater_count": 450,
   "flexible": true,
   "duration": 5,
   "unit_duration": "day",
@@ -59,8 +61,8 @@
   ],
   "guide": {
     "id": 1,
-    "name": "John Smith",
-    "bio": "I am an experienced mountain guide with over 10 years...",
+    "name": "Rime Machiche",
+    "bio": "I am an experienced mountain guide with over 10 years of experience leading treks in the Atlas Mountains. I am passionate about sharing my love of the mountains with others and helping them discover the beauty of Morocco. I speak English, French, and Arabic fluently and have extensive knowledge of the local culture and history. I look forward to welcoming you to Morocco and showing you the best of the Atlas Mountains!",
     "expertise": [
       "Mountain Trekking",
       "Survival Training"
@@ -93,7 +95,7 @@
   "destination": {
     "id": 1,
     "label": "Mount Toubkal",
-    "description": "Mount Toubkal is the highest peak in the Atlas Mountains...",
+    "description": "Mount Toubkal is the highest peak in the Atlas Mountains and North Africa. It is located in Toubkal National Park, about 60 km south of Marrakesh. The mountain is a popular destination for trekkers and climbers due to its accessibility and stunning views. The summit offers panoramic views of the surrounding mountains and valleys. The mountain is also home to a variety of wildlife, including Barbary sheep, wild boar, and the endangered Barbary macaque.",
     "location": {
       "id": 1,
       "label": "Mount Toubkal",
@@ -102,32 +104,143 @@
       "address": "Toubkal National Park, Morocco",
       "lat": 31.0600714,
       "lon": -7.9147482
+    },
+    "multimedia": {
+      "images": [
+        {
+          "url": "https://picsum.photos/800/600?mount_toubkal"
+        },
+        {
+          "url": "https://picsum.photos/800/600?mount_toubkal_view"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://example.com/videos/mount_toubkal_tour.mp4"
+        }
+      ],
+      "360_views": [
+        {
+          "url": "https://example.com/360/mount_toubkal_panorama.html"
+        }
+      ]
+    },
+    "weather_and_seasonal_info": {
+      "live_weather": {
+        "temperature": 20,
+        "weather": "Sunny",
+        "wind_speed": 10,
+        "wind_direction": "N",
+        "humidity": 50,
+        "precipitation": 0
+      },
+      "best_seasons": [
+        "Spring",
+        "Autumn"
+      ],
+      "typical_weather": {
+        "spring": "Mild temperatures with occasional rainfall",
+        "summer": "Warm and dry",
+        "autumn": "Cool with clear skies",
+        "winter": "Cold, potential snowfall"
+      }
+    },
+    "local_info": {
+      "nearby_desinations": [
+        {
+          "id": 2,
+          "label": "Marrakesh",
+          "location": {
+            "id": 2,
+            "label": "Marrakesh",
+            "country": "Morocco",
+            "city": "Marrakesh",
+            "address": "Marrakesh, Morocco",
+            "lat": 31.6294723,
+            "lon": -7.9810845
+          },
+          "multimedia": {
+            "images": [
+              {
+                "url": "https://picsum.photos/800/600?marrakesh"
+              },
+              {
+                "url": "https://picsum.photos/800/600?marrakesh_view"
+              }
+            ],
+            "videos": [
+              {
+                "url": "https://example.com/videos/marrakesh_tour.mp4"
+              }
+            ],
+            "360_views": [
+              {
+                "url": "https://example.com/360/marrakesh_panorama.html"
+              }
+            ]
+          }
+        }
+      ],
+      "local_customs": [
+        "Respect local traditions and dress modestly. Haggling is a common practice in markets.",
+        "Avoid public displays of affection."
+      ]
     }
   },
   "pictures": [
     {
       "id": 1,
-      "url": "https://picsum.photos/800/600?random=1"
+      "url": "https://picsum.photos/300/600?random=1",
+      "format": "portrait"
     },
     {
       "id": 2,
-      "url": "https://picsum.photos/800/600?random=2"
+      "url": "https://picsum.photos/300/600?random=2",
+      "format": "portrait"
     },
     {
       "id": 3,
-      "url": "https://picsum.photos/800/600?random=3"
+      "url": "https://picsum.photos/300/600?random=3",
+      "format": "portrait"
+    },
+    {
+      "id": 4,
+      "url": "https://picsum.photos/800/300?random=5",
+      "format": "landscape"
+    },
+    {
+      "id": 4,
+      "url": "https://picsum.photos/800/300?random=5",
+      "format": "landscape"
+    },
+    {
+      "id": 4,
+      "url": "https://picsum.photos/800/300?random=5",
+      "format": "landscape"
+    },
+    {
+      "id": 5,
+      "url": "https://picsum.photos/300/600?random=6",
+      "format": "portrait"
+    },
+    {
+      "id": 6,
+      "url": "https://picsum.photos/300/600?random=7",
+      "format": "portrait"
     }
   ],
+  "picture_url": "/public/imgs/snow-bg.png",
   "steps": [
     {
       "id": 1,
-      "label": "Day 1: Marrakesh to Imlil",
+      "label": "Marrakesh to Imlil",
+      "day": 1,
       "description": "On the first day, we will drive from Marrakesh to Imlil, a small village at the base of Mount Toubkal. We will spend the night in a traditional Moroccan guesthouse in Imlil.",
       "duration": "PT5H",
       "activities": [
         {
           "id": 1,
-          "name": "Hiking"
+          "name": "Transportation"
         }
       ],
       "destination": {
@@ -161,9 +274,10 @@
     },
     {
       "id": 2,
-      "label": "Day 2: Imlil to Toubkal Base Camp",
+      "label": "Imlil to Toubkal Base Camp",
       "description": "On the second day, we will begin our hike to Toubkal Base Camp. The hike takes about 6 hours and passes through small villages and beautiful landscapes. We will spend the night in a tent at the base camp.",
       "duration": "PT24H",
+      "day": 2,
       "activities": [
         {
           "id": 2,
@@ -200,9 +314,22 @@
     },
     {
       "id": 3,
-      "label": "Day 3: Toubkal Base Camp to Summit and back to Imlil",
-      "description": "On the third day, we will wake up early to begin our ascent to the summit of Mount Toubkal. The hike to the summit takes about 4-5 hours. We will enjoy the breathtaking views from the summit before descending back to Toubkal Base Camp. In the afternoon, we will hike back to Imlil and spend the night in a guesthouse.",
+      "label": "Toubkal Base Camp to Summit",
+      "description": "On the third day, we will wake up early to begin our ascent to the summit of Mount Toubkal. The hike to the summit takes about 4-5 hours. We will enjoy the breathtaking views from the summit before descending back to Toubkal Base Camp",
       "duration": "PT4H",
+      "day": 3,
+      "destination": {
+        "id": 1,
+        "label": "Summit Toubkal",
+        "location": {
+          "id": 1,
+          "label": "Toubkal",
+          "country": "Morocco",
+          "city": "Marrakesh",
+          "lat": 31.0600714,
+          "lon": -7.9147482
+        }
+      },
       "activities": [
         {
           "id": 1,
@@ -227,6 +354,47 @@
     },
     {
       "id": 4,
+      "label": "Back to Imlil",
+      "description": "On the third day, we will descend back to Imlil. The descent takes about 4 hours. We will spend the night in a traditional Moroccan guesthouse in Imlil.",
+      "duration": "PT4H",
+      "day": 3,
+      "activities": [
+        {
+          "id": 1,
+          "name": "Hiking"
+        }
+      ],
+      "start_at": "2023-02-03T14:00:00Z",
+      "pictures": [
+        {
+          "id": 1,
+          "url": "https://picsum.photos/800/600?random=1"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/800/600?random=2"
+        },
+        {
+          "id": 3,
+          "url": "https://picsum.photos/800/600?random=3"
+        }
+      ],
+      "destination": {
+        "id": 1,
+        "label": "Dar Imlil",
+        "location": {
+          "id": 1,
+          "label": "Imlil",
+          "country": "Morocco",
+          "city": "Marrakesh",
+          "adress": "Imlil rue principale",
+          "lat": 31.0600714,
+          "lon": -7.9147482
+        }
+      }
+    },
+    {
+      "id": 5,
       "label": "Day 4: Imlil to Marrakesh",
       "description": "On the fourth and final day, we will drive back to Marrakesh. The drive takes about 2 hours. The trip ends upon arrival in Marrakesh.",
       "start_at": "2023-02-04T10:00:00Z"

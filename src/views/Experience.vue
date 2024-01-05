@@ -1,376 +1,755 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col>
-        <v-card>
-          <v-card-title>
-            <h1 class="my-4">{{ experience.title }}</h1>
-          </v-card-title>
-          <v-carousel v-if="experience.pictures && experience.pictures.length>0">
-            <v-carousel-item
-              v-for="(picture,n) in experience?.pictures" :key="picture.url"
-              :src="picture.url+'?image='+(n * 5 + 10)"
-              cover
-            ></v-carousel-item>
-          </v-carousel>
-          <v-card-text>
-            <v-alert>{{ experience.description }}</v-alert>
-            <v-alert class="my-3">
-              <p><strong>Duration:</strong> {{ experience.duration }} {{ experience.unit_duration }}</p>
-              <p v-if="!experience.flexible"><strong>Start at:</strong> {{ experience.start_at }}</p>
-              <p v-if="!experience.flexible"><strong>End at:</strong> {{ experience.end_at }}</p>
-              <p><strong>Max Participants:</strong> {{ experience.max_participants }}</p>
-              <p>
-                <v-chip label> {{ experience.booked_nbr }}+ booked</v-chip>
-              </p>
-              <v-rating v-model="experience.rating" readonly></v-rating>
-            </v-alert>
-            <v-chip v-if="experience.flexible" class="float-end my-2">Flexible</v-chip>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <v-row>
-      <v-col>
-        <v-card>
-          <v-card-title>
-            <h2 class="ma-4">Activities</h2>
-          </v-card-title>
-          <v-card-text>
-            <div class=" d-flex">
-              <v-alert v-for="activity in experience.activities" :key="activity.id" class="ma-4"
-                       :icon="activity.icon ?? 'mdi-leaf-circle'">
-                {{ activity.name }}
-              </v-alert>
-            </div>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <v-row>
-      <v-col>
-        <v-card>
-          <v-card-title>
-            <h2 class="ma-4">Requirements</h2>
-          </v-card-title>
-          <v-card-text>
-            <div class=" d-flex">
-              <div v-for="requirement in experience.requirements" :key="requirement.id" class="ma-4">
-                <v-chip label>{{ requirement.name }}</v-chip>
-              </div>
-            </div>
-          </v-card-text>
-        </v-card>
-      </v-col>
-
-    </v-row>
-
-    <v-row>
-      <v-col>
-        <v-card>
-          <v-card-title>
-            <h2 class="ma-4">Notices</h2>
-          </v-card-title>
-          <v-card-text>
-            <v-list>
-              <v-list-item v-for="notice in experience.notices" :key="notice.id">
-                <v-list-item prepend-icon="mdi-information">
-                  <v-list-item-title> {{ notice.name }}</v-list-item-title>
-                </v-list-item>
-              </v-list-item>
-            </v-list>
-          </v-card-text>
-        </v-card>
-      </v-col>
-
-    </v-row>
-
-    <v-row>
-      <v-col>
-        <v-card>
-          <v-card-title>
-            <h2 class="ma-4">Take Into Account</h2>
-          </v-card-title>
-          <v-card-text>
-            <v-list>
-              <v-list-item v-for="item in experience.take_into_account" :key="item.id">
-                <v-list-item prepend-icon="mdi-bell-alert-outline">
-                  <v-list-item-title>{{ item.name }}</v-list-item-title>
-                </v-list-item>
-              </v-list-item>
-            </v-list>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <v-row>
-      <v-col>
-        <v-card>
-          <v-card-title><h2 class="ma-4">Guide : {{ experience.guide?.name }}</h2></v-card-title>
-          <v-card-text>
-            <v-alert class="my-3">{{ experience.guide?.bio }}</v-alert>
-          </v-card-text>
-
+<div v-if="experience && experience.type">
+  <div :style="'background :'+theme[experience.type?experience.type:'nature'].color_theme_3" class="px-4"
+       :class="experience.type?'card-'+experience.type:'card-snow'">
+    <div v-if="experience" class="pa-3 experience-hiking">
+      <v-row>
+        <v-col cols="12" md="4" class="full-height">
           <v-row>
-            <v-col cols="12" md="6">
-              <v-container>
-                <v-row>
-                  <v-col
-                    v-for="(picture,n) in experience.guide?.pictures"
-                    :key="n"
-                    class="d-flex child-flex"
-                    cols="4"
+            <v-col>
+              <div class="card-dall-parent-main">
+                <div class="card-dall">
+                  <v-card
+                    max-height="85vh"
                   >
+                    <template v-slot:loader="{ isActive }">
+                      <v-progress-linear
+                        :active="isActive"
+                        color="deep-purple"
+                        height="4"
+                        indeterminate
+                      ></v-progress-linear>
+                    </template>
                     <v-img
-                      :src="`${picture?.url}?image=${n * 5 + 10}`"
-                      :lazy-src="`${picture?.url}?image=${n * 5 + 10}`"
-                      aspect-ratio="1"
                       cover
-                      class="bg-grey-lighten-2"
-                    >
-                      <template v-slot:placeholder>
-                        <v-row
-                          class="fill-height ma-0"
-                          align="center"
-                          justify="center"
-                        >
-                          <v-progress-circular
-                            indeterminate
-                            color="grey-lighten-5"
-                          ></v-progress-circular>
-                        </v-row>
-                      </template>
-                    </v-img>
-                  </v-col>
-                </v-row>
-              </v-container>
+                      height="200"
+                      :src="experience.picture_url"
+                    ></v-img>
+                    <v-card-item>
+                      <h4>{{ experience.title }}</h4>
+
+                      <v-card-subtitle>
+                        <span class="me-1">{{ experience.destination?.label }}</span>
+
+                        <v-icon
+                          color="error"
+                          icon="mdi-map-marker"
+                          size="small"
+                        ></v-icon>
+                      </v-card-subtitle>
+                    </v-card-item>
+
+                    <v-card-text>
+                      <v-row
+                        align="center"
+                        class="mx-0"
+                      >
+                        <v-rating
+                          v-model="experience.rating"
+                          color="amber"
+                          density="compact"
+                          half-increments
+                          readonly
+                          size="small"
+                        ></v-rating>
+
+                        <div class="text-grey ms-4">
+                          {{ experience.rating }} ({{ experience.rater_count }})
+                        </div>
+                      </v-row>
+
+                      <v-alert class="mt-4 mb-1 text-subtitle-1 pa-1 px-1 font-weight-bold"
+                               :color="theme[experience.type?experience.type:'nature'].color_theme_1"
+                               variant="plain">
+                        Starting : $ {{ experience.price }}
+                        <v-btn class="float-end" size="x-small" href="#pricing-details"
+                               :color="theme[experience.type?experience.type:'nature'].color_theme_1">
+                          <v-icon>mdi-cash-multiple</v-icon>
+                        </v-btn>
+                      </v-alert>
+
+                      <div>
+                        {{ experience.description?.substring(0, 150) }}...<a class="mx-3" href="#description">(+)</a>
+                      </div>
+
+                      <v-alert class="mt-2" variant="tonal" :color="theme[experience.type?experience.type:'nature'].color_theme_1" density="compact">
+                        <v-chip label class="ma-1" size="x-small"><strong>Duration : </strong> {{ experience.duration }}
+                          {{ experience.unit_duration }}
+                        </v-chip>
+                        <v-chip label class="ma-1" v-if="!experience.flexible" size="x-small"><strong>Start at
+                          :</strong>
+                          {{ experience.start_at }}
+                        </v-chip>
+                        <v-chip label class="ma-1" v-if="!experience.flexible" size="x-small"><strong>End at :</strong>
+                          {{
+                            experience.end_at
+                          }}
+                        </v-chip>
+                        <v-chip label class="ma-1" size="x-small">
+                          <strong>Max Participants :</strong> {{ experience.max_participants }}
+                        </v-chip>
+                        <v-chip label class="ma-1" size="x-small"> {{ experience.booked_nbr }}+ booked</v-chip>
+                        <v-chip label class="ma-1" v-if="experience.flexible" size="x-small">Flexible</v-chip>
+                      </v-alert>
+                    </v-card-text>
+                  </v-card>
+                </div>
+              </div>
             </v-col>
-            <v-col cols="12" md="6">
-              <v-alert class="mx-4 mb-4">
-                <v-card-text><strong>Expertise:</strong> {{ experience.guide?.expertise.join(', ') }}</v-card-text>
-                <v-card-text><strong>Languages:</strong> {{ experience.guide?.languages.join(', ') }}</v-card-text>
-                <v-card-text><strong>Contact:</strong> {{ experience.guide?.contact?.email }} /
-                  {{ experience.guide?.contact?.phone }}
-                </v-card-text>
-                <v-card-text><strong>Certification:</strong> {{ experience.guide?.certification }}</v-card-text>
-                <v-card-text><strong>Years of Experience:</strong> {{ experience.guide?.years_experience }}
-                </v-card-text>
-              </v-alert>
+          </v-row>
+        </v-col>
+        <v-col cols="12" md="6" class="scrollable">
+          <v-row>
+            <v-col>
+              <div class="card-dall-parent">
+                <div class="card-dall">
+                  <v-card :color="theme[experience.type?experience.type:'nature'].color_theme_2">
+                    <div v-if="experience && experience.pictures">
+                      <v-card-title>
+                        <h4 class="ma-4">
+                          <v-icon class="mx-1">mdi-image-multiple</v-icon>
+                          Medias
+                        </h4>
+                      </v-card-title>
+                      <v-row v-show="adjusted(experience.pictures) && adjusted(experience.pictures).length>0"
+                             class="mx-2 mb-2">
+                        <template v-for="(image, imgIdx) in adjusted(experience.pictures)" :key="imgIdx">
+                          <v-col
+                            :cols="image.format=='landscape' ? 6 : 3"
+                          >
+                            <v-img
+                              :alt="image.format"
+                              :src="image.url"
+                              cover
+                              height="100%"
+                            ></v-img>
+                          </v-col>
+                        </template>
+                        <v-col :cols="empty">
+                          <v-btn variant="outlined" class="w-100 h-100">
+                            <br/>
+                            <v-icon class="my-1" color="black">mdi-image-multiple</v-icon>
+                          </v-btn>
+                        </v-col>
+                      </v-row>
+                    </div>
+                  </v-card>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <div class="card-dall-parent">
+                <div class="card-dall">
+                  <v-card :color="theme[experience.type?experience.type:'nature'].color_theme_2" id="description">
+                    <v-card-title>
+                      <h4 class="ma-4">
+                        <v-icon class="mx-1">mdi-text-long</v-icon>
+                        Description
+                      </h4>
+                    </v-card-title>
+                    <v-card-text>
+                      <v-alert class="ma-1" :color="theme[experience.type?experience.type:'nature'].color_theme_1">{{ experience.description }}</v-alert>
+                    </v-card-text>
+                  </v-card>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <div class="card-dall-parent">
+                <div class="card-dall">
+                  <v-card :color="theme[experience.type?experience.type:'nature'].color_theme_2" id="activities">
+                    <v-card-title>
+                      <h4 class="ma-4">
+                        <v-icon class="mx-2">mdi-format-list-bulleted-type</v-icon>
+                        Activities
+                      </h4>
+                    </v-card-title>
+                    <v-card-text>
+                      <div class=" d-flex">
+                        <v-alert v-for="activity in experience.activities" :key="activity.id" class="ma-4"
+                                 :color="theme[experience.type?experience.type:'nature'].color_theme_1"
+                                 :icon="activity.icon ?? 'mdi-leaf-circle'">
+                          {{ activity.name }}
+                        </v-alert>
+                      </div>
+                    </v-card-text>
+                  </v-card>
+                </div>
+              </div>
             </v-col>
           </v-row>
 
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <v-row>
-      <v-col>
-        <v-card>
-          <v-card-text>
-            <div class="w-100 h-100" v-if="experience.destination?.location">
-              <MapboxMap
-                style="height: 400px"
-                map-style="mapbox://styles/mapbox/streets-v11"
-                :center="[experience.destination?.location?.lon, experience.destination?.location?.lat]"
-                :zoom="10"
-                access-token="pk.eyJ1IjoiYmVsa2FzcnkiLCJhIjoiY2xuaHJ6YnJuMHBpajJsbmt5eGo2czZpeiJ9.bVW5XRWMs49GcvfbpPQg-Q">
-                <MapboxMarker
-                  :lng-lat="[experience.destination?.location?.lon, experience.destination?.location?.lat]"/>
-              </MapboxMap>
-            </div>
-          </v-card-text>
-          <v-card-title><h2 class="ma-4">Destination :{{ experience.destination?.label }}</h2></v-card-title>
-          <v-card-text>
-            <v-alert class="my-3">{{ experience.destination?.description }}
-            </v-alert>
-          </v-card-text>
-          <v-card-text>
-            <v-alert icon="mdi-map">
-              <strong>Location:</strong> {{ experience.destination?.location?.address }},
-              {{ experience.destination?.location?.city }}, {{ experience.destination?.location?.country }}
-            </v-alert>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <v-row>
-      <v-col>
-        <v-card>
-          <v-card-title><h2>Steps</h2></v-card-title>
-          <v-card-text>
-            <v-timeline side="end" align="start">
-              <v-timeline-item v-for="step in experience.steps" :key="step.id" class="w-100">
-                <v-card variant="text">
-                  <v-img
-                    src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
-                    height="200px"
-                    cover
-                  ></v-img>
-                  <v-card-title class="text-red-lighten-2">{{ step.label }}</v-card-title>
-                  <v-card-text>{{ step.description }}</v-card-text>
-                  <v-card-text>
-                    <v-chip><strong>Duration: </strong> {{ step.duration }}</v-chip>
-                    <v-chip class="mx-4" label v-for="activity in step.activities" :key="activity.id">
-                      {{ activity.name }}
-                    </v-chip>
-                  </v-card-text>
-                </v-card>
-              </v-timeline-item>
-            </v-timeline>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-
-    <v-row>
-      <v-col>
-        <v-card>
-          <v-card-title>
-            <h2 class="ma-4">Pricing Details</h2>
-          </v-card-title>
-          <v-card-text>
-            <v-row>
-              <v-col
-                v-for="(pricing, index) in experience.pricing_details"
-                :key="index"
-                cols="12"
-                md="6"
-              >
-                <v-card variant="outlined">
-                  <v-card-title>
-                    {{ pricing.description }} Plan A partir de :
-                    <v-chip size="large" label> ${{ pricing.amount }}</v-chip>
-                  </v-card-title>
-                  <v-card-subtitle>
-                    <div>
-                      <h3>Included:</h3>
-                      <v-alert icon="mdi-check" class="ma-4" label v-for="(include, index) in pricing.includes"
-                               :key="index">
-                        {{ include }}
-                      </v-alert>
-                    </div>
-                  </v-card-subtitle>
-                  <v-card-text>
-                    <v-alert v-if="pricing.optional_add_ons.length>0">
-                      <h4> Optional Add-ons:</h4>
-                      <div
-                        class="text-green-darken-1 font-weight-bold ma-4"
-                        v-for="(addOn, index) in pricing.optional_add_ons"
-                        :key="index"
-                      >
-                        <v-icon>mdi-check</v-icon>
-                        {{ addOn?.description }}
+          <v-row>
+            <v-col>
+              <div class="card-dall-parent">
+                <div class="card-dall">
+                  <v-card :color="theme[experience.type?experience.type:'nature'].color_theme_2" id="requirements">
+                    <v-card-title>
+                      <h4 class="ma-4">
+                        <v-icon class="mx-2">mdi-exclamation-thick</v-icon>
+                        Requirements
+                      </h4>
+                    </v-card-title>
+                    <v-card-text>
+                      <div class=" d-flex">
+                        <div v-for="requirement in experience.requirements" :key="requirement.id" class="ma-4">
+                          <v-chip label variant="flat" :color="theme[experience.type?experience.type:'nature'].color_theme_1">{{
+                              requirement.name
+                            }}
+                          </v-chip>
+                        </div>
                       </div>
-                    </v-alert>
-                  </v-card-text>
-                  <v-card-actions class="px-4">
-                    <v-row>
-                      <v-col cols="12" md="12">
-                        <v-alert icon="mdi-calendar">
-                          <Calendar selectionMode="range" v-model="dates" class="border-1 w-100" inline>
-                            <template #date="slotProps">
-                              <strong>
-                                {{ slotProps.date.day }}
-                              </strong>
-                              <br>
-                              <small class="mx-1">
-                                {{
-                                  getAmountByDate(pricing, new Date(slotProps.date.year + "-" + slotProps.date.month + "-" + slotProps.date.day))
-                                }}
-                              </small>
-                            </template>
-                          </Calendar>
-                        </v-alert>
-                      </v-col>
-                      <v-col>
-                        <v-alert icon="mdi-cash" class="row">
-                          <div v-if="dates.length">
-                            Start Date: {{ formatDate(dates[0]) }}
-                            <div v-if="dates.length > 1">End Date: {{ formatDate(dates[1]) }}</div>
-                          </div>
-                          <v-btn block append-icon="mdi-currency-usd" class="float-end" variant="tonal">
-                            Book now at
-                            {{ getAmountByDate(pricing, dates[0]) }}
-                          </v-btn>
-                        </v-alert>
-                      </v-col>
+                    </v-card-text>
+                  </v-card>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
 
+          <v-row>
+            <v-col>
+              <div class="card-dall-parent">
+                <div class="card-dall">
+                  <v-card :color="theme[experience.type?experience.type:'nature'].color_theme_2" id="notices">
+                    <v-card-title>
+                      <h4 class="ma-4">
+                        <v-icon class="mx-2">mdi-account-alert-outline</v-icon>
+                        Notices
+                      </h4>
+                    </v-card-title>
+                    <v-card-text>
+                      <v-alert icon="mdi-information"
+                               class="my-1"
+                               v-for="notice in experience.notices"
+                               :key="notice.id"
+                               :color="theme[experience.type?experience.type:'nature'].color_theme_1">
+                        {{ notice.name }}
+                      </v-alert>
+                    </v-card-text>
+                  </v-card>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+
+          <v-row>
+            <v-col>
+              <div class="card-dall-parent">
+                <div class="card-dall">
+                  <v-card :color="theme[experience.type?experience.type:'nature'].color_theme_2" id="take-into-account">
+                    <v-card-title>
+                      <h4 class="ma-4">
+                        <v-icon class="mx-2">mdi-bag-personal</v-icon>
+                        Take Into Account
+                      </h4>
+                    </v-card-title>
+                    <v-card-text>
+                      <v-alert icon="mdi-bell-alert-outline" :color="theme[experience.type?experience.type:'nature'].color_theme_1"
+                               v-for="item in experience.take_into_account" :key="item.id" class="my-1 mx-3">
+                        {{ item.name }}
+                      </v-alert>
+                    </v-card-text>
+                  </v-card>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+
+          <v-row>
+            <v-col>
+              <div class="card-dall-parent">
+                <div class="card-dall">
+                  <v-card
+                    class="mx-auto"
+                  >
+                    <v-img
+                      src="https://placekitten.com/640/200"
+                      height="200px"
+                      cover
+                    ></v-img>
+
+                    <v-card-title>
+                      <h4 class="mx-4 my-2">
+                        <v-icon class="mx-2">mdi-card-account-details</v-icon>
+                        Guide : {{ experience.guide?.name }}
+                      </h4>
+                    </v-card-title>
+
+                    <v-card-text>
+                      <v-alert :color="theme[experience.type?experience.type:'nature'].color_theme_1" variant="outlined">
+                        <v-row>
+                          <v-col cols="12" md="6">
+                            <div>
+                              <strong>Expertise:</strong> {{ experience.guide?.expertise.join(', ') }}
+                            </div>
+                          </v-col>
+                          <v-col cols="12" md="6">
+                            <div>
+                              <strong>Languages:</strong> {{ experience.guide?.languages.join(', ') }}
+                            </div>
+                          </v-col>
+                          <v-col cols="12" md="6">
+                            <div>
+                              <strong>Contact:</strong> {{ experience.guide?.contact?.email }} /
+                              {{ experience.guide?.contact?.phone }}
+                            </div>
+                          </v-col>
+                          <v-col cols="12" md="6">
+                            <div>
+                              <strong>Certification:</strong> {{ experience.guide?.certification }}
+                            </div>
+                          </v-col>
+                          <v-col cols="12" md="6">
+                            <div>
+                              <strong>Years of Experience:</strong> {{ experience.guide?.years_experience }}
+                            </div>
+                          </v-col>
+                        </v-row>
+                      </v-alert>
+                    </v-card-text>
+
+                    <v-card-actions>
+                      <v-btn
+                        :color="theme[experience.type?experience.type:'nature'].color_theme_1"
+                        variant="text"
+                      >
+                        Voir le profil
+                      </v-btn>
+
+                      <v-spacer></v-spacer>
+
+                      <v-btn
+                        :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"
+                        @click="show = !show"
+                      ></v-btn>
+                    </v-card-actions>
+
+                    <v-expand-transition>
+                      <div v-show="show">
+                        <v-divider></v-divider>
+
+                        <v-card-text>
+                          {{ experience.guide?.bio }}
+                        </v-card-text>
+                      </div>
+                    </v-expand-transition>
+                  </v-card>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+
+          <v-row>
+            <v-col>
+              <div class="card-dall-parent" id="destination">
+                <div class="card-dall">
+                  <v-card :color="theme[experience.type?experience.type:'nature'].color_theme_2">
+                    <v-card-text>
+                      <div class="w-100 h-100" v-if="experience.destination?.location">
+                        <MapboxMap
+                          style="height: 400px"
+                          map-style="mapbox://styles/mapbox/streets-v11"
+                          :center="[experience.destination?.location?.lon, experience.destination?.location?.lat]"
+                          :zoom="10"
+                          access-token="pk.eyJ1IjoiYmVsa2FzcnkiLCJhIjoiY2xuaHJ6YnJuMHBpajJsbmt5eGo2czZpeiJ9.bVW5XRWMs49GcvfbpPQg-Q">
+                          <MapboxMarker
+                            :lng-lat="[experience.destination?.location?.lon, experience.destination?.location?.lat]"/>
+                        </MapboxMap>
+                      </div>
+                    </v-card-text>
+                    <v-card-title>
+                      <h4 class="ma-2">
+                        <v-icon class="mx-2">mdi-map-marker</v-icon>
+                        Destination :{{ experience.destination?.label }}
+                      </h4>
+                    </v-card-title>
+                    <v-card-text>
+                      <v-alert class="my-1" :color="theme[experience.type?experience.type:'nature'].color_theme_1">{{
+                          experience.destination?.description
+                        }}
+                      </v-alert>
+                      <v-alert icon="mdi-map" :color="theme[experience.type?experience.type:'nature'].color_theme_1">
+                        <strong>Location:</strong> {{ experience.destination?.location?.address }},
+                        {{ experience.destination?.location?.city }}, {{ experience.destination?.location?.country }}
+                      </v-alert>
+                    </v-card-text>
+                  </v-card>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <div class="card-dall-parent">
+                <div class="card-dall">
+                  <v-card class="mx-auto">
+                    <v-toolbar
+                      color="rgba(0, 0, 0, 0)"
+                      theme="dark"
+                    >
+                      <v-tabs
+                        v-model="day"
+                        :bg-color="theme[experience.type?experience.type:'nature'].color_theme_1"
+                        show-arrows
+                        grow
+                      >
+                        <v-tab
+                          v-for="(step,stepsIndex) in arrayFromObject(experience.steps)"
+                          :key="stepsIndex"
+                          :value="stepsIndex"
+                        >
+                          {{ step[0] }}
+                        </v-tab>
+                      </v-tabs>
+                    </v-toolbar>
+                    <v-row class="mx-1 mt-1">
+                      <v-col
+                        v-for="n in 3"
+                        :key="n"
+                        cols="4"
+                      >
+                        <v-img
+                          :src="`https://picsum.photos/500/300?image=${day * n + 10}`"
+                          :lazy-src="`https://picsum.photos/10/6?image=${day * n + 10}`"
+                          aspect-ratio="1"
+                          cover
+                          class="bg-grey-lighten-2"
+                        >
+                          <template v-slot:placeholder>
+                            <v-row
+                              class="fill-height ma-0"
+                              align="center"
+                              justify="center"
+                            >
+                              <v-progress-circular
+                                indeterminate
+                                color="grey-lighten-5"
+                              ></v-progress-circular>
+                            </v-row>
+                          </template>
+                        </v-img>
+                      </v-col>
                     </v-row>
-                  </v-card-actions>
-                </v-card>
-              </v-col>
-            </v-row>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
+                    <v-card-text v-if="arrayFromObject((experience.steps))[day]">
+                      <div class="font-weight-bold ms-1 mb-2">
+                        <v-chip>{{ arrayFromObject(experience.steps)[day][0] }}</v-chip>
+                      </div>
+                      <v-timeline density="compact" align="start">
+                        <v-timeline-item
+                          v-for="step in arrayFromObject((experience.steps))[day][1]"
+                          :key="step.id"
+                          size="x-small"
+                        >
+                          <v-card :color="theme[experience.type?experience.type:'nature'].color_theme_1">
+                            <v-card-title class="text-red-lighten-2 mt-3">{{ step.label }}</v-card-title>
+                            <v-card-text class="text-black">
+                              {{ step.description }}
+                            </v-card-text>
+                            <v-card-text>
+                              <v-chip :color="theme[experience.type?experience.type:'nature'].color_theme_1"><strong>Duration: </strong> {{
+                                  step.duration
+                                }}
+                              </v-chip>
+                              <v-chip :color="theme[experience.type?experience.type:'nature'].color_theme_1" class="mx-4" label
+                                      v-for="activity in step.activities"
+                                      :key="activity.id">
+                                {{ activity.name }}
+                              </v-chip>
+                              <v-btn class="float-end" :color="theme[experience.type?experience.type:'nature'].color_theme_1">
+                                <v-icon class="mx-1">mdi-image-multiple</v-icon>
+                              </v-btn>
+                            </v-card-text>
+                          </v-card>
+                        </v-timeline-item>
+                      </v-timeline>
+                    </v-card-text>
+                  </v-card>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
 
-    <v-row>
-      <v-col>
+          <v-row>
+            <v-col>
+              <div class="card-dall-parent">
+                <div class="card-dall">
+                  <v-card :color="theme[experience.type?experience.type:'nature'].color_theme_2" id="pricing-details">
+                    <h3 class="ma-4">
+                      <v-icon class="mx-2">mdi-cash-multiple</v-icon>
+                      Pricing Details
+                    </h3>
+                    <v-toolbar :color="theme[experience.type?experience.type:'nature'].color_theme_2" class="px-0">
+                      <v-tabs
+                        v-model="tab_price"
+                        color="primary"
+                        variant=""
+                        grow
+                      >
+                        <v-tab
+                          v-for="(pricing, index) in experience.pricing_details"
+                          :key="index"
+                          :value="index"
+                          :color="theme[experience.type?experience.type:'nature'].color_theme_1"
+                        >
+                          Plan A partir de :
+                          ${{ pricing.amount }}
+                        </v-tab>
+                      </v-tabs>
+                    </v-toolbar>
+                    <v-window class="my-3"
+                              v-model="tab_price">
+                      <v-window-item
+                        v-for="(pricing, index) in experience.pricing_details"
+                        :key="index"
+                        :value="index"
+                      >
+                        <v-card-subtitle>
+                          <div class="my-2">
+                            <h3>Included:</h3>
+                            <v-alert :color="theme[experience.type?experience.type:'nature'].color_theme_1" icon="mdi-check" class="ma-1" label
+                                     v-for="(include, index) in pricing.includes"
+                                     :key="index">
+                              {{ include }}
+                            </v-alert>
+                          </div>
+                        </v-card-subtitle>
+                        <v-card-text>
+                          <v-alert v-if="pricing.optional_add_ons.length>0">
+                            <h4> Optional Add-ons:</h4>
+                            <div
+                              class="text-green-darken-1 font-weight-bold ma-4"
+                              v-for="(addOn, index) in pricing.optional_add_ons"
+                              :key="index"
+                            >
+                              <v-icon>mdi-check</v-icon>
+                              {{ addOn?.description }}
+                            </div>
+                          </v-alert>
+                        </v-card-text>
+                        <v-card-actions class="px-4">
+                          <v-row>
+                            <v-col cols="12" md="12">
+                              <!--                                <v-alert icon="mdi-calendar">-->
+                              <!--                                  <Calendar selectionMode="range" v-model="dates" class="border-1 w-100" inline>-->
+                              <!--                                    <template #date="slotProps">-->
+                              <!--                                      <strong>-->
+                              <!--                                        {{ slotProps.date.day }}-->
+                              <!--                                      </strong>-->
+                              <!--                                      <br>-->
+                              <!--                                      <small class="mx-1">-->
+                              <!--                                        {{-->
+                              <!--                                          getAmountByDate(pricing, new Date(slotProps.date.year + "-" + slotProps.date.month + "-" + slotProps.date.day))-->
+                              <!--                                        }}-->
+                              <!--                                      </small>-->
+                              <!--                                    </template>-->
+                              <!--                                  </Calendar>-->
+                              <!--                                </v-alert>-->
+                            </v-col>
+                            <v-col>
+                              <v-alert icon="mdi-cash" class="row">
+                                <div v-if="dates.length">
+                                  Start Date: {{ formatDate(dates[0]) }}
+                                  <div v-if="dates.length > 1">End Date: {{ formatDate(dates[1]) }}</div>
+                                </div>
+                                <v-btn block append-icon="mdi-currency-usd" class="float-end" variant="tonal">
+                                  Book now at
+                                  {{ getAmountByDate(pricing, dates[0]) }}
+                                </v-btn>
+                              </v-alert>
+                            </v-col>
 
-        <v-card>
-          <v-card-title>
-            <h2 class="ma-4">Meeting Point:
-              <v-chip label prepend-icon="mdi-clock" class="float-end">{{ experience.meetingPoint?.time }}</v-chip>
-            </h2>
+                          </v-row>
+                        </v-card-actions>
+                      </v-window-item>
+                    </v-window>
+                  </v-card>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
 
-          </v-card-title>
-          <v-card-text>
-            <v-alert>
-              {{ experience.meetingPoint?.instructions }}
-            </v-alert>
-          </v-card-text>
-          <v-card-text>
-            <v-alert icon="mdi-map">
-              <strong>Address:</strong> {{ experience.meetingPoint?.location?.address }}
-            </v-alert>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
+          <v-row>
+            <v-col>
+              <div class="card-dall-parent">
+                <div class="card-dall">
+                  <v-card id="meeting-point" :color="theme[experience.type?experience.type:'nature'].color_theme_2">
+                    <v-card-title>
+                      <h3 class="ma-4">
+                        <v-icon class="mx-2">mdi-human-greeting</v-icon>
+                        Meeting Point:
+                        <v-chip label prepend-icon="mdi-clock" class="float-end" :color="theme[experience.type?experience.type:'nature'].color_theme_1">
+                          {{ experience.meetingPoint?.time }}
+                        </v-chip>
+                      </h3>
 
-    <v-row>
-      <v-col>
-        <v-card>
-          <v-card-title><h2 class="ma-4">Cancellation Policy</h2></v-card-title>
-          <v-card-text>
-            <v-alert>
-              <strong>Notice Period :</strong> {{ experience.cancellation_policy?.notice_period }}
-            </v-alert>
-          </v-card-text>
-          <v-card-text>
-            <v-alert>
-              <strong>Refund Percentage :</strong> {{ experience.cancellation_policy?.refund_percentage }}%
-            </v-alert>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
+                    </v-card-title>
+                    <v-card-text>
+                      <v-alert :color="theme[experience.type?experience.type:'nature'].color_theme_1" icon="mdi-car-info">
+                        {{ experience.meetingPoint?.instructions }}
+                      </v-alert>
+                    </v-card-text>
+                    <v-card-text>
+                      <v-alert icon="mdi-map" :color="theme[experience.type?experience.type:'nature'].color_theme_1">
+                        <strong>Address:</strong> {{ experience.meetingPoint?.location?.address }}
+                      </v-alert>
+                    </v-card-text>
+                  </v-card>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
 
-    <v-row>
-      <v-col>
-        <v-card>
-          <v-card-title><h2>User Reviews</h2></v-card-title>
-          <v-card-text>
-            <v-list v-for="review in experience.user_reviews" :key="review.userId">
-              <v-list-item prepend-avatar="https://picsum.photos/800/600?random=12">
-                <v-alert>
-                  <v-list-item-title>{{ review.username }}</v-list-item-title>
-                  <v-rating v-model="review.rating" readonly></v-rating>
-                  <v-list-item-subtitle>{{ review.comment }}</v-list-item-subtitle>
-                  <v-list-item-subtitle><em>{{ review.date }}</em></v-list-item-subtitle>
-                </v-alert>
-              </v-list-item>
-            </v-list>
-          </v-card-text>
-        </v-card>
-      </v-col>
-    </v-row>
-  </v-container>
+          <v-row>
+            <v-col>
+              <div class="card-dall-parent">
+                <div class="card-dall">
+                  <v-card id="cancellation-policy" :color="theme[experience.type?experience.type:'nature'].color_theme_2">
+                    <v-card-title>
+                      <h3 class="ma-4">
+                        <v-icon class="mx-2">mdi-file-cancel-outline</v-icon>
+                        Cancellation Policy
+                      </h3>
+                    </v-card-title>
+                    <v-card-text>
+                      <v-alert :color="theme[experience.type?experience.type:'nature'].color_theme_1">
+                        <strong>Notice Period :</strong> {{ experience.cancellation_policy?.notice_period }}
+                      </v-alert>
+                    </v-card-text>
+                    <v-card-text>
+                      <v-alert :color="theme[experience.type?experience.type:'nature'].color_theme_1">
+                        <strong>Refund Percentage :</strong> {{ experience.cancellation_policy?.refund_percentage }}%
+                      </v-alert>
+                    </v-card-text>
+                  </v-card>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+
+          <v-row>
+            <v-col>
+              <div class="card-dall-parent">
+                <div class="card-dall">
+                  <v-card id="user-reviews" :color="theme[experience.type?experience.type:'nature'].color_theme_2">
+                    <h2 class="ma-3">
+                      User Reviews</h2>
+                    <v-card-text>
+                      <v-list v-for="review in experience.user_reviews" :key="review.userId" bg-color="transparent">
+                        <v-list-item prepend-avatar="https://picsum.photos/800/600?random=12">
+                          <v-alert :color="theme[experience.type?experience.type:'nature'].color_theme_1">
+                            <v-list-item-title>{{ review.username }}</v-list-item-title>
+                            <v-rating v-model="review.rating" readonly></v-rating>
+                            <v-list-item-subtitle>{{ review.comment }}</v-list-item-subtitle>
+                            <v-list-item-subtitle><em>{{ review.date }}</em></v-list-item-subtitle>
+                          </v-alert>
+                        </v-list-item>
+                      </v-list>
+                    </v-card-text>
+                  </v-card>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+        </v-col>
+        <v-col cols="12" md="2">
+          <div class="text-xs">
+            <v-card class="d-flex flex-column py-2 px-1 " variant="text">
+              <v-chip label :color="theme[experience.type?experience.type:'nature'].color_theme_1" variant="flat" block href="#medias" size="small"
+                      class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
+                class="ma-2 text-xs">
+                <v-icon class="mx-1">mdi-image-multiple</v-icon>
+              </strong>Medias
+              </v-chip>
+              <v-chip label :color="theme[experience.type?experience.type:'nature'].color_theme_1" variant="flat" block size="small" href="#description"
+                      class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
+                class="ma-2">
+                <v-icon class="mx-1">mdi-text-long</v-icon>
+              </strong>Description
+              </v-chip>
+              <v-chip label :color="theme[experience.type?experience.type:'nature'].color_theme_1" variant="flat" block size="small" href="#activities"
+                      class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
+                class="ma-2">
+                <v-icon class="mx-1">mdi-format-list-bulleted-type</v-icon>
+              </strong>Activities
+              </v-chip>
+              <v-chip label :color="theme[experience.type?experience.type:'nature'].color_theme_1" variant="flat" block size="small" href="#requirements"
+                      class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
+                class="ma-2">
+                <v-icon class="mx-1">mdi-exclamation-thick</v-icon>
+              </strong>Requirements
+              </v-chip>
+              <v-chip label :color="theme[experience.type?experience.type:'nature'].color_theme_1" variant="flat" block size="small" href="#notices"
+                      class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
+                class="ma-2">
+                <v-icon class="mx-1">mdi-account-alert-outline</v-icon>
+              </strong>Notices
+              </v-chip>
+              <v-chip label :color="theme[experience.type?experience.type:'nature'].color_theme_1" variant="flat" block size="small"
+                      href="#take-into-account"
+                      class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
+                class="ma-2">
+                <v-icon class="mx-1">mdi-bag-personal</v-icon>
+              </strong>Into
+                Account
+              </v-chip>
+              <v-chip label :color="theme[experience.type?experience.type:'nature'].color_theme_1" variant="flat" block size="small" href="#guide"
+                      class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
+                class="ma-2">
+                <v-icon class="mx-2">mdi-card-account-details</v-icon>
+              </strong>Guide
+              </v-chip>
+              <v-chip label :color="theme[experience.type?experience.type:'nature'].color_theme_1" variant="flat" block size="small" href="#destination"
+                      class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
+                class="ma-2">
+                <v-icon class="mx-1">mdi-map-marker</v-icon>
+              </strong>Destination
+              </v-chip>
+              <v-chip label :color="theme[experience.type?experience.type:'nature'].color_theme_1" variant="flat" block size="small" href="#steps"
+                      class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
+                class="ma-2">
+                <v-icon class="mx-1">mdi-map-marker-path</v-icon>
+              </strong>Steps
+              </v-chip>
+              <v-chip label :color="theme[experience.type?experience.type:'nature'].color_theme_1" variant="flat" block size="small"
+                      href="#pricing-details"
+                      class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
+                class="ma-2">
+                <v-icon class="mx-1">mdi-cash</v-icon>
+              </strong>Pricing
+              </v-chip>
+              <v-chip label :color="theme[experience.type?experience.type:'nature'].color_theme_1" variant="flat" block size="small" href="#meeting-point"
+                      class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
+                class="ma-2">
+                <v-icon class="mx-1">mdi-human-greeting</v-icon>
+              </strong>Meeting
+              </v-chip>
+              <v-chip label :color="theme[experience.type?experience.type:'nature'].color_theme_1" variant="flat" block size="small"
+                      href="#cancellation-policy"
+                      class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
+                class="ma-2">
+                <v-icon class="mx-1">mdi-file-cancel-outline</v-icon>
+              </strong>Cancellation
+              </v-chip>
+              <v-chip label :color="theme[experience.type?experience.type:'nature'].color_theme_1" variant="flat" block size="small" href="#user-reviews"
+                      class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
+                class="ma-2">
+                <v-icon class="mx-1">mdi-message-draw</v-icon>
+              </strong>User
+                Reviews
+              </v-chip>
+            </v-card>
+          </div>
+        </v-col>
+
+
+      </v-row>
+    </div>
+  </div>
+</div>
 </template>
 
 <script>
@@ -378,15 +757,71 @@ import {MapboxMap, MapboxMarker} from '@studiometa/vue-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import Calendar from "primevue/calendar"
 import axios from "axios";
+import exp from "constants";
 
 export default {
+  computed: {
+    exp() {
+      return exp
+    }
+  },
   components: {
     MapboxMap, MapboxMarker, Calendar
   },
   data() {
     return {
+      color_theme_1: "#4d5443",
+      color_theme_2: "#103a4d1f",
+      color_theme_3: "red",
+      theme: {
+        snow: {
+          color_theme_1: "#446473",
+          color_theme_2: "#2D4D5B1F",
+          color_theme_3: "#e9f8fe",
+          background_url: "snow-pattern.png",
+        },
+        nature: {
+          color_theme_1: "#4d5443",
+          color_theme_2: "#103a4d1f",
+          color_theme_3: "#fefee9",
+          background_url: "nature-pattern.png",
+        },
+        desert: {
+          color_theme_1: "#b98153",
+          color_theme_2: "#103a4d1f",
+          color_theme_3: "#fefee9",
+          background_url: "desert-pattern.png",
+        },
+      },
+      tab_price: null,
+      day: 0,
+      show: false,
+      carousel_step: 0,
+      empty: 0,
+      pictures: [],
       dates: [],
+      messages: [
+        {
+          from: 'You',
+          message: `Sure, I'll see you later.`,
+          time: '10:42am',
+          color: 'deep-purple-lighten-1',
+        },
+        {
+          from: 'John Doe',
+          message: 'Yeah, sure. Does 1:00pm work?',
+          time: '10:37am',
+          color: 'green',
+        },
+        {
+          from: 'You',
+          message: 'Did you still want to grab lunch today?',
+          time: '9:47am',
+          color: 'deep-purple-lighten-1',
+        },
+      ],
       experience: {
+        type: "snow"
         // Paste the JSON object here
       },
     };
@@ -404,13 +839,50 @@ export default {
     }
   },
   mounted() {
-    console.log("in");
     this.getExperience();
   },
   methods: {
+    adjusted(pictures) {
+      if (pictures == null || pictures.length == 0) {
+        return [];
+      }
+
+      //order by format (landscape, portrait)
+      pictures.sort((a, b) => (a.format > b.format) ? 1 : -1);
+
+      let grid = [...pictures];
+      //count the number of landscape pictures
+      let landscape = pictures.filter(picture => picture.format == 'landscape').length * 6;
+      //count the number of portrait pictures
+      let portrait = pictures.filter(picture => picture.format == 'portrait').length * 3;
+      //calculate the empty spaces
+      let empty = 12 - (landscape + portrait) % 12;
+      this.empty = empty;
+      return grid;
+    },
+    arrayFromObject(steps) {
+      const sts = this.groupByDay(steps);
+      return Object.entries(sts);
+    },
+    groupByDay(steps) {
+      if (steps == null || steps.length == 0) {
+        return [];
+      }
+      return steps.reduce((acc, step) => {
+        const date = new Date(step.start_at);
+        const day = date.toLocaleDateString();
+        if (!acc[day]) {
+          acc[day] = [];
+        }
+        acc[day].push(step);
+        return acc;
+      }, {});
+    }
+    ,
     formatDate(date) {
       return date.toLocaleDateString();
-    },
+    }
+    ,
     getAmountByDate(data, date) {
       const targetDate = new Date(date)
       let amount = data.amount;
@@ -424,15 +896,14 @@ export default {
       }
       // Return default basic amount if date not in any range
       return amount;
-    },
+    }
+    ,
     async getExperience() {
-      let  i=this.$route.params.id?this.$route.params.id :1;
+      let i = this.$route.params.id ? this.$route.params.id : 1;
 
       await axios.get("/experiencesjson/" + i + ".json")
-        .then(response => this.experience = response.data)
-        .then(data => {
-          console.log(data);
-        });
+        .then(response => this.experience = response.data);
+
       // const module='@/static/experiences/'+this.$route.params.id+'.json';
       // console.log(module)
     }
@@ -440,9 +911,90 @@ export default {
 };
 </script>
 
-<style>
-.mgl-map {
-  height: 400px;
-  width: 100%;
+<style lang="scss">
+.full-height {
+  max-height: 90vh !important;
+  overflow-y: hidden;
 }
+
+.scrollable {
+  height: 90vh;
+  overflow-y: auto;
+}
+
+.experience-hiking {
+}
+
+.card-dall-parent-main {
+  background-size: contain !important;
+  border-radius: 16px !important;
+
+  .card-dall {
+    border: 19px solid rgba(255, 255, 255, 0.12) !important;
+  }
+}
+
+.card-dall-parent {
+  background: #4d54433d;
+  background-size: contain !important;
+  border-radius: 16px !important;
+}
+
+.card-dall {
+  border-radius: 16px !important;
+  backdrop-filter: blur(0.2px) !important;
+
+  .v-card {
+    border-radius: 10px !important;
+  }
+}
+
+.card-nature {
+  .card-dall-parent-main {
+    background: url(/public/imgs/nature-pattern.png) !important;
+    background-size: contain !important;
+  }
+
+  .card-dall {
+    border: 7px solid rgba(68, 92, 41, 0.51);
+
+    .v-card {
+      border: 3px solid #445c29 !important;
+      background-color: #fefee9 !important;
+    }
+  }
+}
+
+.card-snow {
+  .card-dall-parent-main {
+    background: url(/public/imgs/snow-pattern.png) !important;
+    background-size: contain !important;
+  }
+
+  .card-dall {
+    border: 7px solid rgba(220, 227, 231, 0.5);
+
+    .v-card {
+      border: 3px solid #446473 !important;
+      background-color: #f3f5f6 !important;
+    }
+  }
+}
+
+.card-desert {
+  .card-dall-parent-main {
+    background: url(/public/imgs/desert-pattern.png) !important;
+    background-size: contain !important;
+  }
+
+  .card-dall {
+    border: 7px solid rgba(214, 148, 94, 0.44);
+    .v-card {
+      border: 3px solid #b98153 !important;
+      background-color: rgba(245, 242, 241, 0.99) !important;
+    }
+  }
+}
+
+
 </style>

@@ -1,166 +1,439 @@
 {
-  "id": 200,
-  "title": "Desert Safari Adventure",
-  "description": "Experience the thrill of a desert safari, including dune bashing, camel riding, and a traditional Arabian dinner under the stars.",
-  "start_at": "2023-12-05",
-  "end_at": "2023-12-05",
-  "price": 150,
-  "max_participants": 30,
-  "booked_nbr": 15,
+  "id": 2,
+  "type": "nature",
+  "title": "Akchour Waterfalls Hiking Adventure",
+  "description": "Embark on a memorable hiking journey to the breathtaking Akchour Waterfalls in the heart of the Rif Mountains, near the enchanting city of Chefchaouen, Morocco. This trek is perfect for nature lovers and adventurers seeking to explore the serene beauty of Akchour's landscapes. The trek spans 3 days, leading you through lush green valleys, along river trails, and to the majestic waterfalls. It's guided by a local expert familiar with the area's flora and fauna.",
+  "start_at": "2023-07-15",
+  "end_at": "2023-07-17",
+  "price": 550,
+  "max_participants": 15,
+  "booked_nbr": 150,
   "difficulty": 2,
-  "rating": 4.7,
-  "flexible": false,
-  "duration": 6,
-  "unit_duration": "hours",
+  "rating": 4.8,
+  "rater_count": 300,
+  "flexible": true,
+  "duration": 3,
+  "unit_duration": "day",
   "activities": [
     {
-      "id": 21,
-      "name": "Dune Bashing",
-      "icon": "dune_bashing_icon.png"
+      "id": 1,
+      "name": "Hiking",
+      "icon": "mdi-image-filter-hdr"
     },
     {
-      "id": 22,
-      "name": "Camel Riding",
-      "icon": "camel_icon.png"
+      "id": 2,
+      "name": "Photography"
     },
     {
-      "id": 23,
-      "name": "Arabian Dinner",
-      "icon": "dinner_icon.png"
+      "id": 3,
+      "name": "Swimming"
     }
   ],
   "requirements": [
     {
-      "id": 31,
-      "name": "Comfortable Clothing"
+      "id": 1,
+      "name": "Comfortable Hiking Shoes"
     },
     {
-      "id": 32,
-      "name": "Sunglasses"
+      "id": 2,
+      "name": "Water Bottle"
+    },
+    {
+      "id": 3,
+      "name": "Swimwear"
     }
   ],
   "notices": [
     {
-      "id": 41,
-      "name": "Not suitable for pregnant women"
+      "id": 1,
+      "name": "Be prepared for varying weather conditions."
+    },
+    {
+      "id": 2,
+      "name": "Some trails may be challenging for beginners."
     }
   ],
   "take_into_account": [
     {
-      "id": 51,
-      "name": "Temperature can drop in the evening"
+      "id": 1,
+      "name": "Bring a camera for stunning landscape photography."
+    },
+    {
+      "id": 2,
+      "name": "Pack light but include essential gear for overnight stays."
     }
   ],
   "guide": {
-    "id": 102,
-    "name": "Ahmed Al-Rashid",
-    "bio": "A local expert with over 10 years of experience in desert adventures.",
-    "expertise": ["Desert Safaris", "Camel Tours"],
-    "languages": ["Arabic", "English"],
+    "id": 2,
+    "name": "Amina El Fassi",
+    "bio": "I am a local hiking guide with over 8 years of experience leading expeditions in the Rif Mountains. My love for nature and the outdoors drives my passion for guiding adventurers through some of Morocco's most scenic trails. I am fluent in English, Spanish, and Arabic, and have deep knowledge of the region's cultural and natural history.",
+    "expertise": [
+      "Hiking",
+      "Nature Photography"
+    ],
+    "languages": [
+      "English",
+      "Spanish"
+    ],
     "contact": {
-      "email": "ahmed.alrashid@example.com",
-      "phone": "+1234567890"
+      "email": "amina.el_fassi@example.com",
+      "phone": "234-567-8901"
     },
-    "certification": "Desert Safari Expert",
-    "years_experience": 10,
+    "certification": "Certified Hiking Guide",
+    "years_experience": 8,
     "pictures": [
       {
-        "id": 301,
-        "url": "ahmed_pic1.jpg"
+        "id": 1,
+        "url": "https://picsum.photos/500/300?akchour1"
+      },
+      {
+        "id": 2,
+        "url": "https://picsum.photos/500/300?akchour2"
+      },
+      {
+        "id": 3,
+        "url": "https://picsum.photos/500/300?akchour3"
       }
     ]
   },
   "destination": {
-    "id": 120,
-    "label": "Sahara Desert",
-    "description": "The world's largest hot desert, offering breathtaking landscapes.",
+    "id": 2,
+    "label": "Akchour Waterfalls",
+    "description": "The Akchour Waterfalls are a hidden gem located in the Rif Mountains near Chefchaouen. These cascading waterfalls offer a stunning natural retreat with lush vegetation, diverse wildlife, and crystal-clear pools perfect for swimming. The area provides a tranquil escape from the bustling city life and is a paradise for hikers and nature enthusiasts.",
     "location": {
-      "id": 130,
-      "label": "Central Sahara",
-      "country": "Algeria",
-      "city": "Tamanrasset",
-      "address": "Unnamed Road, Tamanrasset 11000, Algeria",
-      "lat": 22.7899,
-      "lon": 5.5228
+      "id": 2,
+      "label": "Akchour",
+      "country": "Morocco",
+      "city": "Chefchaouen",
+      "address": "Akchour, Chefchaouen, Morocco",
+      "lat": 35.172491,
+      "lon": -5.269706
+    },
+    "multimedia": {
+      "images": [
+        {
+          "url": "https://picsum.photos/800/600?akchour1"
+        },
+        {
+          "url": "https://picsum.photos/800/600?akchour2"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://example.com/videos/akchour_hike.mp4"
+        }
+      ],
+      "360_views": [
+        {
+          "url": "https://example.com/360/akchour_panorama.html"
+        }
+      ]
+    },
+    "weather_and_seasonal_info": {
+      "live_weather": {
+        "temperature": 25,
+        "weather": "Partly Cloudy",
+        "wind_speed": 5,
+        "wind_direction": "E",
+        "humidity": 60,
+        "precipitation": 10
+      },
+      "best_seasons": [
+        "Spring",
+        "Summer"
+      ],
+      "typical_weather": {
+        "spring": "Mild temperatures with occasional showers",
+        "summer": "Warm and sunny",
+        "autumn": "Cool and pleasant",
+        "winter": "Mild with rare snowfall"
+      }
+    },
+    "local_info": {
+      "nearby_destinations": [
+        {
+          "id": 3,
+          "label": "Chefchaouen",
+          "location": {
+            "id": 3,
+            "label": "Chefchaouen",
+            "country": "Morocco",
+            "city": "Chefchaouen",
+            "address": "Chefchaouen, Morocco",
+            "lat": 35.168776,
+            "lon": -5.263233
+          },
+          "multimedia": {
+            "images": [
+              {
+                "url": "https://picsum.photos/800/600?chefchaouen1"
+              },
+              {
+                "url": "https://picsum.photos/800/600?chefchaouen2"
+              }
+            ],
+            "videos": [
+              {
+                "url": "https://example.com/videos/chefchaouen_tour.mp4"
+              }
+            ],
+            "360_views": [
+              {
+                "url": "https://example.com/360/chefchaouen_panorama.html"
+              }
+            ]
+          }
+        }
+      ],
+      "local_customs": [
+        "Respect the natural surroundings and local wildlife.",
+        "Be mindful of local cultural norms and traditions."
+      ]
     }
   },
   "pictures": [
     {
-      "id": 401,
-      "url": "safari_pic1.jpg"
+      "id": 1,
+      "url": "https://picsum.photos/300/600?akchour1",
+      "format": "portrait"
     },
     {
-      "id": 402,
-      "url": "safari_pic2.jpg"
+      "id": 2,
+      "url": "https://picsum.photos/300/600?akchour2",
+      "format": "portrait"
+    },
+    {
+      "id": 3,
+      "url": "https://picsum.photos/300/600?akchour3",
+      "format": "portrait"
+    },
+    {
+      "id": 4,
+      "url": "https://picsum.photos/800/300?akchour4",
+      "format": "landscape"
+    },
+    {
+      "id": 5,
+      "url": "https://picsum.photos/300/600?akchour5",
+      "format": "portrait"
     }
   ],
+  "picture_url": "/public/imgs/nature-bg.png",
   "steps": [
     {
-      "id": 210,
-      "label": "Dune Bashing Session",
-      "description": "Experience the thrill as you ride up and down the dunes in a 4x4.",
-      "duration": "2 hours",
-      "start_at": "15:00",
+      "id": 1,
+      "label": "Chefchaouen to Akchour",
+      "day": 1,
+      "description": "We'll start our journey from the charming city of Chefchaouen to the village of Akchour. After settling in, we'll enjoy a brief orientation walk around the village.",
+      "duration": "PT3H",
       "activities": [
         {
-          "id": 21,
-          "name": "Dune Bashing",
-          "icon": "dune_bashing_icon.png"
+          "id": 1,
+          "name": "Transportation"
         }
       ],
       "destination": {
-        "id": 121,
-        "label": "Dune Site",
-        "description": "A popular spot for dune bashing with high dunes.",
+        "id": 2,
+        "label": "Akchour Village",
         "location": {
-          "id": 131,
-          "label": "Dune Site",
-          "country": "Algeria",
-          "city": "Tamanrasset",
-          "address": "Dune Road, Tamanrasset 11001, Algeria",
-          "lat": 22.7905,
-          "lon": 5.5240
+          "id": 2,
+          "label": "Akchour",
+          "country": "Morocco",
+          "city": "Chefchaouen",
+          "address": "Akchour, Chefchaouen, Morocco",
+          "lat": 35.172491,
+          "lon": -5.269706
         }
       },
       "pictures": [
         {
-          "id": 403,
-          "url": "dune_bashing_pic.jpg"
+          "id": 1,
+          "url": "https://picsum.photos/800/600?akchour_village1"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/800/600?akchour_village2"
+        }
+      ],
+      "start_at": "2023-07-15T09:00:00Z"
+    },
+    {
+      "id": 2,
+      "label": "Akchour Village to Waterfalls",
+      "day": 2,
+      "description": "Embark on the trail leading to the Akchour Waterfalls. The hike, covering scenic landscapes and natural pools, takes approximately 4 hours. There will be opportunities for swimming and photography.",
+      "duration": "PT4H",
+      "activities": [
+        {
+          "id": 1,
+          "name": "Hiking"
+        },
+        {
+          "id": 3,
+          "name": "Swimming"
+        }
+      ],
+      "start_at": "2023-07-16T08:00:00Z",
+      "destination": {
+        "id": 3,
+        "label": "Akchour Waterfalls",
+        "location": {
+          "id": 3,
+          "label": "Waterfalls",
+          "country": "Morocco",
+          "city": "Chefchaouen",
+          "lat": 35.171446,
+          "lon": -5.260498
+        }
+      },
+      "pictures": [
+        {
+          "id": 1,
+          "url": "https://picsum.photos/800/600?akchour_waterfall1"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/800/600?akchour_waterfall2"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "label": "Exploration and Return",
+      "day": 3,
+      "description": "Spend the morning exploring the area around the waterfalls, enjoying the serene environment. After lunch, we'll begin our return journey to Akchour Village, followed by transportation back to Chefchaouen.",
+      "duration": "PT5H",
+      "activities": [
+        {
+          "id": 2,
+          "name": "Photography"
+        },
+        {
+          "id": 1,
+          "name": "Hiking"
+        }
+      ],
+      "start_at": "2023-07-17T09:00:00Z",
+      "destination": {
+        "id": 2,
+        "label": "Akchour Village",
+        "location": {
+          "id": 2,
+          "label": "Akchour",
+          "country": "Morocco",
+          "city": "Chefchaouen",
+          "address": "Akchour, Chefchaouen, Morocco",
+          "lat": 35.172491,
+          "lon": -5.269706
+        }
+      },
+      "pictures": [
+        {
+          "id": 1,
+          "url": "https://picsum.photos/800/600?akchour_village3"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/800/600?akchour_village4"
         }
       ]
     }
   ],
   "pricing_details": [
     {
-      "id": 250,
+      "id": 1,
       "description": "Standard Package",
-      "amount": 150,
-      "includes": ["Dune Bashing", "Camel Ride", "Dinner"],
+      "amount": 550,
+      "includes": [
+        "Accommodation in Akchour",
+        "Meals (Breakfast, Lunch, Dinner)",
+        "Guided Hiking",
+        "Transport from Chefchaouen to Akchour and back"
+      ],
       "optional_add_ons": [
         {
-          "id": 251,
-          "description": "Professional Photo Session",
+          "id": 1,
+          "description": "Photography Kit Rental",
           "amount": 50
+        },
+        {
+          "id": 2,
+          "description": "Single Room Supplement",
+          "amount": 100
         }
       ],
       "date_based_pricing": [
         {
-          "start_date": "2023-12-01",
-          "end_date": "2023-12-31",
-          "amount": 160
+          "start_date": "2023-05-01",
+          "end_date": "2023-06-30",
+          "amount": 500
+        },
+        {
+          "start_date": "2023-07-01",
+          "end_date": "2023-08-31",
+          "amount": 550
+        },
+        {
+          "start_date": "2023-09-01",
+          "end_date": "2023-10-31",
+          "amount": 525
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "description": "Luxury Package",
+      "amount": 750,
+      "includes": [
+        "Upgraded Accommodation",
+        "All Meals (including special dietary menus)",
+        "Private Guided Hiking",
+        "Private Transport",
+        "Photography Guide"
+      ],
+      "optional_add_ons": [
+        {
+          "id": 3,
+          "description": "Extra Day in Chefchaouen",
+          "amount": 200
+        },
+        {
+          "id": 4,
+          "description": "Cultural Tour of Chefchaouen",
+          "amount": 150
         }
       ],
-      "excludes": ["Drinks"]
+      "date_based_pricing": [
+        {
+          "start_date": "2023-05-01",
+          "end_date": "2023-06-30",
+          "amount": 700
+        },
+        {
+          "start_date": "2023-07-01",
+          "end_date": "2023-08-31",
+          "amount": 750
+        },
+        {
+          "start_date": "2023-09-01",
+          "end_date": "2023-10-31",
+          "amount": 725
+        }
+      ],
+      "excludes": [
+        "Personal Expenses",
+        "Travel Insurance"
+      ]
     }
   ],
   "meetingPoint": {
     "location": {
-      "lat": 22.7856,
-      "lon": 5.5197,
-      "address": "Main Gate, Tamanrasset 11000, Algeria"
+      "lat": 35.171399,
+      "lon": -5.269710,
+      "address": "Central Plaza, Chefchaouen, Morocco"
     },
-    "time": "14:30",
-    "instructions": "Gather at the main gate, our guide will meet you there."
+    "time": "2023-07-15T07:00:00Z",
+    "instructions": "Participants will gather at the Central Plaza in Chefchaouen. Look for the guide holding a sign with 'Akchour Hiking Adventure' written on it. Please be there 15 minutes prior to departure for a brief introduction and to answer any last-minute questions."
   },
   "cancellation_policy": {
     "notice_period": "48 hours",
@@ -168,11 +441,28 @@
   },
   "user_reviews": [
     {
-      "userId": "u12345",
-      "username": "Alice",
+      "userId": "a123",
+      "username": "MountainExplorer",
       "rating": 5,
-      "comment": "An unforgettable experience! Highly recommended.",
-      "date": "2023-01-10"
+      "comment": "This trekking experience was unforgettable! The guide was knowledgeable and the scenery was breathtaking. Highly recommend!",
+      "date": "2023-06-10"
+    },
+    {
+      "userId": "b456",
+      "username": "AdventureSeeker",
+      "rating": 4,
+      "comment": "Great experience overall. The food could have been better, but the trek itself was amazing!",
+      "date": "2023-06-12"
+    },
+    {
+      "userId": "c789",
+      "username": "NatureLover",
+      "rating": 5,
+      "comment": "Absolutely loved it! The guide, the trek, the landscapes – everything was top-notch!",
+      "date": "2023-06-15"
     }
   ]
 }
+
+
+

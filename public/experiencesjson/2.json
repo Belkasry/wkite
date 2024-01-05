@@ -1,6 +1,7 @@
 {
   "id": 2,
   "title": "Desert Camel Safari in the Sahara Desert",
+  "type": "desert",
   "description": "Embark on a memorable journey through the vast Sahara Desert in Morocco, experiencing the golden dunes and the starry nights...",
   "start_at": "2023-07-01",
   "end_at": "2023-07-03",
@@ -99,18 +100,32 @@
   },
   "pictures": [
     {
-      "id": 4,
-      "url": "https://picsum.photos/800/600?random=4"
+      "id": 7,
+      "url": "https://picsum.photos/800/600?random=7",
+      "format": "landscape"
     },
     {
-      "id": 5,
-      "url": "https://picsum.photos/800/600?random=5"
+      "id": 13,
+      "url": "https://picsum.photos/800/600?random=7",
+      "format": "landscape"
     },
     {
-      "id": 6,
-      "url": "https://picsum.photos/800/600?random=6"
+      "id": 8,
+      "url": "https://picsum.photos/800/600?random=8",
+      "format": "portrait"
+    },
+    {
+      "id": 9,
+      "url": "https://picsum.photos/800/600?random=9",
+      "format": "landscape"
+    },
+    {
+      "id": 10,
+      "url": "https://picsum.photos/800/600?random=10",
+      "format": "landscape"
     }
   ],
+  "picture_url": "/public/imgs/desert-bg.png",
   "steps": [
     {
       "id": 5,

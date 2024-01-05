@@ -7,9 +7,19 @@ const routes = [
     component: () => import('@/layouts/default/Default.vue'),
     children: [
       {
-        path: '',
+        path: '/',
         name: 'Home',
+        component: () => import( '@/views/Home.vue'),
+      },
+      {
+        path: '/experiences',
+        name: 'Experiences',
         component: () => import( '@/views/Experiences.vue'),
+      },
+      {
+        path: '/experiences/:id',
+        name:'Experience',
+        component: () => import('@/views/Experience.vue'),
       },
     ],
   },
@@ -23,11 +33,6 @@ const routes = [
         component: () => import( '@/views/Experience.vue'),
       },
     ],
-  },
-  {
-    path: '/experiences/:id',
-    name:'experience',
-    component: () => import('@/views/Experience.vue')
   },
 ]
 
