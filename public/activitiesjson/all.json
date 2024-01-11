@@ -1,0 +1,94 @@
+[
+  {
+    "id": 1,
+    "name": "Climbing",
+    "description": "Climbing is the activity of using one's hands, feet, or any other part of the body to ascend a steep object. It is done recreationally, competitively, in trades that rely on it, and in emergency rescue and military operations. It is done indoors and out, on natural and manmade structures.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Ainhize_Belar_eskalatzen.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Mountaineering",
+    "description": "Mountaineering is the set of activities that involves ascending mountains. Mountaineering-related activities include traditional outdoor climbing, skiing, and traversing via ferratas. Indoor climbing, sport climbing and bouldering are also considered mountaineering by some.",
+    "image":"https://upload.wikimedia.org/wikipedia/commons/d/db/Mt_kenya_austrian_hut_with_nelion.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Caving",
+    "description": "Caving – also traditionally known as spelunking in the United States and Canada and potholing in the United Kingdom and Ireland – is the recreational pastime of exploring wild cave systems. In contrast, speleology is the scientific study of caves and the cave environment.",
+    "image":"https://upload.wikimedia.org/wikipedia/commons/7/7a/Alabama_cave_2005-04-24.km.jpg"
+
+  },
+  {
+    "id": 4,
+    "name": "Skiing",
+    "description": "Skiing can be a means of transport, a recreational activity or a competitive winter sport in which the participant uses skis to glide on snow. Many types of competitive skiing events are recognized by the International Olympic Committee (IOC), and the International Ski Federation (FIS).",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Freestyle_skiing_jump2.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Hiking",
+    "description": "Hiking is a long, vigorous walk, usually on trails or footpaths in the countryside. Walking for pleasure developed in Europe during the eighteenth century. Religious pilgrimages have existed much longer but they involve walking long distances for a spiritual purpose associated with specific religions.",
+    "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg/1920px-Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Trekking",
+    "description": "Trekking is a form of walking, undertaken with the specific purpose of exploring and enjoying the scenery. It usually takes place on trails in areas of relatively unspoiled wilderness.",
+    "image":"https://upload.wikimedia.org/wikipedia/commons/2/20/Backpacking_in_Grand_Teton_NP-NPS.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Canyoning",
+    "description": "Canyoning is travelling in canyons using a variety of techniques that may include other outdoor activities such as walking, scrambling, climbing, jumping, abseiling (rappelling), and swimming.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Bali_canyoning.jpg/1024px-Bali_canyoning.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Rafting",
+    "description": "Rafting and white water rafting are recreational outdoor activities which use an inflatable raft to navigate a river or other body of water. This is often done on whitewater or different degrees of rough water.",
+    "image":"https://upload.wikimedia.org/wikipedia/commons/4/4c/AREA_47_Rafting_Imster_Schlucht%2C_2018_%28cropped%29.jpg"
+
+  },
+  {
+    "id": 9,
+    "name": "Desert Tour",
+    "description":"Desert tour is a journey through the desert, sometimes for recreational purposes. Historically, deserts are considered to be hostile environments for humans, so tours through deserts, especially in Africa and the Middle East, have been historically rare.",
+    "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Deserto_libico_-_Driving_-_panoramio.jpg/2560px-Deserto_libico_-_Driving_-_panoramio.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Kayaking",
+    "description": "Sea kayaking is the sport of paddling a kayak on open waters of lakes, bays, and the ocean. Sea kayaks are seaworthy small boats with a covered deck and the ability to incorporate a spray deck. They trade off the maneuverability of whitewater kayaks for higher cruising speed, cargo capacity, ease of straight-line paddling, and comfort for long journeys.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Kayak-Valdes-BC.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Surfing",
+    "description": "Surfing is a surface water pastime in which the wave rider, referred to as a surfer, rides on the forward part, or face, of a moving wave, which usually carries the surfer towards the shore. Waves suitable for surfing are primarily found in the ocean, but can also be found in lakes or rivers in the form of a standing wave or tidal bore.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Surf_IMG_0949_%283120282731%29.jpg/1280px-Surf_IMG_0949_%283120282731%29.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Diving",
+    "description": "Underwater diving, as a human activity, is the practice of descending below the water's surface to interact with the environment. Immersion in water and exposure to high ambient pressure have physiological effects that limit the depths and duration possible in ambient pressure diving.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/9/94/Buzo.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Paragliding",
+    "description": "Paragliding is the recreational and competitive adventure sport of flying paragliders: lightweight, free-flying, foot-launched glider aircraft with no rigid primary structure. The pilot sits in a harness or lies supine in a cocoon-like 'speed bag' suspended below a fabric wing.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/0/05/Img20040730_0302_at_neustift.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Mountain Biking",
+    "description": "Mountain biking is a sport of riding bicycles off-road, often over rough terrain, usually using specially designed mountain bikes. Mountain bikes share similarities with other bikes but incorporate features designed to enhance durability and performance in rough terrain.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/MTB_downhill.jpg "
+  },
+  {
+    "id": 17,
+    "name": "Skydiving",
+    "description": "Parachuting, or skydiving, is a method of transiting from a high point to Earth with the aid of gravity, involving the control of speed during the descent using a parachute or parachutes. It may involve more or less free-falling which is a period when the parachute has not yet been deployed and the body gradually accelerates to terminal velocity.",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Canopy_Relative_Work_%28CReW%29.jpg/1920px-Canopy_Relative_Work_%28CReW%29.jpg "
+  }
+]

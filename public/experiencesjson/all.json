@@ -1,0 +1,2093 @@
+[
+  {
+    "id": 1,
+    "type": "snow",
+    "title": "Mountain Trekking in the Atlas Mountains",
+    "description": "Join us for a challenging mountain trek through the stunning Atlas Mountains in Morocco and summit the highest peak in North Africa. This trek is perfect for those who want to experience the beauty of the Atlas Mountains and the rich culture of Morocco. We will spend 4 days trekking through the mountains, passing through small villages and enjoying the breathtaking views. The trek is led by an experienced mountain guide who will ensure your safety and comfort throughout the trip. This trek is suitable for those with a good level of fitness and some hiking experience.",
+    "start_at": "2023-06-01",
+    "end_at": "2023-06-05",
+    "price": 899,
+    "max_participants": 20,
+    "booked_nbr": 300,
+    "difficulty": 3,
+    "rating": 4.7,
+    "rater_count": 450,
+    "flexible": true,
+    "duration": 5,
+    "unit_duration": "day",
+    "activities": [
+      {
+        "id": 4,
+        "name": "Skiing",
+        "description": "Skiing can be a means of transport, a recreational activity or a competitive winter sport in which the participant uses skis to glide on snow. Many types of competitive skiing events are recognized by the International Olympic Committee (IOC), and the International Ski Federation (FIS).",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Freestyle_skiing_jump2.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Hiking",
+        "description": "Hiking is a long, vigorous walk, usually on trails or footpaths in the countryside. Walking for pleasure developed in Europe during the eighteenth century. Religious pilgrimages have existed much longer but they involve walking long distances for a spiritual purpose associated with specific religions.",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg/1920px-Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg"
+      },
+      {
+        "id": 6,
+        "name": "Trekking",
+        "description": "Trekking is a form of walking, undertaken with the specific purpose of exploring and enjoying the scenery. It usually takes place on trails in areas of relatively unspoiled wilderness.",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/2/20/Backpacking_in_Grand_Teton_NP-NPS.jpg"
+      },
+      {
+        "id": 1,
+        "name": "Climbing",
+        "description": "Climbing is the activity of using one's hands, feet, or any other part of the body to ascend a steep object. It is done recreationally, competitively, in trades that rely on it, and in emergency rescue and military operations. It is done indoors and out, on natural and manmade structures.",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Ainhize_Belar_eskalatzen.jpg"
+      },
+      {
+        "id": 2,
+        "name": "Mountaineering",
+        "description": "Mountaineering is the set of activities that involves ascending mountains. Mountaineering-related activities include traditional outdoor climbing, skiing, and traversing via ferratas. Indoor climbing, sport climbing and bouldering are also considered mountaineering by some.",
+        "image":"https://upload.wikimedia.org/wikipedia/commons/d/db/Mt_kenya_austrian_hut_with_nelion.jpg"
+      }
+    ],
+    "requirements": [
+      {
+        "id": 1,
+        "name": "Passport"
+      },
+      {
+        "id": 2,
+        "name": "Visa"
+      },
+      {
+        "id": 3,
+        "name": "Travel Insurance"
+      }
+    ],
+    "notices": [
+      {
+        "id": 1,
+        "name": "Altitude sickness is a risk at high elevations."
+      },
+      {
+        "id": 2,
+        "name": "The trek can be physically demanding."
+      }
+    ],
+    "take_into_account": [
+      {
+        "id": 1,
+        "name": "Bring warm clothing as temperatures can drop significantly at high elevations."
+      },
+      {
+        "id": 2,
+        "name": "Bring sunscreen and a hat to protect from the sun."
+      }
+    ],
+    "guide":{
+      "id": 1,
+      "name": "Rime Machiche",
+      "nbr_experiences": 10,
+      "verified": true,
+      "title": "Mountain Guide",
+      "rating": 4.0,
+      "bio": "I am an experienced mountain guide with over 10 years of experience leading treks in the Atlas Mountains. I am passionate about sharing my love of the mountains with others and helping them discover the beauty of Morocco. I speak English, French, and Arabic fluently and have extensive knowledge of the local culture and history. I look forward to welcoming you to Morocco and showing you the best of the Atlas Mountains!",
+      "activities": [
+        "Mountain Trekking",
+        "Survival Training"
+      ],
+      "languages": [
+        "English",
+        "French"
+      ],
+      "contact": {
+        "email": "john.smith@example.com",
+        "phone": "123-456-7890"
+      },
+      "certification": "Certified Mountain guide",
+      "years_experience": 10,
+      "pictures": [
+        {
+          "id": 1,
+          "url": "https://www.datocms-assets.com/55179/1647312643-9506360856_d7d657a16a_o.jpg"
+        },
+        {
+          "id": 2,
+          "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Toubkal_Orange.jpg/1920px-Toubkal_Orange.jpg"
+        },
+        {
+          "id": 3,
+          "url": "https://picsum.photos/500/300?guide"
+        }
+      ],
+      "place": {
+        "id": 1,
+        "label": "Azilal",
+        "location": {
+          "id": 1,
+          "label": "Azilal",
+          "country": "Morocco",
+          "city": "Azilal",
+          "lat": 31.142,
+          "lon": -7.914
+        }
+      },
+      "reviews": [
+        {
+          "id": 1,
+          "rating": 5,
+          "comment": "Rime was a great mountain guide. He was very patient and helped me learn how to climb in no time. I would definitely recommend him to anyone looking for a mountain guide in Morocco!"
+        },
+        {
+          "id": 2,
+          "rating": 4,
+          "comment": "Rime was a great mountain guide. He was very patient and helped me learn how to climb in no time. I would definitely recommend him to anyone looking for a mountain guide in Morocco!"
+        },
+        {
+          "id": 3,
+          "rating": 5,
+          "comment": "Rime was a great mountain guide. He was very patient and helped me learn how to climb in no time. I would definitely recommend him to anyone looking for a mountain guide in Morocco!"
+        }
+      ],
+      "nbr_participants": 100
+    },
+    "destination": {
+      "id": 1,
+      "label": "Mount Toubkal",
+      "description": "Mount Toubkal is the highest peak in the Atlas Mountains and North Africa. It is located in Toubkal National Park, about 60 km south of Marrakesh. The mountain is a popular destination for trekkers and climbers due to its accessibility and stunning views. The summit offers panoramic views of the surrounding mountains and valleys. The mountain is also home to a variety of wildlife, including Barbary sheep, wild boar, and the endangered Barbary macaque.",
+      "location": {
+        "id": 1,
+        "label": "Mount Toubkal",
+        "country": "Morocco",
+        "city": "Marrakesh",
+        "address": "Toubkal National Park, Morocco",
+        "lat": 31.0600714,
+        "lon": -7.9147482
+      },
+      "multimedia": {
+        "images": [
+          {
+            "url": "https://picsum.photos/800/600?mount_toubkal"
+          },
+          {
+            "url": "https://picsum.photos/800/600?mount_toubkal_view"
+          }
+        ],
+        "videos": [
+          {
+            "url": "https://example.com/videos/mount_toubkal_tour.mp4"
+          }
+        ],
+        "360_views": [
+          {
+            "url": "https://example.com/360/mount_toubkal_panorama.html"
+          }
+        ]
+      },
+      "weather_and_seasonal_info": {
+        "live_weather": {
+          "temperature": 20,
+          "weather": "Sunny",
+          "wind_speed": 10,
+          "wind_direction": "N",
+          "humidity": 50,
+          "precipitation": 0
+        },
+        "best_seasons": [
+          "Spring",
+          "Autumn"
+        ],
+        "typical_weather": {
+          "spring": "Mild temperatures with occasional rainfall",
+          "summer": "Warm and dry",
+          "autumn": "Cool with clear skies",
+          "winter": "Cold, potential snowfall"
+        }
+      },
+      "local_info": {
+        "nearby_desinations": [
+          {
+            "id": 2,
+            "label": "Marrakesh",
+            "location": {
+              "id": 2,
+              "label": "Marrakesh",
+              "country": "Morocco",
+              "city": "Marrakesh",
+              "address": "Marrakesh, Morocco",
+              "lat": 31.6294723,
+              "lon": -7.9810845
+            },
+            "multimedia": {
+              "images": [
+                {
+                  "url": "https://picsum.photos/800/600?marrakesh"
+                },
+                {
+                  "url": "https://picsum.photos/800/600?marrakesh_view"
+                }
+              ],
+              "videos": [
+                {
+                  "url": "https://example.com/videos/marrakesh_tour.mp4"
+                }
+              ],
+              "360_views": [
+                {
+                  "url": "https://example.com/360/marrakesh_panorama.html"
+                }
+              ]
+            }
+          }
+        ],
+        "local_customs": [
+          "Respect local traditions and dress modestly. Haggling is a common practice in markets.",
+          "Avoid public displays of affection."
+        ]
+      }
+    },
+    "pictures": [
+      {
+        "id": 1,
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/1920px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg",
+        "format": "landscape"
+      },
+      {
+        "id": 2,
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Vihren_Pirin_IMG_8898.jpg/1920px-Vihren_Pirin_IMG_8898.jpg",
+        "format": "landscape"
+      },
+      {
+        "id": 3,
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/GlarusAlps.jpg",
+        "format": "landscape"
+      },
+      {
+        "id": 4,
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ortler_Ascent_-_South_Tyrol.jpg/1280px-Ortler_Ascent_-_South_Tyrol.jpg",
+        "format": "portrait"
+      },
+      {
+        "id": 4,
+        "url": "https://static01.nyt.com/images/2021/01/19/sports/19summit-k2-3/19summit-k2-3-superJumbo.jpg?quality=75&auto=webp",
+        "format": "portrait"
+      },
+      {
+        "id": 5,
+        "url": "https://www.datocms-assets.com/55179/1647312643-9506360856_d7d657a16a_o.jpg",
+        "format": "portrait"
+      },
+      {
+        "id": 6,
+        "url": "https://picsum.photos/300/600?random=7",
+        "format": "portrait"
+      }
+    ],
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Toubkal_Orange.jpg/1920px-Toubkal_Orange.jpg",
+    "steps": [
+      {
+        "id": 1,
+        "label": "Marrakesh to Imlil",
+        "day": 1,
+        "description": "On the first day, we will drive from Marrakesh to Imlil, a small village at the base of Mount Toubkal. We will spend the night in a traditional Moroccan guesthouse in Imlil.",
+        "duration": "PT5H",
+        "activities": [
+          {
+            "id": 1,
+            "name": "Transportation"
+          }
+        ],
+        "destination": {
+          "id": 1,
+          "label": "Dar Imlil",
+          "location": {
+            "id": 1,
+            "label": "Imlil",
+            "country": "Morocco",
+            "city": "Marrakesh",
+            "adress": "Imlil rue principale",
+            "lat": 31.0600714,
+            "lon": -7.9147482
+          }
+        },
+        "pictures": [
+          {
+            "id": 1,
+            "url": "https://picsum.photos/800/600?random=1"
+          },
+          {
+            "id": 2,
+            "url": "https://picsum.photos/800/600?random=2"
+          },
+          {
+            "id": 3,
+            "url": "https://picsum.photos/800/600?random=3"
+          }
+        ],
+        "start_at": "2023-02-01T18:00:00Z"
+      },
+      {
+        "id": 2,
+        "label": "Imlil to Toubkal Base Camp",
+        "description": "On the second day, we will begin our hike to Toubkal Base Camp. The hike takes about 6 hours and passes through small villages and beautiful landscapes. We will spend the night in a tent at the base camp.",
+        "duration": "PT24H",
+        "day": 2,
+        "activities": [
+          {
+            "id": 2,
+            "name": "Camping"
+          }
+        ],
+        "start_at": "2023-02-02T18:00:00Z",
+        "destination": {
+          "id": 1,
+          "label": "Refuge Toubkal",
+          "location": {
+            "id": 1,
+            "label": "Toubkal",
+            "country": "Morocco",
+            "city": "Marrakesh",
+            "lat": 31.0600714,
+            "lon": -7.9147482
+          }
+        },
+        "pictures": [
+          {
+            "id": 1,
+            "url": "https://picsum.photos/800/600?random=1"
+          },
+          {
+            "id": 2,
+            "url": "https://picsum.photos/800/600?random=2"
+          },
+          {
+            "id": 3,
+            "url": "https://picsum.photos/800/600?random=3"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Toubkal Base Camp to Summit",
+        "description": "On the third day, we will wake up early to begin our ascent to the summit of Mount Toubkal. The hike to the summit takes about 4-5 hours. We will enjoy the breathtaking views from the summit before descending back to Toubkal Base Camp",
+        "duration": "PT4H",
+        "day": 3,
+        "destination": {
+          "id": 1,
+          "label": "Summit Toubkal",
+          "location": {
+            "id": 1,
+            "label": "Toubkal",
+            "country": "Morocco",
+            "city": "Marrakesh",
+            "lat": 31.0600714,
+            "lon": -7.9147482
+          }
+        },
+        "activities": [
+          {
+            "id": 1,
+            "name": "Hiking"
+          }
+        ],
+        "start_at": "2023-02-03T10:00:00Z",
+        "pictures": [
+          {
+            "id": 1,
+            "url": "https://picsum.photos/800/600?random=1"
+          },
+          {
+            "id": 2,
+            "url": "https://picsum.photos/800/600?random=2"
+          },
+          {
+            "id": 3,
+            "url": "https://picsum.photos/800/600?random=3"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "label": "Back to Imlil",
+        "description": "On the third day, we will descend back to Imlil. The descent takes about 4 hours. We will spend the night in a traditional Moroccan guesthouse in Imlil.",
+        "duration": "PT4H",
+        "day": 3,
+        "activities": [
+          {
+            "id": 1,
+            "name": "Hiking"
+          }
+        ],
+        "start_at": "2023-02-03T14:00:00Z",
+        "pictures": [
+          {
+            "id": 1,
+            "url": "https://picsum.photos/800/600?random=1"
+          },
+          {
+            "id": 2,
+            "url": "https://picsum.photos/800/600?random=2"
+          },
+          {
+            "id": 3,
+            "url": "https://picsum.photos/800/600?random=3"
+          }
+        ],
+        "destination": {
+          "id": 1,
+          "label": "Dar Imlil",
+          "location": {
+            "id": 1,
+            "label": "Imlil",
+            "country": "Morocco",
+            "city": "Marrakesh",
+            "adress": "Imlil rue principale",
+            "lat": 31.0600714,
+            "lon": -7.9147482
+          }
+        }
+      },
+      {
+        "id": 5,
+        "label": "Day 4: Imlil to Marrakesh",
+        "description": "On the fourth and final day, we will drive back to Marrakesh. The drive takes about 2 hours. The trip ends upon arrival in Marrakesh.",
+        "start_at": "2023-02-04T10:00:00Z"
+      }
+    ],
+    "pricing_details": [
+      {
+        "id": 1,
+        "description": "Basic",
+        "amount": 799,
+        "includes": [
+          "Accommodation and Meals",
+          "Transport",
+          "Guiding",
+          "Mules"
+        ],
+        "optional_add_ons": [
+        ],
+        "date_based_pricing": [
+          {
+            "start_date": "2023-04-01",
+            "end_date": "2023-05-31",
+            "amount": 799
+          },
+          {
+            "start_date": "2023-06-01",
+            "end_date": "2023-07-31",
+            "amount": 899
+          },
+          {
+            "start_date": "2023-08-01",
+            "end_date": "2023-09-30",
+            "amount": 999
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Premium",
+        "amount": 1099,
+        "includes": [
+          "Upgraded Accommodation and Meals",
+          "Private Transport",
+          "Guiding",
+          "Mules",
+          "Travel Insurance"
+        ],
+        "date_based_pricing": [
+          {
+            "start_date": "2023-04-01",
+            "end_date": "2023-05-31",
+            "amount": 1099
+          },
+          {
+            "start_date": "2023-06-01",
+            "end_date": "2023-07-31",
+            "amount": 1199
+          },
+          {
+            "start_date": "2023-08-01",
+            "end_date": "2023-09-30",
+            "amount": 1299
+          }
+        ],
+        "excludes": [
+          "Personal Expenses"
+        ],
+        "optional_add_ons": [
+          {
+            "id": 1,
+            "description": "Single Room Supplement",
+            "amount": 150
+          },
+          {
+            "id": 2,
+            "description": "Extra Day of Acclimatization",
+            "amount": 200
+          },
+          {
+            "id": 3,
+            "description": "Local Cultural Experience",
+            "amount": 100
+          }
+        ]
+      }
+    ],
+    "meetingPoint": {
+      "location": {
+        "lat": 34.0522,
+        "lon": -118.2437,
+        "address": "123 Main St, Los Angeles, CA"
+      },
+      "time": "2023-06-01T08:00:00Z",
+      "instructions": "We will meet at the main entrance..."
+    },
+    "cancellation_policy": {
+      "notice_period": "48 hours",
+      "refund_percentage": 50
+    },
+    "user_reviews": [
+      {
+        "userId": "a123",
+        "username": "MountainExplorer",
+        "rating": 5,
+        "comment": "This trekking experience was unforgettable! The guide was knowledgeable and the scenery was breathtaking. Highly recommend!",
+        "date": "2023-06-10"
+      },
+      {
+        "userId": "b456",
+        "username": "AdventureSeeker",
+        "rating": 4,
+        "comment": "Great experience overall. The food could have been better, but the trek itself was amazing!",
+        "date": "2023-06-12"
+      },
+      {
+        "userId": "c789",
+        "username": "NatureLover",
+        "rating": 5,
+        "comment": "Absolutely loved it! The guide, the trek, the landscapes – everything was top-notch!",
+        "date": "2023-06-15"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Desert Camel Safari in the Sahara Desert",
+    "type": "desert",
+    "description": "Embark on a memorable journey through the vast Sahara Desert in Morocco, experiencing the golden dunes and the starry nights...",
+    "start_at": "2023-07-01",
+    "end_at": "2023-07-03",
+    "price": 699,
+    "max_participants": 15,
+    "booked_nbr": 10,
+    "difficulty": 2,
+    "rating": 4.9,
+    "flexible": true,
+    "duration": 3,
+    "unit_duration": "day",
+    "activities": [
+      {
+        "id": 3,
+        "name": "Camel Riding",
+        "icon": "mdi-camel"
+      },
+      {
+        "id": 4,
+        "name": "Dune Bashing"
+      }
+    ],
+    "requirements": [
+      {
+        "id": 1,
+        "name": "Passport"
+      },
+      {
+        "id": 4,
+        "name": "Sunscreen"
+      }
+    ],
+    "notices": [
+      {
+        "id": 3,
+        "name": "Be prepared for high daytime temperatures."
+      },
+      {
+        "id": 4,
+        "name": "Nights can get chilly, so bring warm clothing."
+      }
+    ],
+    "take_into_account": [
+      {
+        "id": 3,
+        "name": "Bring enough water to stay hydrated."
+      },
+      {
+        "id": 4,
+        "name": "Wear comfortable clothing and shoes suitable for desert terrain."
+      }
+    ],
+    "guide": {
+      "id": 2,
+      "name": "Sarah Alizadeh",
+      "bio": "An experienced desert guide with over 8 years in the Sahara, ensuring safety and unforgettable memories...",
+      "expertise": [
+        "Desert Expeditions",
+        "Camel Trekking"
+      ],
+      "languages": [
+        "English",
+        "Arabic",
+        "French"
+      ],
+      "contact": {
+        "email": "sarah.alizadeh@example.com",
+        "phone": "321-654-0987"
+      },
+      "certification": "Certified Desert Expedition Guide",
+      "years_experience": 8,
+      "pictures": [
+        {
+          "id": 4,
+          "url": "https://picsum.photos/500/300?random=4"
+        },
+        {
+          "id": 5,
+          "url": "https://picsum.photos/500/300?random=5"
+        }
+      ]
+    },
+    "destination": {
+      "id": 2,
+      "label": "Sahara Desert",
+      "description": "The Sahara Desert is the world's largest hot desert, offering mesmerizing dunes and unique experiences...",
+      "location": {
+        "id": 2,
+        "label": "Sahara Desert",
+        "country": "Morocco",
+        "city": "Merzouga",
+        "address": "Merzouga, Errachidia, Morocco",
+        "lat": 31.099167,
+        "lon": -4.011667
+      }
+    },
+    "pictures": [
+      {
+        "id": 7,
+        "url": "https://picsum.photos/800/600?random=7",
+        "format": "landscape"
+      },
+      {
+        "id": 13,
+        "url": "https://picsum.photos/800/600?random=7",
+        "format": "landscape"
+      },
+      {
+        "id": 8,
+        "url": "https://picsum.photos/800/600?random=8",
+        "format": "portrait"
+      },
+      {
+        "id": 9,
+        "url": "https://picsum.photos/800/600?random=9",
+        "format": "landscape"
+      },
+      {
+        "id": 10,
+        "url": "https://picsum.photos/800/600?random=10",
+        "format": "landscape"
+      }
+    ],
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Merzouga_desert_camp.jpg/2560px-Merzouga_desert_camp.jpg",
+    "steps": [
+      {
+        "id": 5,
+        "label": "Day 1: Merzouga to Sahara Desert Camp",
+        "description": "Start the journey from Merzouga on camels, heading to a desert camp while experiencing the vastness of the desert. Camp under the starry sky.",
+        "duration": "PT6H",
+        "activities": [
+          {
+            "id": 3,
+            "name": "Camel Riding"
+          }
+        ],
+        "destination": {
+          "id": 2,
+          "label": "Sahara Desert Camp",
+          "location": {
+            "id": 2,
+            "label": "Sahara Desert",
+            "country": "Morocco",
+            "city": "Merzouga"
+          }
+        },
+        "pictures": [
+          {
+            "id": 4,
+            "url": "https://picsum.photos/800/600?random=4"
+          }
+        ]
+      },
+      {
+        "id": 6,
+        "label": "Day 2: Explore Sahara",
+        "description": "Explore the beauty of the desert, go dune bashing and experience local Berber culture. Stay another night under the stars.",
+        "duration": "PT12H",
+        "activities": [
+          {
+            "id": 4,
+            "name": "Dune Bashing"
+          }
+        ],
+        "destination": {
+          "id": 2,
+          "label": "Sahara Desert",
+          "location": {
+            "id": 2,
+            "label": "Sahara Desert",
+            "country": "Morocco",
+            "city": "Merzouga"
+          }
+        },
+        "pictures": [
+          {
+            "id": 5,
+            "url": "https://picsum.photos/800/600?random=5"
+          }
+        ]
+      },
+      {
+        "id": 7,
+        "label": "Day 3: Return to Merzouga",
+        "description": "Return to Merzouga from the desert camp on camels, marking the end of the desert expedition.",
+        "duration": "PT6H",
+        "activities": [
+          {
+            "id": 3,
+            "name": "Camel Riding"
+          }
+        ],
+        "destination": {
+          "id": 2,
+          "label": "Merzouga",
+          "location": {
+            "id": 2,
+            "label": "Merzouga",
+            "country": "Morocco",
+            "city": "Merzouga"
+          }
+        },
+        "pictures": [
+          {
+            "id": 6,
+            "url": "https://picsum.photos/800/600?random=6"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "type": "nature",
+    "title": "Akchour Waterfalls Hiking Adventure",
+    "description": "Embark on a memorable hiking journey to the breathtaking Akchour Waterfalls in the heart of the Rif Mountains, near the enchanting city of Chefchaouen, Morocco. This trek is perfect for nature lovers and adventurers seeking to explore the serene beauty of Akchour's landscapes. The trek spans 3 days, leading you through lush green valleys, along river trails, and to the majestic waterfalls. It's guided by a local expert familiar with the area's flora and fauna.",
+    "start_at": "2023-07-15",
+    "end_at": "2023-07-17",
+    "price": 550,
+    "max_participants": 15,
+    "booked_nbr": 150,
+    "difficulty": 2,
+    "rating": 4.8,
+    "rater_count": 300,
+    "flexible": true,
+    "duration": 3,
+    "unit_duration": "day",
+    "activities": [
+      {
+        "id": 1,
+        "name": "Hiking",
+        "icon": "mdi-image-filter-hdr"
+      },
+      {
+        "id": 2,
+        "name": "Photography"
+      },
+      {
+        "id": 3,
+        "name": "Swimming"
+      }
+    ],
+    "requirements": [
+      {
+        "id": 1,
+        "name": "Comfortable Hiking Shoes"
+      },
+      {
+        "id": 2,
+        "name": "Water Bottle"
+      },
+      {
+        "id": 3,
+        "name": "Swimwear"
+      }
+    ],
+    "notices": [
+      {
+        "id": 1,
+        "name": "Be prepared for varying weather conditions."
+      },
+      {
+        "id": 2,
+        "name": "Some trails may be challenging for beginners."
+      }
+    ],
+    "take_into_account": [
+      {
+        "id": 1,
+        "name": "Bring a camera for stunning landscape photography."
+      },
+      {
+        "id": 2,
+        "name": "Pack light but include essential gear for overnight stays."
+      }
+    ],
+    "guide": {
+      "id": 2,
+      "name": "Amina El Fassi",
+      "bio": "I am a local hiking guide with over 8 years of experience leading expeditions in the Rif Mountains. My love for nature and the outdoors drives my passion for guiding adventurers through some of Morocco's most scenic trails. I am fluent in English, Spanish, and Arabic, and have deep knowledge of the region's cultural and natural history.",
+      "expertise": [
+        "Hiking",
+        "Nature Photography"
+      ],
+      "languages": [
+        "English",
+        "Spanish"
+      ],
+      "contact": {
+        "email": "amina.el_fassi@example.com",
+        "phone": "234-567-8901"
+      },
+      "certification": "Certified Hiking Guide",
+      "years_experience": 8,
+      "pictures": [
+        {
+          "id": 1,
+          "url": "https://picsum.photos/500/300?akchour1"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/500/300?akchour2"
+        },
+        {
+          "id": 3,
+          "url": "https://picsum.photos/500/300?akchour3"
+        }
+      ]
+    },
+    "destination": {
+      "id": 2,
+      "label": "Akchour Waterfalls",
+      "description": "The Akchour Waterfalls are a hidden gem located in the Rif Mountains near Chefchaouen. These cascading waterfalls offer a stunning natural retreat with lush vegetation, diverse wildlife, and crystal-clear pools perfect for swimming. The area provides a tranquil escape from the bustling city life and is a paradise for hikers and nature enthusiasts.",
+      "location": {
+        "id": 2,
+        "label": "Akchour",
+        "country": "Morocco",
+        "city": "Chefchaouen",
+        "address": "Akchour, Chefchaouen, Morocco",
+        "lat": 35.172491,
+        "lon": -5.269706
+      },
+      "multimedia": {
+        "images": [
+          {
+            "url": "https://picsum.photos/800/600?akchour1"
+          },
+          {
+            "url": "https://picsum.photos/800/600?akchour2"
+          }
+        ],
+        "videos": [
+          {
+            "url": "https://example.com/videos/akchour_hike.mp4"
+          }
+        ],
+        "360_views": [
+          {
+            "url": "https://example.com/360/akchour_panorama.html"
+          }
+        ]
+      },
+      "weather_and_seasonal_info": {
+        "live_weather": {
+          "temperature": 25,
+          "weather": "Partly Cloudy",
+          "wind_speed": 5,
+          "wind_direction": "E",
+          "humidity": 60,
+          "precipitation": 10
+        },
+        "best_seasons": [
+          "Spring",
+          "Summer"
+        ],
+        "typical_weather": {
+          "spring": "Mild temperatures with occasional showers",
+          "summer": "Warm and sunny",
+          "autumn": "Cool and pleasant",
+          "winter": "Mild with rare snowfall"
+        }
+      },
+      "local_info": {
+        "nearby_destinations": [
+          {
+            "id": 3,
+            "label": "Chefchaouen",
+            "location": {
+              "id": 3,
+              "label": "Chefchaouen",
+              "country": "Morocco",
+              "city": "Chefchaouen",
+              "address": "Chefchaouen, Morocco",
+              "lat": 35.168776,
+              "lon": -5.263233
+            },
+            "multimedia": {
+              "images": [
+                {
+                  "url": "https://picsum.photos/800/600?chefchaouen1"
+                },
+                {
+                  "url": "https://picsum.photos/800/600?chefchaouen2"
+                }
+              ],
+              "videos": [
+                {
+                  "url": "https://example.com/videos/chefchaouen_tour.mp4"
+                }
+              ],
+              "360_views": [
+                {
+                  "url": "https://example.com/360/chefchaouen_panorama.html"
+                }
+              ]
+            }
+          }
+        ],
+        "local_customs": [
+          "Respect the natural surroundings and local wildlife.",
+          "Be mindful of local cultural norms and traditions."
+        ]
+      }
+    },
+    "pictures": [
+      {
+        "id": 1,
+        "url": "https://picsum.photos/300/600?akchour1",
+        "format": "portrait"
+      },
+      {
+        "id": 2,
+        "url": "https://picsum.photos/300/600?akchour2",
+        "format": "portrait"
+      },
+      {
+        "id": 3,
+        "url": "https://picsum.photos/300/600?akchour3",
+        "format": "portrait"
+      },
+      {
+        "id": 4,
+        "url": "https://picsum.photos/800/300?akchour4",
+        "format": "landscape"
+      },
+      {
+        "id": 5,
+        "url": "https://picsum.photos/300/600?akchour5",
+        "format": "portrait"
+      }
+    ],
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Akchour_falls.jpg/1920px-Akchour_falls.jpg",
+    "steps": [
+      {
+        "id": 1,
+        "label": "Chefchaouen to Akchour",
+        "day": 1,
+        "description": "We'll start our journey from the charming city of Chefchaouen to the village of Akchour. After settling in, we'll enjoy a brief orientation walk around the village.",
+        "duration": "PT3H",
+        "activities": [
+          {
+            "id": 1,
+            "name": "Transportation"
+          }
+        ],
+        "destination": {
+          "id": 2,
+          "label": "Akchour Village",
+          "location": {
+            "id": 2,
+            "label": "Akchour",
+            "country": "Morocco",
+            "city": "Chefchaouen",
+            "address": "Akchour, Chefchaouen, Morocco",
+            "lat": 35.172491,
+            "lon": -5.269706
+          }
+        },
+        "pictures": [
+          {
+            "id": 1,
+            "url": "https://picsum.photos/800/600?akchour_village1"
+          },
+          {
+            "id": 2,
+            "url": "https://picsum.photos/800/600?akchour_village2"
+          }
+        ],
+        "start_at": "2023-07-15T09:00:00Z"
+      },
+      {
+        "id": 2,
+        "label": "Akchour Village to Waterfalls",
+        "day": 2,
+        "description": "Embark on the trail leading to the Akchour Waterfalls. The hike, covering scenic landscapes and natural pools, takes approximately 4 hours. There will be opportunities for swimming and photography.",
+        "duration": "PT4H",
+        "activities": [
+          {
+            "id": 1,
+            "name": "Hiking"
+          },
+          {
+            "id": 3,
+            "name": "Swimming"
+          }
+        ],
+        "start_at": "2023-07-16T08:00:00Z",
+        "destination": {
+          "id": 3,
+          "label": "Akchour Waterfalls",
+          "location": {
+            "id": 3,
+            "label": "Waterfalls",
+            "country": "Morocco",
+            "city": "Chefchaouen",
+            "lat": 35.171446,
+            "lon": -5.260498
+          }
+        },
+        "pictures": [
+          {
+            "id": 1,
+            "url": "https://picsum.photos/800/600?akchour_waterfall1"
+          },
+          {
+            "id": 2,
+            "url": "https://picsum.photos/800/600?akchour_waterfall2"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Exploration and Return",
+        "day": 3,
+        "description": "Spend the morning exploring the area around the waterfalls, enjoying the serene environment. After lunch, we'll begin our return journey to Akchour Village, followed by transportation back to Chefchaouen.",
+        "duration": "PT5H",
+        "activities": [
+          {
+            "id": 2,
+            "name": "Photography"
+          },
+          {
+            "id": 1,
+            "name": "Hiking"
+          }
+        ],
+        "start_at": "2023-07-17T09:00:00Z",
+        "destination": {
+          "id": 2,
+          "label": "Akchour Village",
+          "location": {
+            "id": 2,
+            "label": "Akchour",
+            "country": "Morocco",
+            "city": "Chefchaouen",
+            "address": "Akchour, Chefchaouen, Morocco",
+            "lat": 35.172491,
+            "lon": -5.269706
+          }
+        },
+        "pictures": [
+          {
+            "id": 1,
+            "url": "https://picsum.photos/800/600?akchour_village3"
+          },
+          {
+            "id": 2,
+            "url": "https://picsum.photos/800/600?akchour_village4"
+          }
+        ]
+      }
+    ],
+    "pricing_details": [
+      {
+        "id": 1,
+        "description": "Standard Package",
+        "amount": 550,
+        "includes": [
+          "Accommodation in Akchour",
+          "Meals (Breakfast, Lunch, Dinner)",
+          "Guided Hiking",
+          "Transport from Chefchaouen to Akchour and back"
+        ],
+        "optional_add_ons": [
+          {
+            "id": 1,
+            "description": "Photography Kit Rental",
+            "amount": 50
+          },
+          {
+            "id": 2,
+            "description": "Single Room Supplement",
+            "amount": 100
+          }
+        ],
+        "date_based_pricing": [
+          {
+            "start_date": "2023-05-01",
+            "end_date": "2023-06-30",
+            "amount": 500
+          },
+          {
+            "start_date": "2023-07-01",
+            "end_date": "2023-08-31",
+            "amount": 550
+          },
+          {
+            "start_date": "2023-09-01",
+            "end_date": "2023-10-31",
+            "amount": 525
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Luxury Package",
+        "amount": 750,
+        "includes": [
+          "Upgraded Accommodation",
+          "All Meals (including special dietary menus)",
+          "Private Guided Hiking",
+          "Private Transport",
+          "Photography Guide"
+        ],
+        "optional_add_ons": [
+          {
+            "id": 3,
+            "description": "Extra Day in Chefchaouen",
+            "amount": 200
+          },
+          {
+            "id": 4,
+            "description": "Cultural Tour of Chefchaouen",
+            "amount": 150
+          }
+        ],
+        "date_based_pricing": [
+          {
+            "start_date": "2023-05-01",
+            "end_date": "2023-06-30",
+            "amount": 700
+          },
+          {
+            "start_date": "2023-07-01",
+            "end_date": "2023-08-31",
+            "amount": 750
+          },
+          {
+            "start_date": "2023-09-01",
+            "end_date": "2023-10-31",
+            "amount": 725
+          }
+        ],
+        "excludes": [
+          "Personal Expenses",
+          "Travel Insurance"
+        ]
+      }
+    ],
+    "meetingPoint": {
+      "location": {
+        "lat": 35.171399,
+        "lon": -5.269710,
+        "address": "Central Plaza, Chefchaouen, Morocco"
+      },
+      "time": "2023-07-15T07:00:00Z",
+      "instructions": "Participants will gather at the Central Plaza in Chefchaouen. Look for the guide holding a sign with 'Akchour Hiking Adventure' written on it. Please be there 15 minutes prior to departure for a brief introduction and to answer any last-minute questions."
+    },
+    "cancellation_policy": {
+      "notice_period": "48 hours",
+      "refund_percentage": 50
+    },
+    "user_reviews": [
+      {
+        "userId": "a123",
+        "username": "MountainExplorer",
+        "rating": 5,
+        "comment": "This trekking experience was unforgettable! The guide was knowledgeable and the scenery was breathtaking. Highly recommend!",
+        "date": "2023-06-10"
+      },
+      {
+        "userId": "b456",
+        "username": "AdventureSeeker",
+        "rating": 4,
+        "comment": "Great experience overall. The food could have been better, but the trek itself was amazing!",
+        "date": "2023-06-12"
+      },
+      {
+        "userId": "c789",
+        "username": "NatureLover",
+        "rating": 5,
+        "comment": "Absolutely loved it! The guide, the trek, the landscapes – everything was top-notch!",
+        "date": "2023-06-15"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "type": "surf",
+    "title": "Taghazout Surfing Expedition",
+    "description": "Dive into the world of surfing with our exclusive Taghazout Surfing Expedition. Renowned for its consistent surf breaks, Taghazout offers an ideal setting for both beginners and seasoned surfers. Over 5 days, you'll get to experience various famous surf spots, learn from experienced instructors, and immerse yourself in the laid-back surf culture. The package includes daily surf lessons, equipment rental, and plenty of time to catch the perfect waves.",
+    "start_at": "2023-08-10",
+    "end_at": "2023-08-14",
+    "price": 650,
+    "max_participants": 10,
+    "booked_nbr": 120,
+    "difficulty": 2,
+    "rating": 4.9,
+    "rater_count": 200,
+    "flexible": true,
+    "duration": 5,
+    "unit_duration": "day",
+    "activities": [
+      {
+        "id": 1,
+        "name": "Surfing",
+        "icon": "mdi-wave"
+      },
+      {
+        "id": 2,
+        "name": "Yoga"
+      }
+    ],
+    "requirements": [
+      {
+        "id": 1,
+        "name": "Swimwear"
+      },
+      {
+        "id": 2,
+        "name": "Sunscreen"
+      }
+    ],
+    "notices": [
+      {
+        "id": 1,
+        "name": "No previous surfing experience required."
+      },
+      {
+        "id": 2,
+        "name": "Be prepared for sun exposure and physical activity."
+      }
+    ],
+    "take_into_account": [
+      {
+        "id": 1,
+        "name": "Bring a water bottle to stay hydrated."
+      },
+      {
+        "id": 2,
+        "name": "Respect local surf etiquette and safety rules."
+      }
+    ],
+    "guide": {
+      "id": 3,
+      "name": "Youssef Elouahabi",
+      "bio": "I'm Youssef, a professional surf instructor with over 12 years of experience in the waters of Taghazout. My goal is to share the thrill of surfing with enthusiasts from all over the world. Fluent in English, French, and Arabic, I specialize in helping beginners find their confidence on the board and guiding experienced surfers to new challenges.",
+      "expertise": [
+        "Surfing Instruction",
+        "Ocean Safety"
+      ],
+      "languages": [
+        "English",
+        "French"
+      ],
+      "contact": {
+        "email": "youssef.surf@example.com",
+        "phone": "345-678-9012"
+      },
+      "certification": "Certified Surf Instructor",
+      "years_experience": 12,
+      "pictures": [
+        {
+          "id": 1,
+          "url": "https://picsum.photos/500/300?taghazout_surf1"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/500/300?taghazout_surf2"
+        }
+      ]
+    },
+    "destination": {
+      "id": 3,
+      "label": "Taghazout Beaches",
+      "description": "Taghazout is a picturesque surf village known for its epic waves and vibrant surf culture. Located along Morocco's southwest coast, the area boasts a variety of surf spots suitable for all levels. From the gentle rollers perfect for beginners to the challenging tubes for the pros, Taghazout is a surfer's paradise.",
+      "location": {
+        "id": 3,
+        "label": "Taghazout",
+        "country": "Morocco",
+        "city": "Taghazout",
+        "address": "Taghazout Beach, Morocco",
+        "lat": 30.545066,
+        "lon": -9.708527
+      },
+      "multimedia": {
+        "images": [
+          {
+            "url": "https://picsum.photos/800/600?taghazout_beach1"
+          },
+          {
+            "url": "https://picsum.photos/800/600?taghazout_beach2"
+          }
+        ],
+        "videos": [
+          {
+            "url": "https://example.com/videos/taghazout_surf.mp4"
+          }
+        ],
+        "360_views": [
+          {
+            "url": "https://example.com/360/taghazout_panorama.html"
+          }
+        ]
+      },
+      "weather_and_seasonal_info": {
+        "live_weather": {
+          "temperature": 28,
+          "weather": "Sunny",
+          "wind_speed": 15,
+          "wind_direction": "NW",
+          "humidity": 70,
+          "precipitation": 0
+        },
+        "best_seasons": [
+          "Autumn",
+          "Winter"
+        ],
+        "typical_weather": {
+          "spring": "Mild, occasional showers",
+          "summer": "Warm, sunny",
+          "autumn": "Ideal surfing conditions",
+          "winter": "Mild, consistent surf"
+        }
+      },
+      "local_info": {
+        "nearby_destinations": [
+          {
+            "id": 4,
+            "label": "Agadir",
+            "location": {
+              "id": 4,
+              "label": "Agadir",
+              "country": "Morocco",
+              "city": "Agadir",
+              "address": "Agadir, Morocco",
+              "lat": 30.427755,
+              "lon": -9.598107
+            },
+            "multimedia": {
+              "images": [
+                {
+                  "url": "https://picsum.photos/800/600?agadir1"
+                },
+                {
+                  "url": "https://picsum.photos/800/600?agadir2"
+                }
+              ],
+              "videos": [
+                {
+                  "url": "https://example.com/videos/agadir_tour.mp4"
+                }
+              ],
+              "360_views": [
+                {
+                  "url": "https://example.com/360/agadir_panorama.html"
+                }
+              ]
+            }
+          }
+        ],
+        "local_customs": [
+          "Respect the local surf culture and prioritize safety.",
+          "Support local businesses and be mindful of the environment."
+        ]
+      }
+    },
+    "pictures": [
+      {
+        "id": 1,
+        "url": "https://picsum.photos/300/600?taghazout1",
+        "format": "portrait"
+      },
+      {
+        "id": 2,
+        "url": "https://picsum.photos/300/600?taghazout2",
+        "format": "portrait"
+      },
+      {
+        "id": 3,
+        "url": "https://picsum.photos/300/600?taghazout3",
+        "format": "portrait"
+      },
+      {
+        "id": 4,
+        "url": "https://picsum.photos/800/300?taghazout4",
+        "format": "landscape"
+      }
+    ],
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/5/54/Taghazout_Tag_Graffiti_Art.jpg",
+    "steps": [
+      {
+        "id": 1,
+        "label": "Introduction to Surfing in Taghazout",
+        "day": 1,
+        "description": "Begin your surfing adventure with an introduction session on the basics of surfing. This includes understanding surf safety, board dynamics, and initial practice on the beach. The day ends with a relaxing yoga session to stretch out and prepare for the next day.",
+        "duration": "PT6H",
+        "activities": [
+          {
+            "id": 1,
+            "name": "Surfing Lesson"
+          },
+          {
+            "id": 2,
+            "name": "Yoga"
+          }
+        ],
+        "start_at": "2023-08-10T09:00:00Z",
+        "destination": {
+          "id": 3,
+          "label": "Taghazout Beach",
+          "location": {
+            "id": 3,
+            "label": "Taghazout",
+            "country": "Morocco",
+            "city": "Taghazout",
+            "lat": 30.545066,
+            "lon": -9.708527
+          }
+        },
+        "pictures": [
+          {
+            "id": 1,
+            "url": "https://picsum.photos/800/600?taghazout_surf_day1"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "label": "First Surf in the Ocean",
+        "day": 2,
+        "description": "Take your newly learned skills to the ocean. Start with small waves, guided by the instructor. The afternoon session focuses on improving techniques and enjoying the surf. The day winds down with a group dinner and surf theory discussion.",
+        "duration": "PT8H",
+        "activities": [
+          {
+            "id": 1,
+            "name": "Surfing"
+          }
+        ],
+        "start_at": "2023-08-11T08:00:00Z",
+        "destination": {
+          "id": 3,
+          "label": "Taghazout Surf Spot",
+          "location": {
+            "id": 3,
+            "label": "Taghazout",
+            "country": "Morocco",
+            "city": "Taghazout",
+            "lat": 30.545066,
+            "lon": -9.708527
+          }
+        },
+        "pictures": [
+          {
+            "id": 2,
+            "url": "https://picsum.photos/800/600?taghazout_surf_day2"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Exploring Different Surf Spots",
+        "day": 3,
+        "description": "Discover various surf spots around Taghazout, each offering different wave types. This is a day to explore and challenge your surfing skills under the watchful eye of your instructor. End the day with a sunset yoga session.",
+        "duration": "PT8H",
+        "activities": [
+          {
+            "id": 1,
+            "name": "Surfing"
+          },
+          {
+            "id": 2,
+            "name": "Yoga"
+          }
+        ],
+        "start_at": "2023-08-12T08:00:00Z",
+        "destination": {
+          "id": 3,
+          "label": "Various Taghazout Surf Spots",
+          "location": {
+            "id": 3,
+            "label": "Taghazout",
+            "country": "Morocco",
+            "city": "Taghazout",
+            "lat": 30.545066,
+            "lon": -9.708527
+          }
+        },
+        "pictures": [
+          {
+            "id": 3,
+            "url": "https://picsum.photos/800/600?taghazout_surf_day3"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "label": "Advanced Surfing Techniques",
+        "day": 4,
+        "description": "Focus on advanced surfing techniques and maneuvering. Participants can practice turning and riding larger waves. The day includes personal feedback sessions to enhance individual skills, followed by a group barbecue in the evening.",
+        "duration": "PT8H",
+        "activities": [
+          {
+            "id": 1,
+            "name": "Surfing"
+          }
+        ],
+        "start_at": "2023-08-13T08:00:00Z",
+        "destination": {
+          "id": 3,
+          "label": "Taghazout Main Beach",
+          "location": {
+            "id": 3,
+            "label": "Taghazout",
+            "country": "Morocco",
+            "city": "Taghazout",
+            "lat": 30.545066,
+            "lon": -9.708527
+          }
+        },
+        "pictures": [
+          {
+            "id": 4,
+            "url": "https://picsum.photos/800/600?taghazout_surf_day4"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "label": "Freestyle Surfing and Closing Ceremony",
+        "day": 5,
+        "description": "The final day is for freestyle surfing, allowing participants to showcase their skills. The expedition concludes with a closing ceremony, certificate distribution for participants, and a farewell lunch.",
+        "duration": "PT6H",
+        "activities": [
+          {
+            "id": 1,
+            "name": "Surfing"
+          }
+        ],
+        "start_at": "2023-08-14T08:00:00Z",
+        "destination": {
+          "id": 3,
+          "label": "Taghazout Surf Beach",
+          "location": {
+            "id": 3,
+            "label": "Taghazout",
+            "country": "Morocco",
+            "city": "Taghazout",
+            "lat": 30.545066,
+            "lon": -9.708527
+          }
+        },
+        "pictures": [
+          {
+            "id": 5,
+            "url": "https://picsum.photos/800/600?taghazout_surf_day5"
+          }
+        ]
+      }
+    ],
+    "pricing_details": [
+      {
+        "id": 1,
+        "description": "Basic Surf Package",
+        "amount": 650,
+        "includes": [
+          "Surf Lessons",
+          "Surfboard Rental",
+          "Accommodation",
+          "Daily Breakfast and Lunch",
+          "Yoga Sessions"
+        ],
+        "optional_add_ons": [
+          {
+            "id": 1,
+            "description": "Photography Package",
+            "amount": 100
+          },
+          {
+            "id": 2,
+            "description": "Evening Meals",
+            "amount": 150
+          }
+        ],
+        "date_based_pricing": [
+          {
+            "start_date": "2023-05-01",
+            "end_date": "2023-06-30",
+            "amount": 600
+          },
+          {
+            "start_date": "2023-07-01",
+            "end_date": "2023-08-31",
+            "amount": 650
+          },
+          {
+            "start_date": "2023-09-01",
+            "end_date": "2023-10-31",
+            "amount": 625
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Premium Surf Experience",
+        "amount": 850,
+        "includes": [
+          "Advanced Surf Lessons",
+          "Premium Surfboard Rental",
+          "Luxury Accommodation",
+          "All Meals (Breakfast, Lunch, Dinner)",
+          "Private Yoga Sessions",
+          "Transportation to Different Surf Spots"
+        ],
+        "optional_add_ons": [
+          {
+            "id": 3,
+            "description": "Private Surf Photography Session",
+            "amount": 200
+          },
+          {
+            "id": 4,
+            "description": "Cultural Tour of Taghazout",
+            "amount": 120
+          }
+        ],
+        "date_based_pricing": [
+          {
+            "start_date": "2023-05-01",
+            "end_date": "2023-06-30",
+            "amount": 800
+          },
+          {
+            "start_date": "2023-07-01",
+            "end_date": "2023-08-31",
+            "amount": 850
+          },
+          {
+            "start_date": "2023-09-01",
+            "end_date": "2023-10-31",
+            "amount": 825
+          }
+        ],
+        "excludes": [
+          "Personal Expenses",
+          "Travel Insurance"
+        ]
+      }
+    ],
+    "meetingPoint": {
+    },
+    "cancellation_policy": {
+    },
+    "user_reviews": [
+    ]
+  },
+  {
+    "id": 5,
+    "type": "water",
+    "title": "Ouzoud Waterfalls Kayaking Adventure",
+    "description": "Experience the beauty of the Ouzoud Waterfalls from a unique perspective with our exclusive kayaking adventure. The Ouzoud Waterfalls are the highest waterfalls in Morocco, cascading over 100 meters into the El Abid River. This 3-day expedition takes you on a kayaking journey through the river, allowing you to explore the waterfalls and surrounding landscapes. The package includes kayaking equipment, accommodation, and meals.",
+    "start_at": "2023-09-15",
+    "end_at": "2023-09-17",
+    "price": 450,
+    "max_participants": 10,
+    "booked_nbr": 100,
+    "difficulty": 2,
+    "rating": 4.7,
+    "rater_count": 150,
+    "flexible": false,
+    "duration": 3,
+    "unit_duration": "day",
+    "activities": [
+      {
+        "id": 1,
+        "name": "Kayaking",
+        "icon": "mdi-kayak"
+      },
+      {
+        "id": 2,
+        "name": "Swimming"
+      },
+      {
+        "id": 3,
+        "name": "Hiking"
+      }
+    ],
+    "requirements": [
+      {
+        "id": 1,
+        "name": "Swimwear"
+      },
+      {
+        "id": 2,
+        "name": "Water Bottle"
+      }
+    ],
+    "notices": [
+      {
+        "id": 1,
+        "name": "No previous kayaking experience required."
+      },
+      {
+        "id": 2,
+        "name": "Be prepared for sun exposure and physical activity."
+      }
+    ],
+    "take_into_account": [
+      {
+        "id": 1,
+        "name": "Bring a water bottle to stay hydrated."
+      },
+      {
+        "id": 2,
+        "name": "Respect local safety rules and regulations."
+      }
+    ],
+    "guide": {
+      "id": 4,
+      "name": "Mohamed El Kaddouri",
+      "bio": "I'm Mohamed, a professional kayaking guide with over 10 years of experience leading expeditions in the Ouzoud Waterfalls. My goal is to share the thrill of kayaking with enthusiasts from all over the world. Fluent in English, French, and Arabic, I specialize in helping beginners find their confidence on the water and guiding experienced kayakers to new challenges.",
+      "expertise": [
+        "Kayaking Instruction",
+        "River Safety"
+      ],
+      "languages": [
+        "English",
+        "French"
+      ],
+      "contact": {
+        "email": "Kaddouri@gmail.com",
+        "phone": "456-789-0123",
+        "whatsapp": "456-789-0123",
+        "facebook": "https://www.facebook.com/Kaddouri",
+        "instagram": "https://www.instagram.com/Kaddouri",
+        "twitter": "https://www.twitter.com/Kaddouri",
+        "youtube": "https://www.youtube.com/Kaddouri",
+        "website": "https://www.Kaddouri.com"
+      },
+      "certification": "Certified Kayaking Instructor",
+      "years_experience": 10,
+      "pictures": [
+        {
+          "id": 1,
+          "url": "https://picsum.photos/500/300?ouzoud_kayak1"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/500/300?ouzoud_kayak2"
+        }
+      ],
+      "videos": [
+        {
+          "id": 1,
+          "url": "https://example.com/videos/ouzoud_kayak.mp4"
+        }
+      ],
+      "360_views": [
+        {
+          "id": 1,
+          "url": "https://example.com/360/ouzoud_panorama.html"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "username": "MountainExplorer",
+          "rating": 5,
+          "comment": "This kayaking experience was unforgettable! The guide was knowledgeable and the scenery was breathtaking. Highly recommend!",
+          "date": "2023-06-10"
+        },
+        {
+          "id": 2,
+          "username": "AdventureSeeker",
+          "rating": 4,
+          "comment": "Great experience overall. The food could have been better, but the kayaking itself was amazing!",
+          "date": "2023-06-12"
+        },
+        {
+          "id": 3,
+          "username": "NatureLover",
+          "rating": 5,
+          "comment": "Absolutely loved it! The guide, the kayaking, the landscapes – everything was top-notch!",
+          "date": "2023-06-15"
+        }
+      ]
+    },
+    "destination": {
+      "id": 4,
+      "label": "Ouzoud Waterfalls",
+      "description": "The Ouzoud Waterfalls are the highest waterfalls in Morocco, cascading over 100 meters into the El Abid River. The area offers a variety of activities, including kayaking, swimming, and hiking. The waterfalls are surrounded by lush vegetation and diverse wildlife, making it a popular destination for nature enthusiasts.",
+      "location": {
+        "id": 4,
+        "label": "Ouzoud",
+        "country": "Morocco",
+        "city": "Ouzoud",
+        "address": "Ouzoud, Morocco",
+        "lat": 32.008333,
+        "lon": -6.897222
+      }
+    },
+    "pictures": [
+      {
+        "id": 1,
+        "url": "https://picsum.photos/300/600?ouzoud1",
+        "format": "portrait"
+      },
+      {
+        "id": 2,
+        "url": "https://picsum.photos/300/600?ouzoud2",
+        "format": "portrait"
+      },
+      {
+        "id": 3,
+        "url": "https://picsum.photos/300/600?ouzoud3",
+        "format": "portrait"
+      },
+      {
+        "id": 4,
+        "url": "https://picsum.photos/800/300?ouzoud4",
+        "format": "landscape"
+      }
+    ],
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/1/10/Cascades_d%27Ouzoud_014.JPG",
+    "steps": [
+      {
+        "id": 1,
+        "label": "Introduction to Kayaking",
+        "day": 1,
+        "description": "Begin your kayaking adventure with an introduction session on the basics of kayaking. This includes understanding river safety, boat dynamics, and initial practice on the water. The day ends with a relaxing yoga session to stretch out and prepare for the next day.",
+        "duration": "PT6H",
+        "activities": [
+          {
+            "id": 1,
+            "name": "Kayaking Lesson"
+          },
+          {
+            "id": 2,
+            "name": "Yoga"
+          }
+        ],
+        "start_at": "2023-09-15T09:00:00Z",
+        "destination": {
+          "id": 4,
+          "label": "Ouzoud Waterfalls",
+          "location": {
+            "id": 4,
+            "label": "Ouzoud",
+            "country": "Morocco",
+            "city": "Ouzoud",
+            "address": "Ouzoud, Morocco",
+            "lat": 32.008333,
+            "lon": -6.897222
+          }
+        },
+        "pictures": [
+          {
+            "id": 1,
+            "url": "https://picsum.photos/800/600?ouzoud_kayak_day1"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "label": "Kayaking to the Waterfalls",
+        "day": 2,
+        "description": "Take your newly learned skills to the river. Start with small rapids, guided by the instructor. The afternoon session focuses on improving techniques and enjoying the water. The day winds down with a group dinner and kayaking theory discussion.",
+        "duration": "PT8H",
+        "activities": [
+          {
+            "id": 1,
+            "name": "Kayaking"
+          }
+        ],
+        "start_at": "2023-09-16T08:00:00Z",
+        "destination": {
+          "id": 4,
+          "label": "Ouzoud Waterfalls",
+          "location": {
+            "id": 4,
+            "label": "Ouzoud",
+            "country": "Morocco",
+            "city": "Ouzoud",
+            "address": "Ouzoud, Morocco",
+            "lat": 32.008333,
+            "lon": -6.897222,
+            "pictures": [
+              {
+                "id": 1,
+                "url": "https://picsum.photos/800/600?ouzoud_waterfall1"
+              },
+              {
+                "id": 2,
+                "url": "https://picsum.photos/800/600?ouzoud_waterfall2"
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "pricing_details": [
+      {
+        "id": 1,
+        "description": "Basic Kayaking Package",
+        "amount": 450,
+        "includes": [
+          "Kayaking Lessons",
+          "Kayak Rental",
+          "Accommodation",
+          "Daily Breakfast and Lunch",
+          "Yoga Sessions"
+        ],
+        "optional_add_ons": [
+          {
+            "id": 1,
+            "description": "Photography Package",
+            "amount": 100
+          },
+          {
+            "id": 2,
+            "description": "Evening Meals",
+            "amount": 150
+          }
+        ],
+        "date_based_pricing": [
+          {
+            "start_date": "2023-05-01",
+            "end_date": "2023-06-30",
+            "amount": 400
+          },
+          {
+            "start_date": "2023-07-01",
+            "end_date": "2023-08-31",
+            "amount": 450
+          },
+          {
+            "start_date": "2023-09-01",
+            "end_date": "2023-10-31",
+            "amount": 425
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Premium Kayaking Experience",
+        "amount": 650,
+        "includes": [
+          "Advanced Kayaking Lessons",
+          "Premium Kayak Rental",
+          "Luxury Accommodation",
+          "All Meals (Breakfast, Lunch, Dinner)",
+          "Private Yoga Sessions",
+          "Transportation to Different Kayaking Spots"
+        ],
+        "optional_add_ons": [
+          {
+            "id": 3,
+            "description": "Private Kayaking Photography Session",
+            "amount": 200
+          },
+          {
+            "id": 4,
+            "description": "Cultural Tour of Ouzoud",
+            "amount": 120
+          }
+        ],
+        "date_based_pricing": [
+          {
+            "start_date": "2023-01-01",
+            "end_date": "2023-06-30",
+            "amount": 600
+          },
+          {
+            "start_date": "2023-07-01",
+            "end_date": "2023-08-31",
+            "amount": 650
+          },
+          {
+            "start_date": "2023-09-01",
+            "end_date": "2023-10-31",
+            "amount": 625
+          },
+          {
+            "start_date": "2023-11-01",
+            "end_date": "2023-12-31",
+            "amount": 600
+          }
+        ]
+      }
+    ],
+    "meetingPoint": {
+      "location": {
+        "lat": 32.008333,
+        "lon": -6.897222,
+        "address": "Ouzoud Waterfalls, Morocco"
+      },
+      "time": "2023-09-15T07:00:00Z",
+      "instructions": "Participants will gather at the Ouzoud Waterfalls. Look for the guide holding a sign with 'Ouzoud Kayaking Adventure' written on it. Please be there 15 minutes prior to departure for a brief introduction and to answer any last-minute questions."
+    },
+    "cancellation_policy": {
+      "notice_period": "48 hours",
+      "refund_percentage": 50
+    },
+    "user_reviews": [
+      {
+        "userId": "a123",
+        "username": "MountainExplorer",
+        "rating": 5,
+        "comment": "This kayaking experience was unforgettable! The guide was knowledgeable and the scenery was breathtaking. Highly recommend!",
+        "date": "2023-06-10"
+      },
+      {
+        "userId": "b456",
+        "username": "AdventureSeeker",
+        "rating": 4,
+        "comment": "Great experience overall. The food could have been better, but the kayaking itself was amazing!",
+        "date": "2023-06-12"
+      },
+      {
+        "userId": "c789",
+        "username": "NatureLover",
+        "rating": 5,
+        "comment": "Absolutely loved it! The guide, the kayaking, the landscapes – everything was top-notch!",
+        "date": "2023-06-15"
+      }
+    ]
+  }
+]

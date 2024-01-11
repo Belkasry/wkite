@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "National Park of Toubkal",
+    "image": "https://picsum.photos/640/360?random=1"
+  },
+  {
+    "id": 2,
+    "name": "Sahara Desert (Merzouga and Erg Chebbi)",
+    "image": "https://picsum.photos/640/360?random=2"
+  },
+  {
+    "id": 3,
+    "name": "Marrakech",
+    "image": "https://picsum.photos/640/360?random=3"
+  },
+  {
+    "id": 4,
+    "name": "Chefchaouen",
+    "image": "https://picsum.photos/640/360?random=4"
+  },
+  {
+    "id": 5,
+    "name": "Agadir",
+    "image": "https://picsum.photos/640/360?random=5"
+  },
+  {
+    "id": 6,
+    "name": "Essaouira",
+    "image": "https://picsum.photos/640/360?random=6"
+  },
+  {
+    "id": 7,
+    "name": "Todra Gorge",
+    "image": "https://picsum.photos/640/360?random=7"
+  },
+  {
+    "id": 8,
+    "name": "Dades Valley",
+    "image": "https://picsum.photos/640/360?random=8"
+  },
+  {
+    "id": 9,
+    "name": "Ouarzazate",
+    "image": "https://picsum.photos/640/360?random=9"
+  },
+  {
+    "id": 10,
+    "name": "Atlas Mountains (Ourika Valley)",
+    "image": "https://picsum.photos/640/360?random=10"
+  }
+]

@@ -1,0 +1,470 @@
+{
+  "id": 4,
+  "type": "surf",
+  "title": "Taghazout Surfing Expedition",
+  "description": "Dive into the world of surfing with our exclusive Taghazout Surfing Expedition. Renowned for its consistent surf breaks, Taghazout offers an ideal setting for both beginners and seasoned surfers. Over 5 days, you'll get to experience various famous surf spots, learn from experienced instructors, and immerse yourself in the laid-back surf culture. The package includes daily surf lessons, equipment rental, and plenty of time to catch the perfect waves.",
+  "start_at": "2023-08-10",
+  "end_at": "2023-08-14",
+  "price": 650,
+  "max_participants": 10,
+  "booked_nbr": 120,
+  "difficulty": 2,
+  "rating": 4.9,
+  "rater_count": 200,
+  "flexible": true,
+  "duration": 5,
+  "unit_duration": "day",
+  "activities": [
+    {
+      "id": 1,
+      "name": "Surfing",
+      "icon": "mdi-wave"
+    },
+    {
+      "id": 2,
+      "name": "Yoga"
+    }
+  ],
+  "requirements": [
+    {
+      "id": 1,
+      "name": "Swimwear"
+    },
+    {
+      "id": 2,
+      "name": "Sunscreen"
+    }
+  ],
+  "notices": [
+    {
+      "id": 1,
+      "name": "No previous surfing experience required."
+    },
+    {
+      "id": 2,
+      "name": "Be prepared for sun exposure and physical activity."
+    }
+  ],
+  "take_into_account": [
+    {
+      "id": 1,
+      "name": "Bring a water bottle to stay hydrated."
+    },
+    {
+      "id": 2,
+      "name": "Respect local surf etiquette and safety rules."
+    }
+  ],
+  "guide": {
+    "id": 3,
+    "name": "Youssef Elouahabi",
+    "bio": "I'm Youssef, a professional surf instructor with over 12 years of experience in the waters of Taghazout. My goal is to share the thrill of surfing with enthusiasts from all over the world. Fluent in English, French, and Arabic, I specialize in helping beginners find their confidence on the board and guiding experienced surfers to new challenges.",
+    "expertise": [
+      "Surfing Instruction",
+      "Ocean Safety"
+    ],
+    "languages": [
+      "English",
+      "French"
+    ],
+    "contact": {
+      "email": "youssef.surf@example.com",
+      "phone": "345-678-9012"
+    },
+    "certification": "Certified Surf Instructor",
+    "years_experience": 12,
+    "pictures": [
+      {
+        "id": 1,
+        "url": "https://picsum.photos/500/300?taghazout_surf1"
+      },
+      {
+        "id": 2,
+        "url": "https://picsum.photos/500/300?taghazout_surf2"
+      }
+    ]
+  },
+  "destination": {
+    "id": 3,
+    "label": "Taghazout Beaches",
+    "description": "Taghazout is a picturesque surf village known for its epic waves and vibrant surf culture. Located along Morocco's southwest coast, the area boasts a variety of surf spots suitable for all levels. From the gentle rollers perfect for beginners to the challenging tubes for the pros, Taghazout is a surfer's paradise.",
+    "location": {
+      "id": 3,
+      "label": "Taghazout",
+      "country": "Morocco",
+      "city": "Taghazout",
+      "address": "Taghazout Beach, Morocco",
+      "lat": 30.545066,
+      "lon": -9.708527
+    },
+    "multimedia": {
+      "images": [
+        {
+          "url": "https://picsum.photos/800/600?taghazout_beach1"
+        },
+        {
+          "url": "https://picsum.photos/800/600?taghazout_beach2"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://example.com/videos/taghazout_surf.mp4"
+        }
+      ],
+      "360_views": [
+        {
+          "url": "https://example.com/360/taghazout_panorama.html"
+        }
+      ]
+    },
+    "weather_and_seasonal_info": {
+      "live_weather": {
+        "temperature": 28,
+        "weather": "Sunny",
+        "wind_speed": 15,
+        "wind_direction": "NW",
+        "humidity": 70,
+        "precipitation": 0
+      },
+      "best_seasons": [
+        "Autumn",
+        "Winter"
+      ],
+      "typical_weather": {
+        "spring": "Mild, occasional showers",
+        "summer": "Warm, sunny",
+        "autumn": "Ideal surfing conditions",
+        "winter": "Mild, consistent surf"
+      }
+    },
+    "local_info": {
+      "nearby_destinations": [
+        {
+          "id": 4,
+          "label": "Agadir",
+          "location": {
+            "id": 4,
+            "label": "Agadir",
+            "country": "Morocco",
+            "city": "Agadir",
+            "address": "Agadir, Morocco",
+            "lat": 30.427755,
+            "lon": -9.598107
+          },
+          "multimedia": {
+            "images": [
+              {
+                "url": "https://picsum.photos/800/600?agadir1"
+              },
+              {
+                "url": "https://picsum.photos/800/600?agadir2"
+              }
+            ],
+            "videos": [
+              {
+                "url": "https://example.com/videos/agadir_tour.mp4"
+              }
+            ],
+            "360_views": [
+              {
+                "url": "https://example.com/360/agadir_panorama.html"
+              }
+            ]
+          }
+        }
+      ],
+      "local_customs": [
+        "Respect the local surf culture and prioritize safety.",
+        "Support local businesses and be mindful of the environment."
+      ]
+    }
+  },
+  "pictures": [
+    {
+      "id": 1,
+      "url": "https://picsum.photos/300/600?taghazout1",
+      "format": "portrait"
+    },
+    {
+      "id": 2,
+      "url": "https://picsum.photos/300/600?taghazout2",
+      "format": "portrait"
+    },
+    {
+      "id": 3,
+      "url": "https://picsum.photos/300/600?taghazout3",
+      "format": "portrait"
+    },
+    {
+      "id": 4,
+      "url": "https://picsum.photos/800/300?taghazout4",
+      "format": "landscape"
+    }
+  ],
+  "picture_url": "/public/imgs/surf-bg.png",
+  "steps": [
+    {
+      "id": 1,
+      "label": "Introduction to Surfing in Taghazout",
+      "day": 1,
+      "description": "Begin your surfing adventure with an introduction session on the basics of surfing. This includes understanding surf safety, board dynamics, and initial practice on the beach. The day ends with a relaxing yoga session to stretch out and prepare for the next day.",
+      "duration": "PT6H",
+      "activities": [
+        {
+          "id": 1,
+          "name": "Surfing Lesson"
+        },
+        {
+          "id": 2,
+          "name": "Yoga"
+        }
+      ],
+      "start_at": "2023-08-10T09:00:00Z",
+      "destination": {
+        "id": 3,
+        "label": "Taghazout Beach",
+        "location": {
+          "id": 3,
+          "label": "Taghazout",
+          "country": "Morocco",
+          "city": "Taghazout",
+          "lat": 30.545066,
+          "lon": -9.708527
+        }
+      },
+      "pictures": [
+        {
+          "id": 1,
+          "url": "https://picsum.photos/800/600?taghazout_surf_day1"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "label": "First Surf in the Ocean",
+      "day": 2,
+      "description": "Take your newly learned skills to the ocean. Start with small waves, guided by the instructor. The afternoon session focuses on improving techniques and enjoying the surf. The day winds down with a group dinner and surf theory discussion.",
+      "duration": "PT8H",
+      "activities": [
+        {
+          "id": 1,
+          "name": "Surfing"
+        }
+      ],
+      "start_at": "2023-08-11T08:00:00Z",
+      "destination": {
+        "id": 3,
+        "label": "Taghazout Surf Spot",
+        "location": {
+          "id": 3,
+          "label": "Taghazout",
+          "country": "Morocco",
+          "city": "Taghazout",
+          "lat": 30.545066,
+          "lon": -9.708527
+        }
+      },
+      "pictures": [
+        {
+          "id": 2,
+          "url": "https://picsum.photos/800/600?taghazout_surf_day2"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "label": "Exploring Different Surf Spots",
+      "day": 3,
+      "description": "Discover various surf spots around Taghazout, each offering different wave types. This is a day to explore and challenge your surfing skills under the watchful eye of your instructor. End the day with a sunset yoga session.",
+      "duration": "PT8H",
+      "activities": [
+        {
+          "id": 1,
+          "name": "Surfing"
+        },
+        {
+          "id": 2,
+          "name": "Yoga"
+        }
+      ],
+      "start_at": "2023-08-12T08:00:00Z",
+      "destination": {
+        "id": 3,
+        "label": "Various Taghazout Surf Spots",
+        "location": {
+          "id": 3,
+          "label": "Taghazout",
+          "country": "Morocco",
+          "city": "Taghazout",
+          "lat": 30.545066,
+          "lon": -9.708527
+        }
+      },
+      "pictures": [
+        {
+          "id": 3,
+          "url": "https://picsum.photos/800/600?taghazout_surf_day3"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "label": "Advanced Surfing Techniques",
+      "day": 4,
+      "description": "Focus on advanced surfing techniques and maneuvering. Participants can practice turning and riding larger waves. The day includes personal feedback sessions to enhance individual skills, followed by a group barbecue in the evening.",
+      "duration": "PT8H",
+      "activities": [
+        {
+          "id": 1,
+          "name": "Surfing"
+        }
+      ],
+      "start_at": "2023-08-13T08:00:00Z",
+      "destination": {
+        "id": 3,
+        "label": "Taghazout Main Beach",
+        "location": {
+          "id": 3,
+          "label": "Taghazout",
+          "country": "Morocco",
+          "city": "Taghazout",
+          "lat": 30.545066,
+          "lon": -9.708527
+        }
+      },
+      "pictures": [
+        {
+          "id": 4,
+          "url": "https://picsum.photos/800/600?taghazout_surf_day4"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "label": "Freestyle Surfing and Closing Ceremony",
+      "day": 5,
+      "description": "The final day is for freestyle surfing, allowing participants to showcase their skills. The expedition concludes with a closing ceremony, certificate distribution for participants, and a farewell lunch.",
+      "duration": "PT6H",
+      "activities": [
+        {
+          "id": 1,
+          "name": "Surfing"
+        }
+      ],
+      "start_at": "2023-08-14T08:00:00Z",
+      "destination": {
+        "id": 3,
+        "label": "Taghazout Surf Beach",
+        "location": {
+          "id": 3,
+          "label": "Taghazout",
+          "country": "Morocco",
+          "city": "Taghazout",
+          "lat": 30.545066,
+          "lon": -9.708527
+        }
+      },
+      "pictures": [
+        {
+          "id": 5,
+          "url": "https://picsum.photos/800/600?taghazout_surf_day5"
+        }
+      ]
+    }
+  ],
+  "pricing_details": [
+    {
+      "id": 1,
+      "description": "Basic Surf Package",
+      "amount": 650,
+      "includes": [
+        "Surf Lessons",
+        "Surfboard Rental",
+        "Accommodation",
+        "Daily Breakfast and Lunch",
+        "Yoga Sessions"
+      ],
+      "optional_add_ons": [
+        {
+          "id": 1,
+          "description": "Photography Package",
+          "amount": 100
+        },
+        {
+          "id": 2,
+          "description": "Evening Meals",
+          "amount": 150
+        }
+      ],
+      "date_based_pricing": [
+        {
+          "start_date": "2023-05-01",
+          "end_date": "2023-06-30",
+          "amount": 600
+        },
+        {
+          "start_date": "2023-07-01",
+          "end_date": "2023-08-31",
+          "amount": 650
+        },
+        {
+          "start_date": "2023-09-01",
+          "end_date": "2023-10-31",
+          "amount": 625
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "description": "Premium Surf Experience",
+      "amount": 850,
+      "includes": [
+        "Advanced Surf Lessons",
+        "Premium Surfboard Rental",
+        "Luxury Accommodation",
+        "All Meals (Breakfast, Lunch, Dinner)",
+        "Private Yoga Sessions",
+        "Transportation to Different Surf Spots"
+      ],
+      "optional_add_ons": [
+        {
+          "id": 3,
+          "description": "Private Surf Photography Session",
+          "amount": 200
+        },
+        {
+          "id": 4,
+          "description": "Cultural Tour of Taghazout",
+          "amount": 120
+        }
+      ],
+      "date_based_pricing": [
+        {
+          "start_date": "2023-05-01",
+          "end_date": "2023-06-30",
+          "amount": 800
+        },
+        {
+          "start_date": "2023-07-01",
+          "end_date": "2023-08-31",
+          "amount": 850
+        },
+        {
+          "start_date": "2023-09-01",
+          "end_date": "2023-10-31",
+          "amount": 825
+        }
+      ],
+      "excludes": [
+        "Personal Expenses",
+        "Travel Insurance"
+      ]
+    }
+  ],
+  "meetingPoint": {
+  },
+  "cancellation_policy": {
+  },
+  "user_reviews": [
+  ]
+}

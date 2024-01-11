@@ -1,0 +1,335 @@
+[
+  {
+    "id": 1,
+    "name": "Rime Machiche",
+    "nbr_experiences": 10,
+    "verified": true,
+    "title": "Mountain Guide",
+    "rating": 4.0,
+    "bio": "I am an experienced mountain guide with over 10 years of experience leading treks in the Atlas Mountains. I am passionate about sharing my love of the mountains with others and helping them discover the beauty of Morocco. I speak English, French, and Arabic fluently and have extensive knowledge of the local culture and history. I look forward to welcoming you to Morocco and showing you the best of the Atlas Mountains!",
+    "activities": [
+      "Mountain Trekking",
+      "Survival Training"
+    ],
+    "languages": [
+      "English",
+      "French"
+    ],
+    "contact": {
+      "email": "john.smith@example.com",
+      "phone": "123-456-7890"
+    },
+    "certification": "Certified Mountain guide",
+    "years_experience": 10,
+    "pictures": [
+      {
+        "id": 1,
+        "url": "https://this-person-does-not-exist.com/static/images/fake-3.jpg"
+      },
+      {
+        "id": 2,
+        "url": "https://picsum.photos/500/300?guide"
+      },
+      {
+        "id": 3,
+        "url": "https://picsum.photos/500/300?guide"
+      }
+    ],
+    "place": {
+      "id": 1,
+      "label": "Azilal",
+      "location": {
+        "id": 1,
+        "label": "Azilal",
+        "country": "Morocco",
+        "city": "Azilal",
+        "lat": 31.142,
+        "lon": -7.914
+      }
+    },
+    "reviews": [
+      {
+        "id": 1,
+        "rating": 5,
+        "comment": "Rime was a great mountain guide. He was very patient and helped me learn how to climb in no time. I would definitely recommend him to anyone looking for a mountain guide in Morocco!"
+      },
+      {
+        "id": 2,
+        "rating": 4,
+        "comment": "Rime was a great mountain guide. He was very patient and helped me learn how to climb in no time. I would definitely recommend him to anyone looking for a mountain guide in Morocco!"
+      },
+      {
+        "id": 3,
+        "rating": 5,
+        "comment": "Rime was a great mountain guide. He was very patient and helped me learn how to climb in no time. I would definitely recommend him to anyone looking for a mountain guide in Morocco!"
+      }
+    ],
+    "nbr_participants": 100
+  },
+  {
+    "id": 2,
+    "name": "John Smith",
+    "nbr_experiences": 2,
+    "verified": false,
+    "title": "Mountain Guide",
+    "rating": 4.5,
+    "bio": "I am an experienced mountain guide with over 10 years of experience leading treks in the Atlas Mountains. I am passionate about sharing my love of the mountains with others and helping them discover the beauty of Morocco. I speak English, French, and Arabic fluently and have extensive knowledge of the local culture and history. I look forward to welcoming you to Morocco and showing you the best of the Atlas Mountains!",
+    "activities": [
+      "Mountain Trekking",
+      "Survival Training"
+    ],
+    "languages": [
+      "English",
+      "French"
+    ],
+    "contact": {
+      "email": "jhon smith",
+      "phone": "123-456-7890",
+      "city": "New York",
+      "country": "USA"
+    },
+    "certification": "Certified Mountain guide",
+    "years_experience": 10,
+    "pictures": [
+      {
+        "id": 1,
+        "url": "https://this-person-does-not-exist.com/static/images/fake-1.jpg"
+      },
+      {
+        "id": 2,
+        "url": "https://picsum.photos/500/300?guide"
+      },
+      {
+        "id": 3,
+        "url": "https://picsum.photos/500/300?guide"
+      }
+    ],
+    "place": {
+      "id": 6,
+      "label": "Imlil",
+      "location": {
+        "id": 6,
+        "label": "Imlil",
+        "country": "Morocco",
+        "city": "Imlil",
+        "lat": 31.142,
+        "lon": -7.914
+      }
+    },
+    "reviews": [
+      {
+        "id": 1,
+        "rating": 5,
+        "comment": "John was a great mountain guide. He was very patient and helped me learn how to climb in no time. I would definitely recommend him to anyone looking for a mountain guide in Morocco!"
+      },
+      {
+        "id": 2,
+        "rating": 4,
+        "comment": "John was a great mountain guide. He was very patient and helped me learn how to climb in no time. I would definitely recommend him to anyone looking for a mountain guide in Morocco!"
+      },
+      {
+        "id": 3,
+        "rating": 5,
+        "comment": "John was a great mountain guide. He was very patient and helped me learn how to climb in no time. I would definitely recommend him to anyone looking for a mountain guide in Morocco!"
+      }
+    ],
+    "nbr_participants": 100
+  },
+  {
+    "id": 3,
+    "verified": true,
+    "nbr_experiences": 4,
+    "name": "Rami Malak",
+    "title": "Surf Monitor",
+    "rating": 2,
+    "bio": "I am an experienced Surf Monitor with 8 years of experience leading surf lessons in the Atlantic Ocean. I am passionate about sharing my love of the ocean with others and helping them discover the beauty of Morocco. I speak English, French, and Arabic fluently and have extensive knowledge of the local culture and history. I look forward to welcoming you to Morocco and showing you the best of the Atlantic Ocean!",
+    "activities": [
+      "Surfing",
+      "Swimming"
+    ],
+    "languages": [
+      "English",
+      "French"
+    ],
+    "contact": {
+      "email": "rami@malek.com",
+      "phone": "123-456-7890"
+    },
+    "certification": "Certified Surf Monitor",
+    "years_experience": 8,
+    "pictures": [
+      {
+        "id": 1,
+        "url": "https://this-person-does-not-exist.com/static/images/fake-2.jpg"
+      },
+      {
+        "id": 2,
+        "url": "https://picsum.photos/500/300?guide"
+      },
+      {
+        "id": 3,
+        "url": "https://picsum.photos/500/300?guide"
+      }
+    ],
+    "reviews": [
+      {
+        "id": 1,
+        "rating": 5,
+        "comment": "Rami was a great surf instructor. He was very patient and helped me learn how to surf in no time. I would definitely recommend him to anyone looking for a surf instructor in Morocco!"
+      },
+      {
+        "id": 2,
+        "rating": 4,
+        "comment": "Rami was a great surf instructor. He was very patient and helped me learn how to surf in no time. I would definitely recommend him to anyone looking for a surf instructor in Morocco!"
+      },
+      {
+        "id": 3,
+        "rating": 5,
+        "comment": "Rami was a great surf instructor. He was very patient and helped me learn how to surf in no time. I would definitely recommend him to anyone looking for a surf instructor in Morocco!"
+      }
+    ],
+    "place": {
+      "id": 3,
+      "label": "Taghazout Surf Beach",
+      "location": {
+        "id": 3,
+        "label": "Taghazout",
+        "country": "Morocco",
+        "city": "Taghazout",
+        "lat": 30.545066,
+        "lon": -9.708527
+      }
+    },
+    "nbr_participants": 100
+  },
+  {
+    "id": 4,
+    "nbr_experiences": 14,
+    "title": "Desert Guide",
+    "name": "Ahmad Ghandour",
+    "bio": "I am an experienced Desert Guide with 5 years of experience leading desert tours in the Sahara Desert. I am passionate about sharing my love of the desert with others and helping them discover the beauty of Morocco. I speak English, French, and Arabic fluently and have extensive knowledge of the local culture and history. I look forward to welcoming you to Morocco and showing you the best of the Sahara Desert!",
+    "activities": [
+      "Desert Tours",
+      "Camel Riding"
+    ],
+    "languages": [
+      "English",
+      "French"
+    ],
+    "contact": {
+      "email": "ahmad@gmai.com",
+      "phone": "123-456-7890"
+    },
+    "certification": "Certified Desert Guide",
+    "years_experience": 5,
+    "pictures": [
+      {
+        "id": 1,
+        "url": "https://thispersondoesnotexist.com"
+      },
+      {
+        "id": 2,
+        "url": "https://picsum.photos/500/300?guide"
+      },
+      {
+        "id": 3,
+        "url": "https://picsum.photos/500/300?guide"
+      }
+    ],
+    "place": {
+      "id": 3,
+      "label": "Ouarzazate",
+      "location": {
+        "id": 3,
+        "label": "Ouarzazate",
+        "country": "Morocco",
+        "city": "Ouarzazate",
+        "lat": 30.545066,
+        "lon": -9.708527
+      }
+    },
+    "reviews": [
+      {
+        "id": 1,
+        "rating": 5,
+        "comment": "Ahmad was a great desert guide. He was very patient and helped me learn how to ride a camel in no time. I would definitely recommend him to anyone looking for a desert guide in Morocco!"
+      },
+      {
+        "id": 2,
+        "rating": 4,
+        "comment": "Ahmad was a great desert guide. He was very patient and helped me learn how to ride a camel in no time. I would definitely recommend him to anyone looking for a desert guide in Morocco!"
+      },
+      {
+        "id": 3,
+        "rating": 5,
+        "comment": "Ahmad was a great desert guide. He was very patient and helped me learn how to ride a camel in no time. I would definitely recommend him to anyone looking for a desert guide in Morocco!"
+      }
+    ],
+    "nbr_participants": 100
+  },
+  {
+    "id": 5,
+    "nbr_experiences": 14,
+    "title": "Canoying Guide",
+    "name": "Imad Fadili",
+    "bio": "I am an experienced Canoying Guide with 5 years of experience leading Canoying tours in the Atlas Mountains. I am passionate about sharing my love of the Canoying with others and helping them discover the beauty of Morocco. I speak English, French, and Arabic fluently and have extensive knowledge of the local culture and history. I look forward to welcoming you to Morocco and showing you the best of the Canoying!",
+    "activities": [
+      "Canoying",
+      "Swimming"
+    ],
+    "languages": [
+      "English",
+      "French"
+    ],
+    "contact": {
+      "email": "imad@aa.com",
+      "phone": "123-456-7890"
+    },
+    "certification": "Certified Canoying Guide",
+    "years_experience": 5,
+    "pictures": [
+      {
+        "id": 1,
+        "url": "https://thispersondoesnotexist.com?guide=1"
+      },
+      {
+        "id": 2,
+        "url": "https://picsum.photos/500/300?guide"
+      },
+      {
+        "id": 3,
+        "url": "https://picsum.photos/500/300?guide"
+      }
+    ],
+    "place": {
+      "id": 3,
+        "label": "Zawiya Ahansal",
+        "location": {
+          "id": 3,
+          "label": "Zawiya Ahansal",
+          "country": "Morocco",
+          "city": "Zawiya Ahansal",
+          "lat": 30.545066,
+          "lon": -9.708527
+        }
+    },
+    "reviews": [
+      {
+        "id": 1,
+        "rating": 5,
+        "comment": "Imad was a great Canoying guide. He was very patient and helped me learn how to ride a camel in no time. I would definitely recommend him to anyone looking for a Canoying guide in Morocco!"
+      },
+      {
+        "id": 2,
+        "rating": 4,
+        "comment": "Imad was a great Canoying guide. He was very patient and helped me learn how to ride a camel in no time. I would definitely recommend him to anyone looking for a Canoying guide in Morocco!"
+      },
+      {
+        "id": 3,
+        "rating": 5,
+        "comment": "Imad was a great Canoying guide. He was very patient and helped me learn how to ride a camel in no time. I would definitely recommend him to anyone looking for a Canoying guide in Morocco!"
+      }
+    ],
+    "nbr_participants": 100
+  }
+]

@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row>
-      <v-col cols="12" md="4" v-for="activity in activities"
+      <v-col cols="12" md="4" v-for="activity in experiences"
              :key="activity.id">
         <v-card
             class="mx-auto"
@@ -15,20 +15,16 @@
           >
             <v-card-title> {{ activity.title }}</v-card-title>
           </v-img>
-
           <v-card-subtitle class="pt-4 text-shades-black">
             {{ activity.start_at }} to {{ activity.end_at }}
           </v-card-subtitle>
-
           <v-card-text>
             {{ activity.description }}
           </v-card-text>
-
           <v-card-actions>
             <v-btn color="orange">
               Share
             </v-btn>
-
             <v-btn color="orange" link :href="'/experiences/'+activity?.id">
               Explore
             </v-btn>
@@ -45,14 +41,14 @@ import axios from "axios";
 export default {
   data() {
     return {
-      activities: []
+      experiences: []
     };
   },
   methods: {
-    async fetchActivities() {
-      for (let i = 1; i < 4; i++) {
+    async fetchExperiences() {
+      for (let i = 1; i < 5; i++) {
         await axios.get("/experiencesjson/" + i + ".json")
-            .then(response => this.activities.push(response.data))
+            .then(response => this.experiences.push(response.data))
             .then(data => {
               console.log(data);
             });
@@ -60,7 +56,7 @@ export default {
     }
   },
   mounted() {
-    this.fetchActivities()
+    this.fetchExperiences()
   }
 };
 </script>
