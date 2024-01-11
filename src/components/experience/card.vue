@@ -1,7 +1,11 @@
 <script>
+import {getTheme} from "@/utils/services";
+
 export default {
-  name: "card",
+  name: "ExperienceCard",
+  methods: {getTheme},
   data: () => ({
+    model_carousel: 0,
     loading: false,
     selection: [],
     expanded: false,
@@ -9,112 +13,125 @@ export default {
   props: {
     experience: Object,
   },
-  methods: {
-    getActivityIcon(activity) {
-      // Define icons for different activities
-      const icons = {
-        Hiking: 'mdi-hiking',
-        'Mountain Biking': 'mdi-bike',
-        Sightseeing: 'mdi-eye',
-      };
-      return icons[activity] || 'mdi-help-circle';
-    },
-  },
 }
 </script>
 
 <template>
-  <v-col cols="12" md="4">
-    <v-card>
-      <v-img
-        :src="experience?.destination?.location.country === 'Switzerland' ? 'https://picsum.photos/800/600?random=1' : 'https://picsum.photos/800/600?random=4'"
-        alt="Card image"
-      ></v-img>
+      <div class="card-dall-parent-main" v-if="experience">
+        <div class="card-dall">
+          <v-card
+            max-height="85vh"
+          >
+            <div v-if="experience.pictures && experience.pictures.length > 0">
+              <v-row class="mx-2 py-1">
+                <v-col v-for="(picture, i) in experience.pictures"
+                       :key="i">
+                  <v-progress-linear
+                    :model-value="i===model_carousel?100:0"
+                    :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                    bg-color="grey lighten-3"
+                  ></v-progress-linear>
+                </v-col>
+              </v-row>
+              <v-carousel height="200"
+                          v-model="model_carousel"
+                          show-arrows="hover"
+                          hide-delimiter-background
+                          hide-delimiters>
 
-      <v-card-title>{{ experience?.title }}</v-card-title>
+                <v-carousel-item
+                  v-for="(picture, i) in experience.pictures"
+                  :key="i"
+                  :value="i"
+                >
+                  <v-img
+                    cover
+                    height="200"
+                    :src="picture.url"
+                  ></v-img>
+                </v-carousel-item>
+              </v-carousel>
+            </div>
+            <v-card-item>
+              <h4>{{ experience.title }}</h4>
 
-      <v-card-text>
-        <v-row>
-          <v-col cols="12" sm="6">
-            <v-icon>mdi-calendar</v-icon>
-            {{ experience?.start_at }} - {{ experience?.end_at }}
-          </v-col>
-          <v-col cols="12" sm="6">
-            <v-icon>mdi-currency-usd</v-icon>
-            {{ experience?.price }}
-          </v-col>
-        </v-row>
-      </v-card-text>
+              <v-card-subtitle>
+                <span class="me-1">{{ experience.destination?.label }}</span>
 
-      <v-card-text>
-        <v-icon>mdi-trekking</v-icon>
-        Difficulty: {{ experience?.difficulty }}/5
-      </v-card-text>
+                <v-icon
+                  color="error"
+                  icon="mdi-map-marker"
+                  size="small"
+                ></v-icon>
+              </v-card-subtitle>
+            </v-card-item>
 
-      <v-card-text>
-        <v-icon>mdi-star</v-icon>
-        Rating: {{ experience?.rating }}/5
-      </v-card-text>
+            <v-card-text>
+              <v-row
+                align="center"
+                class="mx-0"
+              >
+                <v-rating
+                  v-model="experience.rating"
+                  color="amber"
+                  density="compact"
+                  half-increments
+                  readonly
+                  size="small"
+                ></v-rating>
 
-      <v-card-text>
-        <v-icon>mdi-clock</v-icon>
-        Duration: {{ experience?.duration }}
-      </v-card-text>
+                <div class="text-grey ms-4">
+                  {{ experience.rating }} ({{ experience.rater_count }})
+                </div>
+              </v-row>
 
-      <v-card-subtitle>Description:</v-card-subtitle>
-      <v-card-text>{{ experience?.description }}</v-card-text>
+              <v-alert class="mt-4 mb-1 text-subtitle-1 pa-1 px-1 font-weight-bold"
+                       :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                       variant="plain">
+                Starting : $ {{ experience.price }}
+                <v-btn class="float-end" size="x-small" href="#pricing-details"
+                       :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                  <v-icon>mdi-cash-multiple</v-icon>
+                </v-btn>
+              </v-alert>
 
-      <v-card-subtitle>Activities:</v-card-subtitle>
-      <v-card-text>
-        <v-chip v-for="activity in experience?.activities" :key="activity.id" class="mr-2">
-          <v-icon left>{{ getActivityIcon(activity.name) }}</v-icon>
-          {{ activity.name }}
-        </v-chip>
-      </v-card-text>
+              <div>
+                {{ experience.description?.substring(0, 150) }}...<a class="mx-3" href="#description">(+)</a>
+              </div>
 
-      <v-card-subtitle>Requirements:</v-card-subtitle>
-      <v-card-text>
-        <v-chip v-for="requirement in experience?.requirements" :key="requirement.id" class="mr-2">
-          <v-icon left>mdi-check-circle</v-icon>
-          {{ requirement.name }}
-        </v-chip>
-      </v-card-text>
-
-      <v-card-subtitle>Notices:</v-card-subtitle>
-      <v-card-text>
-        <v-chip v-for="notice in experience?.notices" :key="notice.id" class="mr-2">
-          <v-icon left>mdi-alert</v-icon>
-          {{ notice.name }}
-        </v-chip>
-      </v-card-text>
-
-      <v-card-subtitle>Important Considerations:</v-card-subtitle>
-      <v-card-text>
-        <v-chip v-for="consideration in experience?.take_into_account" :key="consideration.id" class="mr-2">
-          <v-icon left>mdi-information</v-icon>
-          {{ consideration.name }}
-        </v-chip>
-      </v-card-text>
-
-      <v-card-subtitle>Guide:</v-card-subtitle>
-      <v-card-title>{{experience?.guide?.name}}</v-card-title>
-      <v-card-text>{{ experience?.guide?.bio }}</v-card-text>
-
-      <v-card-subtitle>Destination:</v-card-subtitle>
-      <v-card-text>
-        <div>
-          <v-icon>mdi-map-marker</v-icon>
-          {{ experience?.destination?.label }}, {{ experience?.destination?.location?.country }} - {{ experience?.destination?.location.city }}
+              <v-alert class="mt-2"
+                       variant="tonal"
+                       :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                       density="compact">
+                <v-chip label class="ma-1" size="x-small" variant="flat"><strong>Duration : </strong> {{
+                    experience.duration
+                  }}
+                  {{ experience.unit_duration }}
+                </v-chip>
+                <v-chip label class="ma-1" v-if="!experience.flexible" size="x-small" variant="flat"><strong>Start
+                  at
+                  :</strong>
+                  {{ experience.start_at }}
+                </v-chip>
+                <v-chip label class="ma-1" v-if="!experience.flexible" size="x-small" variant="flat"><strong>End
+                  at
+                  :</strong>
+                  {{
+                    experience.end_at
+                  }}
+                </v-chip>
+                <v-chip label class="ma-1 font-weight-bold" size="x-small" variant="flat">
+                  <strong>Max Participants :</strong> {{ experience.max_participants }}
+                </v-chip>
+                <v-chip label class="ma-1" size="x-small" variant="flat"> {{ experience.booked_nbr }}+
+                  booked
+                </v-chip>
+                <v-chip label class="ma-1 font-weight-bold" variant="flat" v-if="experience.flexible"
+                        size="x-small">Flexible
+                </v-chip>
+              </v-alert>
+            </v-card-text>
+          </v-card>
         </div>
-        <div>
-          <v-icon>mdi-domain</v-icon>
-          {{ experience?.destination?.location.address }}
-        </div>
-      </v-card-text>
-    </v-card>
-  </v-col>
+      </div>
 </template>
-
-<style scoped>
-
-</style>

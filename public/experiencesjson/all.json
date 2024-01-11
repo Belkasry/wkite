@@ -20,31 +20,36 @@
         "id": 4,
         "name": "Skiing",
         "description": "Skiing can be a means of transport, a recreational activity or a competitive winter sport in which the participant uses skis to glide on snow. Many types of competitive skiing events are recognized by the International Olympic Committee (IOC), and the International Ski Federation (FIS).",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Freestyle_skiing_jump2.jpg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Freestyle_skiing_jump2.jpg",
+        "icon": "mdi-ski"
       },
       {
         "id": 5,
         "name": "Hiking",
         "description": "Hiking is a long, vigorous walk, usually on trails or footpaths in the countryside. Walking for pleasure developed in Europe during the eighteenth century. Religious pilgrimages have existed much longer but they involve walking long distances for a spiritual purpose associated with specific religions.",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg/1920px-Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg"
+        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg/1920px-Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg",
+        "icon": "mdi-hiking"
       },
       {
         "id": 6,
         "name": "Trekking",
         "description": "Trekking is a form of walking, undertaken with the specific purpose of exploring and enjoying the scenery. It usually takes place on trails in areas of relatively unspoiled wilderness.",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/2/20/Backpacking_in_Grand_Teton_NP-NPS.jpg"
+        "image":"https://upload.wikimedia.org/wikipedia/commons/2/20/Backpacking_in_Grand_Teton_NP-NPS.jpg",
+        "icon": "mdi-walk"
       },
       {
         "id": 1,
         "name": "Climbing",
         "description": "Climbing is the activity of using one's hands, feet, or any other part of the body to ascend a steep object. It is done recreationally, competitively, in trades that rely on it, and in emergency rescue and military operations. It is done indoors and out, on natural and manmade structures.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Ainhize_Belar_eskalatzen.jpg"
+        "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Ainhize_Belar_eskalatzen.jpg",
+        "icon": "mdi-image-filter-hdr"
       },
       {
         "id": 2,
         "name": "Mountaineering",
         "description": "Mountaineering is the set of activities that involves ascending mountains. Mountaineering-related activities include traditional outdoor climbing, skiing, and traversing via ferratas. Indoor climbing, sport climbing and bouldering are also considered mountaineering by some.",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/d/db/Mt_kenya_austrian_hut_with_nelion.jpg"
+        "image":"https://upload.wikimedia.org/wikipedia/commons/d/db/Mt_kenya_austrian_hut_with_nelion.jpg",
+        "icon": "mdi-image-filter-hdr"
       }
     ],
     "requirements": [

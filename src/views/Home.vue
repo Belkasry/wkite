@@ -50,7 +50,7 @@
                       :value="0">
                       <v-sheet class="w-100 h-100 d-flex align-items-end flex-column"
                                :style="'background:url('+experience.picture_url+')'" style="background-size: cover;">
-                        <div class="w-100 mt-auto p-2"
+                        <div class="w-100 mt-auto p-2 d-flex flex-wrap"
                              :style="'background:'+getTheme(experience.type).color_theme_1+'aa'">
                           <v-chip
                             color="white"
