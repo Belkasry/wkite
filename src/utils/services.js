@@ -42,16 +42,9 @@ export function getTheme(theme) {
 }
 
 
-export async function getExperience(id) {
-  const response= await axios.get("/experiencesjson/all.json")
-  const allExperiences = response.data;
-  console.log(allExperiences.find((experience) => experience.id == id))
-  return allExperiences.find((experience) => experience.id == id);
-}
-
-export async function getGuide(id) {
-  const response= await axios.get("/guidesjson/all.json")
-  const allGuides = response.data;
-  console.log(allGuides.find((guide) => guide.id == id))
-  return allGuides.find((guide) => guide.id == id);
-}
+// export async function getGuide(id) {
+//   const response= await axios.get("/guidesjson/all.json")
+//   const allGuides = response.data;
+//   console.log(allGuides.find((guide) => guide.id == id))
+//   return allGuides.find((guide) => guide.id == id);
+// }

@@ -16,13 +16,34 @@
   "unit_duration": "day",
   "activities": [
     {
-      "id": 1,
+      "id": 4,
+      "name": "Skiing",
+      "description": "Skiing can be a means of transport, a recreational activity or a competitive winter sport in which the participant uses skis to glide on snow. Many types of competitive skiing events are recognized by the International Olympic Committee (IOC), and the International Ski Federation (FIS).",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Freestyle_skiing_jump2.jpg"
+    },
+    {
+      "id": 5,
       "name": "Hiking",
-      "icon": "mdi-image-filter-hdr"
+      "description": "Hiking is a long, vigorous walk, usually on trails or footpaths in the countryside. Walking for pleasure developed in Europe during the eighteenth century. Religious pilgrimages have existed much longer but they involve walking long distances for a spiritual purpose associated with specific religions.",
+      "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg/1920px-Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Trekking",
+      "description": "Trekking is a form of walking, undertaken with the specific purpose of exploring and enjoying the scenery. It usually takes place on trails in areas of relatively unspoiled wilderness.",
+      "image":"https://upload.wikimedia.org/wikipedia/commons/2/20/Backpacking_in_Grand_Teton_NP-NPS.jpg"
+    },
+    {
+      "id": 1,
+      "name": "Climbing",
+      "description": "Climbing is the activity of using one's hands, feet, or any other part of the body to ascend a steep object. It is done recreationally, competitively, in trades that rely on it, and in emergency rescue and military operations. It is done indoors and out, on natural and manmade structures.",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Ainhize_Belar_eskalatzen.jpg"
     },
     {
       "id": 2,
-      "name": "Sightseeing"
+      "name": "Mountaineering",
+      "description": "Mountaineering is the set of activities that involves ascending mountains. Mountaineering-related activities include traditional outdoor climbing, skiing, and traversing via ferratas. Indoor climbing, sport climbing and bouldering are also considered mountaineering by some.",
+      "image":"https://upload.wikimedia.org/wikipedia/commons/d/db/Mt_kenya_austrian_hut_with_nelion.jpg"
     }
   ],
   "requirements": [
@@ -59,11 +80,15 @@
       "name": "Bring sunscreen and a hat to protect from the sun."
     }
   ],
-  "guide": {
+  "guide":{
     "id": 1,
     "name": "Rime Machiche",
+    "nbr_experiences": 10,
+    "verified": true,
+    "title": "Mountain Guide",
+    "rating": 4.0,
     "bio": "I am an experienced mountain guide with over 10 years of experience leading treks in the Atlas Mountains. I am passionate about sharing my love of the mountains with others and helping them discover the beauty of Morocco. I speak English, French, and Arabic fluently and have extensive knowledge of the local culture and history. I look forward to welcoming you to Morocco and showing you the best of the Atlas Mountains!",
-    "expertise": [
+    "activities": [
       "Mountain Trekking",
       "Survival Training"
     ],
@@ -80,17 +105,47 @@
     "pictures": [
       {
         "id": 1,
-        "url": "https://picsum.photos/500/300"
+        "url": "https://www.datocms-assets.com/55179/1647312643-9506360856_d7d657a16a_o.jpg"
       },
       {
         "id": 2,
-        "url": "https://picsum.photos/500/300"
+        "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Toubkal_Orange.jpg/1920px-Toubkal_Orange.jpg"
       },
       {
         "id": 3,
-        "url": "https://picsum.photos/500/300"
+        "url": "https://picsum.photos/500/300?guide"
       }
-    ]
+    ],
+    "place": {
+      "id": 1,
+      "label": "Azilal",
+      "location": {
+        "id": 1,
+        "label": "Azilal",
+        "country": "Morocco",
+        "city": "Azilal",
+        "lat": 31.142,
+        "lon": -7.914
+      }
+    },
+    "reviews": [
+      {
+        "id": 1,
+        "rating": 5,
+        "comment": "Rime was a great mountain guide. He was very patient and helped me learn how to climb in no time. I would definitely recommend him to anyone looking for a mountain guide in Morocco!"
+      },
+      {
+        "id": 2,
+        "rating": 4,
+        "comment": "Rime was a great mountain guide. He was very patient and helped me learn how to climb in no time. I would definitely recommend him to anyone looking for a mountain guide in Morocco!"
+      },
+      {
+        "id": 3,
+        "rating": 5,
+        "comment": "Rime was a great mountain guide. He was very patient and helped me learn how to climb in no time. I would definitely recommend him to anyone looking for a mountain guide in Morocco!"
+      }
+    ],
+    "nbr_participants": 100
   },
   "destination": {
     "id": 1,
@@ -190,37 +245,32 @@
   "pictures": [
     {
       "id": 1,
-      "url": "https://picsum.photos/300/600?random=1",
-      "format": "portrait"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg/1920px-Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg",
+      "format": "landscape"
     },
     {
       "id": 2,
-      "url": "https://picsum.photos/300/600?random=2",
-      "format": "portrait"
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Vihren_Pirin_IMG_8898.jpg/1920px-Vihren_Pirin_IMG_8898.jpg",
+      "format": "landscape"
     },
     {
       "id": 3,
-      "url": "https://picsum.photos/300/600?random=3",
+      "url": "https://upload.wikimedia.org/wikipedia/commons/3/39/GlarusAlps.jpg",
+      "format": "landscape"
+    },
+    {
+      "id": 4,
+      "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Ortler_Ascent_-_South_Tyrol.jpg/1280px-Ortler_Ascent_-_South_Tyrol.jpg",
       "format": "portrait"
     },
     {
       "id": 4,
-      "url": "https://picsum.photos/800/300?random=5",
-      "format": "landscape"
-    },
-    {
-      "id": 4,
-      "url": "https://picsum.photos/800/300?random=5",
-      "format": "landscape"
-    },
-    {
-      "id": 4,
-      "url": "https://picsum.photos/800/300?random=5",
-      "format": "landscape"
+      "url": "https://static01.nyt.com/images/2021/01/19/sports/19summit-k2-3/19summit-k2-3-superJumbo.jpg?quality=75&auto=webp",
+      "format": "portrait"
     },
     {
       "id": 5,
-      "url": "https://picsum.photos/300/600?random=6",
+      "url": "https://www.datocms-assets.com/55179/1647312643-9506360856_d7d657a16a_o.jpg",
       "format": "portrait"
     },
     {
@@ -229,7 +279,7 @@
       "format": "portrait"
     }
   ],
-  "picture_url": "/public/imgs/snow-bg.png",
+  "picture_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Toubkal_Orange.jpg/1920px-Toubkal_Orange.jpg",
   "steps": [
     {
       "id": 1,

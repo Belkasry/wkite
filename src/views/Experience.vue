@@ -1,8 +1,16 @@
 <template>
-  <div v-if="experience && experience.type" class="experience">
+  <v-skeleton-loader
+    boilerplate
+    class="mx-auto"
+    elevation="2"
+    max-width="760"
+    type="card-avatar, article, actions"
+    v-if="!loaded"
+  ></v-skeleton-loader>
+  <div class="experience" v-else>
     <div
-         class="px-4"
-         :class="experience.type?'card-'+experience.type:'card-snow'">
+      class="px-4"
+      :class="experience.type?'card-'+experience.type:'card-snow'">
       <div v-if="experience" class="pa-3 experience-hiking">
         <v-row>
           <v-col cols="12" md="4" class="full-height">
@@ -13,7 +21,7 @@
                     <v-card
                       max-height="85vh"
                     >
-                      <div>
+                      <div v-if="experience.pictures && experience.pictures.length > 0">
                         <v-row class="mx-2 py-1">
                           <v-col v-for="(picture, i) in experience.pictures"
                                  :key="i">
@@ -24,7 +32,6 @@
                             ></v-progress-linear>
                           </v-col>
                         </v-row>
-
                         <v-carousel height="200"
                                     v-model="model_carousel"
                                     show-arrows="hover"
@@ -135,7 +142,7 @@
                 <div class="card-dall-parent">
                   <div class="card-dall">
                     <v-card :color="getTheme(experience.type?experience.type:'nature').color_theme_2">
-                      <div v-if="experience && experience.pictures">
+                      <div v-if="loaded && experience && experience.pictures && experience.pictures.length > 0">
                         <v-card-title>
                           <h4 class="ma-4">
                             <v-icon class="mx-1">mdi-image-multiple</v-icon>
@@ -143,9 +150,9 @@
                           </h4>
                         </v-card-title>
                         <v-row no-gutters
-                               v-show="adjusted(experience.pictures) && adjusted(experience.pictures).length>0"
+                               v-show="adjusted && adjusted.length>0"
                                class="mx-2 mb-2">
-                          <template v-for="(image, imgIdx) in adjusted(experience.pictures)" :key="imgIdx">
+                          <template v-for="(image, imgIdx) in adjusted" :key="imgIdx">
                             <v-col
                               :cols="image.format=='landscape' ? 6 : 3"
                               class="pa-1"
@@ -238,7 +245,6 @@
                 </div>
               </v-col>
             </v-row>
-
             <v-row>
               <v-col>
                 <div class="card-dall-parent">
@@ -266,7 +272,6 @@
                 </div>
               </v-col>
             </v-row>
-
             <v-row>
               <v-col>
                 <div class="card-dall-parent">
@@ -292,7 +297,6 @@
                 </div>
               </v-col>
             </v-row>
-
             <v-row>
               <v-col>
                 <div class="card-dall-parent">
@@ -334,7 +338,7 @@
                         title="Card title"
                         theme="dark"
                       ></v-avatar>
-                      <v-div class="mt-auto w-100">
+                      <div class="mt-auto w-100">
                         <v-row style="margin-top:-10px !important;" class="justify-content-center d-flex">
                           <v-chip :color="getTheme(experience.type?experience.type:'nature').color_theme_3"
                                   variant="elevated"
@@ -369,7 +373,7 @@
                             </v-row>
                           </v-alert>
                         </v-row>
-                      </v-div>
+                      </div>
                     </div>
                     <v-card-text class="text-center text-white">
                       <v-row>
@@ -575,7 +579,6 @@
                 </div>
               </v-col>
             </v-row>
-
             <v-row>
               <v-col>
                 <div class="card-dall-parent">
@@ -676,7 +679,6 @@
                 </div>
               </v-col>
             </v-row>
-
             <v-row>
               <v-col>
                 <div class="card-dall-parent">
@@ -711,7 +713,6 @@
                 </div>
               </v-col>
             </v-row>
-
             <v-row>
               <v-col>
                 <div class="card-dall-parent">
@@ -739,7 +740,6 @@
                 </div>
               </v-col>
             </v-row>
-
             <v-row>
               <v-col>
                 <div class="card-dall-parent">
@@ -867,8 +867,6 @@
               </v-card>
             </div>
           </v-col>
-
-
         </v-row>
       </div>
     </div>
@@ -878,20 +876,16 @@
 <script>
 import {MapboxMap, MapboxMarker} from '@studiometa/vue-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import exp from "constants";
-import {getExperience, getTheme, goto} from "@/utils/services";
+import {getTheme, goto} from "@/utils/services";
+import axios from "axios";
 
 export default {
-  computed: {
-    exp() {
-      return exp
-    }
-  },
   components: {
     MapboxMap, MapboxMarker
   },
   data() {
     return {
+      loaded: false,
       model_carousel: 0,
       color_theme_1: "#4d5443",
       color_theme_2: "#103a4d1f",
@@ -945,16 +939,27 @@ export default {
     }
   },
   mounted() {
-    this.getExperience();
+    //wait for the DOM to be rendered then call getExperience
+    this.$nextTick(() => {
+      this.getExperience();
+    });
+
+  },
+  computed: {
+    adjusted() {
+      if (this.experience.pictures == null || this.experience.pictures.length == 0) {
+        return [];
+      }
+      return this.adjustedP(this.experience.pictures);
+    }
   },
   methods: {
     goto,
     getTheme,
-    adjusted(pictures) {
+    adjustedP(pictures) {
       if (pictures == null || pictures.length == 0) {
         return [];
       }
-
       //order by format (landscape, portrait)
       pictures.sort((a, b) => (a.format > b.format) ? 1 : -1);
 
@@ -967,11 +972,13 @@ export default {
       let empty = 12 - (landscape + portrait) % 12;
       this.empty = empty;
       return grid;
-    },
+    }
+    ,
     arrayFromObject(steps) {
       const sts = this.groupByDay(steps);
       return Object.entries(sts);
-    },
+    }
+    ,
     groupByDay(steps) {
       if (steps == null || steps.length == 0) {
         return [];
@@ -1007,11 +1014,14 @@ export default {
     }
     ,
     async getExperience() {
-      let i = this.$route.params.id ? this.$route.params.id : 1;
-
-      this.experience = await getExperience(i);
-      // const module='@/static/experiences/'+this.$route.params.id+'.json';
-      // console.log(module)
+      this.loaded = false;
+      let id = this.$route.params.id ? this.$route.params.id : 1;
+      await axios.get("/experiencesjson/all.json").then(response => {
+        const allExperiences = response.data;
+        const newExperience = allExperiences.find(experience => experience.id == id);
+        this.experience = newExperience;
+        this.loaded = true;
+      });
     }
   }
 };
