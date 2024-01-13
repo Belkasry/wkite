@@ -23,7 +23,7 @@
             <div class="card-dall">
               <v-card
                 width="250">
-                <div :style="'background:'+getTheme(experience.type).color_theme_1">
+                <div :style="'background:'+getTheme(experience.type)?.color_theme_1">
                   <v-row class="py-1 mx-1">
                     <v-col>
                       <v-progress-linear
@@ -51,7 +51,7 @@
                       <v-sheet class="w-100 h-100 d-flex align-items-end flex-column"
                                :style="'background:url('+experience.picture_url+')'" style="background-size: cover;">
                         <div class="w-100 mt-auto p-2 d-flex flex-wrap"
-                             :style="'background:'+getTheme(experience.type).color_theme_1+'aa'">
+                             :style="'background:'+getTheme(experience.type)?.color_theme_1+'aa'">
                           <v-chip
                             color="white"
                             variant="flat"
@@ -150,7 +150,7 @@
             <div class="card-dall">
               <v-card
                 width="250">
-                <div :style="'background:'+getTheme(experience.type).color_theme_1">
+                <div :style="'background:'+getTheme(experience.type)?.color_theme_1">
                   <v-row class="py-1 mx-1">
                     <v-col>
                       <v-progress-linear
@@ -178,7 +178,7 @@
                       <v-sheet class="w-100 h-100 d-flex align-items-end flex-column"
                                :style="'background:url('+experience.picture_url+')'" style="background-size: cover;">
                         <div class="w-100 mt-auto p-2"
-                             :style="'background:'+getTheme(experience.type).color_theme_1+'aa'">
+                             :style="'background:'+getTheme(experience.type)?.color_theme_1+'aa'">
                           <v-chip
                             color="white"
                             variant="flat"
@@ -381,29 +381,7 @@
           v-for="destination in destinations"
           :key="destination.id"
         >
-          <v-card
-            class="ma-3"
-            height="200"
-            min-width="250"
-            :style="'background:url('+destination.image+') no-repeat center center;background-size: cover;'"
-            style="border-radius: 15px;box-shadow: 0 4px 10px rgba(7,36,72,0.39);">
-            <v-sheet
-              style="background: linear-gradient(to right,rgba(255,255,255,0.06), rgba(255,255,0,0))"
-              width="100%"
-              height="100%"
-              class="d-flex align-items-end flex-column"
-              rounded
-            >
-              <div
-                style="background:rgba(255,255,255,0.9);!important; border-radius:1px 1px 15px 15px;"
-                class="mt-auto w-100 d-flex justify-content-center pa-4"
-                min-height="50px"
-              >
-                <h5 style="text-shadow: 1px 1px 2px rgba(255,255,255,1); "
-                    class="text-black text-center my-auto">{{ destination.name }}</h5>
-              </div>
-            </v-sheet>
-          </v-card>
+        <DestinationHomeCard :destination="destination"/>
         </template>
       </div>
       <v-btn
@@ -431,13 +409,14 @@
       </v-btn>
       <div class="cards d-flex align-items-start" ref="activityContainer">
         <template
-          v-for="activity in activities"
+          v-for="activity in activities.slice(0, 15)"
           :key="activity.id"
         >
           <v-sheet
             class="ma-3"
-            height="200"
+            height="150"
             min-width="150"
+            color="red"
             :style="'background:url('+activity.image+') no-repeat center center;background-size: cover;'"
             style="border-radius: 15px;box-shadow: 0 4px 10px rgba(7,36,72,0.39);">
             <v-sheet
@@ -548,4 +527,5 @@ export default {
 }
 </style>
 <script setup>
+import DestinationHomeCard from "@/components/destination/HomeCard.vue";
 </script>

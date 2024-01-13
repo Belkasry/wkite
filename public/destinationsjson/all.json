@@ -1,52 +1,335 @@
 [
   {
     "id": 1,
-    "name": "National Park of Toubkal",
+    "name": "Mount Toubkal",
+    "description": "Mount Toubkal is the highest peak in the Atlas Mountains and North Africa. It is located in Toubkal National Park, about 60 km south of Marrakesh. The mountain is a popular destination for trekkers and climbers due to its accessibility and stunning views. The summit offers panoramic views of the surrounding mountains and valleys. The mountain is also home to a variety of wildlife, including Barbary sheep, wild boar, and the endangered Barbary macaque.",
+    "location": {
+      "id": 1,
+      "label": "Mount Toubkal",
+      "country": "Morocco",
+      "city": "Marrakesh",
+      "address": "Toubkal National Park, Morocco",
+      "lat": 31.0600714,
+      "lon": -7.9147482
+    },
+    "multimedia": {
+      "images": [
+        {
+          "url": "https://picsum.photos/800/600?mount_toubkal"
+        },
+        {
+          "url": "https://picsum.photos/800/600?mount_toubkal_view"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://example.com/videos/mount_toubkal_tour.mp4"
+        }
+      ],
+      "360_views": [
+        {
+          "url": "https://example.com/360/mount_toubkal_panorama.html"
+        }
+      ]
+    },
+    "weather_and_seasonal_info": {
+      "live_weather": {
+        "temperature": 20,
+        "weather": "Sunny",
+        "wind_speed": 10,
+        "wind_direction": "N",
+        "humidity": 50,
+        "precipitation": 0
+      },
+      "best_seasons": [
+        "Spring",
+        "Autumn"
+      ],
+      "typical_weather": {
+        "spring": "Mild temperatures with occasional rainfall",
+        "summer": "Warm and dry",
+        "autumn": "Cool with clear skies",
+        "winter": "Cold, potential snowfall"
+      }
+    },
     "image": "https://picsum.photos/640/360?random=1"
+  },
+  {
+    "id": 11,
+    "name": "M'Goun Massif",
+    "description": "M'Goun Massif, part of the central High Atlas Mountains, is renowned for its stunning landscapes and traditional Berber culture. It's the second-highest peak in Morocco, offering challenging treks and breathtaking views. Trekkers can explore the M'Goun Valley, known for its natural beauty and the unique lifestyle of the Berber communities. The massif is also famous for its deep canyons, particularly the Gorges of M'Goun, making it a favorite among adventure enthusiasts.",
+    "location": {
+      "id": 2,
+      "label": "M'Goun Massif",
+      "country": "Morocco",
+      "city": "Azilal",
+      "address": "High Atlas Mountains, Morocco",
+      "lat": 31.7917,
+      "lon": -7.0926
+    },
+    "multimedia": {
+      "images": [
+        {
+          "url": "https://picsum.photos/800/600?mgoun_massif"
+        },
+        {
+          "url": "https://picsum.photos/800/600?mgoun_massif_view"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://example.com/videos/mgoun_massif_tour.mp4"
+        }
+      ],
+      "360_views": [
+        {
+          "url": "https://example.com/360/mgoun_massif_panorama.html"
+        }
+      ]
+    },
+    "weather_and_seasonal_info": {
+      "live_weather": {
+        "temperature": 15,
+        "weather": "Partly Cloudy",
+        "wind_speed": 8,
+        "wind_direction": "NE",
+        "humidity": 40,
+        "precipitation": 5
+      },
+      "best_seasons": [
+        "Late Spring",
+        "Early Autumn"
+      ],
+      "typical_weather": {
+        "spring": "Moderately warm with occasional showers",
+        "summer": "Hot during day, cool at night",
+        "autumn": "Pleasant temperatures, clear skies",
+        "winter": "Cold with snow on higher elevations"
+      }
+    },
+    "image": "https://picsum.photos/640/360?random=2",
+    "type": "mountain"
+  },
+  {
+    "id": 13,
+    "name": "Jebel Toubkal West",
+    "description": "Jebel Toubkal West is a prominent peak located near Mount Toubkal in the High Atlas Mountains. While slightly lower than its eastern counterpart, Jebel Toubkal West offers a more secluded and challenging trekking experience. It's an ideal destination for experienced hikers seeking less-traveled paths and spectacular views of the Toubkal Massif. The summit provides a unique vantage point for viewing the sunrise or sunset over the rugged Atlas range.",
+    "location": {
+      "id": 3,
+      "label": "Jebel Toubkal West",
+      "country": "Morocco",
+      "city": "Imlil",
+      "address": "High Atlas Mountains, near Mount Toubkal, Morocco",
+      "lat": 31.0591,
+      "lon": -7.9150
+    },
+    "multimedia": {
+      "images": [
+        {
+          "url": "https://picsum.photos/800/600?jebel_toubkal_west"
+        },
+        {
+          "url": "https://picsum.photos/800/600?jebel_toubkal_west_view"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://example.com/videos/jebel_toubkal_west_tour.mp4"
+        }
+      ],
+      "360_views": [
+        {
+          "url": "https://example.com/360/jebel_toubkal_west_panorama.html"
+        }
+      ]
+    },
+    "weather_and_seasonal_info": {
+      "live_weather": {
+        "temperature": 18,
+        "weather": "Clear",
+        "wind_speed": 12,
+        "wind_direction": "W",
+        "humidity": 35,
+        "precipitation": 2
+      },
+      "best_seasons": [
+        "Summer",
+        "Early Autumn"
+      ],
+      "typical_weather": {
+        "spring": "Variable temperatures with occasional rain",
+        "summer": "Dry and sunny, cooler at higher altitudes",
+        "autumn": "Mild and clear, ideal for trekking",
+        "winter": "Harsh and snowy, challenging conditions"
+      }
+    },
+    "image": "https://picsum.photos/640/360?random=3",
+    "type": "mountain"
+  },
+  {
+    "id": 14,
+    "name": "Jebel Ayachi",
+    "description": "Jebel Ayachi stands as one of the highest peaks in the Eastern High Atlas range. Known for its dramatic cliffs and diverse landscapes, it offers a unique trekking experience. The mountain's terrain varies from rocky outcrops to lush valleys, making it a paradise for nature lovers and hikers alike. Jebel Ayachi is particularly noted for its stunning snow-covered summit in the winter, offering breathtaking views and a serene environment.",
+    "location": {
+      "id": 4,
+      "label": "Jebel Ayachi",
+      "country": "Morocco",
+      "city": "Midelt",
+      "address": "Eastern High Atlas Mountains, Morocco",
+      "lat": 32.6764,
+      "lon": -4.7349
+    },
+    "multimedia": {
+      "images": [
+        {
+          "url": "https://picsum.photos/800/600?jebel_ayachi"
+        },
+        {
+          "url": "https://picsum.photos/800/600?jebel_ayachi_view"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://example.com/videos/jebel_ayachi_tour.mp4"
+        }
+      ],
+      "360_views": [
+        {
+          "url": "https://example.com/360/jebel_ayachi_panorama.html"
+        }
+      ]
+    },
+    "weather_and_seasonal_info": {
+      "live_weather": {
+        "temperature": 16,
+        "weather": "Mostly Cloudy",
+        "wind_speed": 9,
+        "wind_direction": "E",
+        "humidity": 45,
+        "precipitation": 3
+      },
+      "best_seasons": [
+        "Late Spring",
+        "Early Autumn"
+      ],
+      "typical_weather": {
+        "spring": "Mild with occasional rain showers",
+        "summer": "Warm days and cool nights",
+        "autumn": "Crisp air and clear skies, perfect for hiking",
+        "winter": "Cold with heavy snowfall on the summit"
+      }
+    },
+    "image": "https://picsum.photos/640/360?random=4",
+    "type": "mountain"
+  },
+  {
+    "id": 15,
+    "name": "Jebel Sirwa",
+    "description": "Jebel Sirwa, a distinctive extinct volcano, is located at the junction of the High Atlas and Anti-Atlas mountains. It is renowned for its unique geological formations and the traditional Berber communities that inhabit its slopes. Jebel Sirwa offers a less-traveled yet rewarding trekking experience with its striking landscapes, including terraced fields and basalt columns. The summit provides panoramic views of both the High Atlas and Anti-Atlas ranges.",
+    "location": {
+      "id": 5,
+      "label": "Jebel Sirwa",
+      "country": "Morocco",
+      "city": "Taliouine",
+      "address": "Junction of High Atlas and Anti-Atlas Mountains, Morocco",
+      "lat": 30.876027,
+      "lon": -7.452083
+    },
+    "multimedia": {
+      "images": [
+        {
+          "url": "https://picsum.photos/800/600?jebel_sirwa"
+        },
+        {
+          "url": "https://picsum.photos/800/600?jebel_sirwa_view"
+        }
+      ],
+      "videos": [
+        {
+          "url": "https://example.com/videos/jebel_sirwa_tour.mp4"
+        }
+      ],
+      "360_views": [
+        {
+          "url": "https://example.com/360/jebel_sirwa_panorama.html"
+        }
+      ]
+    },
+    "weather_and_seasonal_info": {
+      "live_weather": {
+        "temperature": 17,
+        "weather": "Partly Cloudy",
+        "wind_speed": 11,
+        "wind_direction": "SE",
+        "humidity": 40,
+        "precipitation": 4
+      },
+      "best_seasons": [
+        "Spring",
+        "Autumn"
+      ],
+      "typical_weather": {
+        "spring": "Moderate temperatures with occasional showers",
+        "summer": "Warm with cool nights",
+        "autumn": "Pleasant, ideal for hiking",
+        "winter": "Cool, with occasional snow at higher altitudes"
+      }
+    },
+    "image": "https://picsum.photos/640/360?random=5",
+    "type": "mountain"
   },
   {
     "id": 2,
     "name": "Sahara Desert (Merzouga and Erg Chebbi)",
-    "image": "https://picsum.photos/640/360?random=2"
+    "image": "https://picsum.photos/640/360?random=2",
+    "type": "desert"
   },
   {
     "id": 3,
     "name": "Marrakech",
-    "image": "https://picsum.photos/640/360?random=3"
+    "image": "https://picsum.photos/640/360?random=3",
+    "type": "city"
   },
   {
     "id": 4,
     "name": "Chefchaouen",
-    "image": "https://picsum.photos/640/360?random=4"
+    "image": "https://picsum.photos/640/360?random=4",
+    "type": "city"
   },
   {
     "id": 5,
     "name": "Agadir",
-    "image": "https://picsum.photos/640/360?random=5"
+    "image": "https://picsum.photos/640/360?random=5",
+    "type": "city"
   },
   {
     "id": 6,
     "name": "Essaouira",
-    "image": "https://picsum.photos/640/360?random=6"
+    "image": "https://picsum.photos/640/360?random=6",
+    "type": "city"
   },
   {
     "id": 7,
     "name": "Todra Gorge",
-    "image": "https://picsum.photos/640/360?random=7"
+    "image": "https://picsum.photos/640/360?random=7",
+    "type": "mountain"
   },
   {
     "id": 8,
     "name": "Dades Valley",
-    "image": "https://picsum.photos/640/360?random=8"
+    "image": "https://picsum.photos/640/360?random=8",
+    "type": "mountain"
   },
   {
     "id": 9,
     "name": "Ouarzazate",
-    "image": "https://picsum.photos/640/360?random=9"
+    "image": "https://picsum.photos/640/360?random=9",
+    "type": "city"
   },
   {
     "id": 10,
     "name": "Atlas Mountains (Ourika Valley)",
-    "image": "https://picsum.photos/640/360?random=10"
+    "image": "https://picsum.photos/640/360?random=10",
+    "type": "mountain"
   }
 ]

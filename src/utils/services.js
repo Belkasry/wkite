@@ -1,8 +1,26 @@
 import router from "@/router";
-import axios from "axios";
 
 export function goto(path) {
   router.push(`/${path}`);
+}
+
+export function getColorActivity(activity) {
+  // "On Foot","Bicycle","Climb","Snow","Water","With Animals","On Wheels","Accessible","Motor","Air","Nature","Other"
+  const activities = {
+    "On Foot": "#268a02",
+    Bicycle: "#446473",
+    Climb: "#b98153",
+    Snow: "#446473",
+    Water: "#103a4d",
+    "With Animals": "#4d5443",
+    "On Wheels": "#b98153",
+    Accessible: "#4d5443",
+    Motor: "#b98153",
+    Air: "#446473",
+    Nature: "#4d5443",
+    Other: "#b98153",
+  }
+  return activities[activity];
 }
 
 export function getTheme(theme) {

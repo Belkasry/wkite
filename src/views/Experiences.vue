@@ -1,6 +1,11 @@
 <template>
   <v-container>
-    <v-navigation-drawer floating class="mt-7">
+    <v-breadcrumbs :items="['KAITO','Experiences']">
+      <template v-slot:divider>
+        <v-icon icon="mdi-chevron-right"></v-icon>
+      </template>
+    </v-breadcrumbs>
+    <v-navigation-drawer floating class="mt-7" color="white" elevation="2">
       <div class="d-flex px-2 my-2">
         <v-btn
           class="flex-grow-1"
@@ -130,33 +135,103 @@
         <v-divider class="my-6"></v-divider>
       </div>
     </v-navigation-drawer>
-    <v-row>
-      <v-col cols="12" md="12" v-for="experience in experiences"
-             :key="experience.id">
-        <LongExperienceCard :experience="experience"/>
-      </v-col>
-    </v-row>
+    <v-container>
+    <v-data-iterator
+      :items-per-page="3"
+      :items="experiences"
+      :search="search"
+    >
+      <template v-slot:header="{ page, pageCount, prevPage, nextPage }">
+        <v-toolbar class="px-2 my-3 d-flex justify-content-between" elevation="2" color="white" style="border-radius: 10px">
+          <v-text-field
+            v-model="search"
+            clearable
+            density="comfortable"
+            hide-details
+            placeholder="National Park, City, Country, ..."
+            prepend-inner-icon="mdi-magnify"
+            style="max-width: 500px;"
+            variant="outlined"
+          ></v-text-field>
+          <div class="mx-auto">
+          <v-btn
+            :disabled="page === 1"
+            icon="mdi-arrow-left"
+            size="small"
+            variant="tonal"
+            class="me-2"
+            @click="prevPage"
+          ></v-btn>
+          <v-btn
+            :disabled="page === pageCount"
+            icon="mdi-arrow-right"
+            size="small"
+            variant="tonal"
+            @click="nextPage"
+          ></v-btn>
+          </div>
+        </v-toolbar>
+      </template>
+      <template v-slot:default="{ items }">
+        <v-container>
+        <template
+          v-for="(item, i) in items"
+          :key="i"
+        >
+          <LongExperienceCard :experience="item.raw"/>
+          <br>
+        </template>
+        </v-container>
+      </template>
+      <template v-slot:footer="{ page, pageCount, prevPage, nextPage }">
+        <div class="d-flex align-center justify-center pa-4">
+          <v-btn
+            :disabled="page === 1"
+            icon="mdi-arrow-left"
+            density="comfortable"
+            variant="tonal"
+            rounded
+            @click="prevPage"
+          ></v-btn>
+
+          <div class="mx-2 text-caption">
+            Page {{ page }} of {{ pageCount }}
+          </div>
+
+          <v-btn
+            :disabled="page >= pageCount"
+            icon="mdi-arrow-right"
+            density="comfortable"
+            variant="tonal"
+            rounded
+            @click="nextPage"
+          ></v-btn>
+        </div>
+      </template>
+    </v-data-iterator>
+    </v-container>
   </v-container>
 </template>
 
 <script>
 import axios from "axios";
-import LongExperienceCard from "@/components/experience/LongCard.vue";
 import {getTheme, goto} from "@/utils/services";
+import LongExperienceCard from "@/components/experience/LongCard.vue";
 
 export default {
   components: {LongExperienceCard},
   data() {
     return {
-      experiences: []
+      experiences: [],
+      search: "",
     };
   },
   methods: {
     getTheme,
     goto,
     async fetchExperiences() {
-        await axios.get("/experiencesjson/all" + ".json")
-            .then(response => this.experiences=response.data)
+      await axios.get("/experiencesjson/all" + ".json")
+        .then(response => this.experiences = response.data)
     }
   },
   mounted() {
@@ -165,130 +240,3 @@ export default {
 };
 </script>
 
-<style lang="scss">
-  .border-radius-elipse {
-    width: 200px;
-    height: 100px;
-    border-radius: 100px 100px 0 0;
-  }
-
-  .full-height {
-    max-height: 90vh !important;
-    overflow-y: hidden;
-  }
-
-  .scrollable {
-    height: 90vh;
-    overflow-y: auto;
-  }
-
-  .experience-hiking {
-  }
-
-  .card-dall-parent-main {
-    background-size: contain !important;
-    border-radius: 16px !important;
-
-    .card-dall {
-      border: 19px solid rgba(255, 255, 255, 0.12) !important;
-    }
-  }
-
-  .card-dall-parent {
-    background: #4d54433d;
-    background-size: contain !important;
-    border-radius: 16px !important;
-  }
-
-  .card-dall {
-    border-radius: 16px !important;
-    backdrop-filter: blur(0.2px) !important;
-
-    .v-card {
-      border-radius: 10px !important;
-    }
-  }
-
-  .card-nature {
-    .card-dall-parent-main {
-      background: url(/imgs/nature-pattern.png) !important;
-      background-size: contain !important;
-    }
-
-    .card-dall {
-      border: 7px solid rgba(68, 92, 41, 0.51);
-
-      .v-card {
-        border: 3px solid #445c29 !important;
-        background-color: #fefee9 !important;
-      }
-    }
-  }
-
-  .card-snow {
-    .card-dall-parent-main {
-      background: url(/imgs/snow-pattern.png) !important;
-      background-size: contain !important;
-    }
-
-    .card-dall {
-      border: 7px solid rgba(220, 227, 231, 0.5);
-
-      .v-card {
-        border: 3px solid #446473 !important;
-        background-color: #ffffff !important;
-      }
-    }
-  }
-
-  .card-surf {
-    .card-dall-parent-main {
-      background: url(/imgs/surf-pattern.png) !important;
-      background-size: cover !important;
-      background-repeat: no-repeat !important;
-    }
-
-    .card-dall {
-      border: 7px solid #97b68d;
-
-      .v-card {
-        border: 3px solid #268a02 !important;
-        background-color: #f3f5f6 !important;
-      }
-    }
-  }
-
-  .card-water {
-    .card-dall-parent-main {
-      background: url(/imgs/water-pattern.png) !important;
-      background-size: cover !important;
-      background-repeat: no-repeat !important;
-    }
-
-    .card-dall {
-      border: 7px solid #e9f8fe;
-
-      .v-card {
-        border: 3px solid #103a4d !important;
-        background-color: rgba(240, 243, 245, 0.97) !important;
-      }
-    }
-  }
-
-  .card-desert {
-    .card-dall-parent-main {
-      background: url(/imgs/desert-pattern.png) !important;
-      background-size: contain !important;
-    }
-
-    .card-dall {
-      border: 7px solid rgba(214, 148, 94, 0.44);
-
-      .v-card {
-        border: 3px solid #b98153 !important;
-        background-color: rgba(245, 242, 241, 0.99) !important;
-      }
-    }
-  }
-
-</style>

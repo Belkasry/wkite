@@ -7,6 +7,8 @@
 </script>
 <style>
 .v-application {
-  font-family: "Montserrat", "Roboto", sans-serif;
+  font-family: "Roboto-Slab", sans-serif;
+  font-size: 14px;
+  font-weight: 1100 !important;
 }
 </style>

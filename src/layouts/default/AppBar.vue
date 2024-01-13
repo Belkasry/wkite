@@ -69,9 +69,9 @@ export default {
     drawer: null,
     links: [
       {key: 1, label: 'Experiences', href: '/experiences'},
-      {key: 2, label: 'Destinations'},
+      {key: 2, label: 'Destinations', href: '/destinations'},
       {key: 3, label: 'Guides'},
-      {key: 4, label: 'Activities'},
+      {key: 4, label: 'Activities', href: '/activities'},
     ],
   }),
   watch: {

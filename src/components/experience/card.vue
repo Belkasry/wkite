@@ -28,7 +28,7 @@ export default {
                        :key="i">
                   <v-progress-linear
                     :model-value="i===model_carousel?100:0"
-                    :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                    :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
                     bg-color="grey lighten-3"
                   ></v-progress-linear>
                 </v-col>
@@ -86,11 +86,11 @@ export default {
               </v-row>
 
               <v-alert class="mt-4 mb-1 text-subtitle-1 pa-1 px-1 font-weight-bold"
-                       :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                       :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
                        variant="plain">
                 Starting : $ {{ experience.price }}
                 <v-btn class="float-end" size="x-small" href="#pricing-details"
-                       :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                       :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">
                   <v-icon>mdi-cash-multiple</v-icon>
                 </v-btn>
               </v-alert>
@@ -101,7 +101,7 @@ export default {
 
               <v-alert class="mt-2"
                        variant="tonal"
-                       :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                       :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
                        density="compact">
                 <v-chip label class="ma-1" size="x-small" variant="flat"><strong>Duration : </strong> {{
                     experience.duration

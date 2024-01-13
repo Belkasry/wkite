@@ -16,18 +16,43 @@
           <v-col cols="12" md="4" class="full-height">
             <v-row>
               <v-col>
-                <div class="card-dall-parent-main">
+                <div class="card-dall-parent">
                   <div class="card-dall">
                     <v-card
                       max-height="85vh"
                     >
                       <div v-if="experience.pictures && experience.pictures.length > 0">
+                        <v-dialog v-model="dialog_viewer"
+                                  :scrim="false"
+                                  transition="dialog-bottom-transition"
+                        >
+                          <v-card width="100vw"
+                                  style="background: rgb(198,201,215);
+                                         background: radial-gradient(circle, rgba(198,201,215,0.97) 0%, rgba(30,27,28,1) 100%);">
+                            <v-toolbar
+                              dark
+                              color="white"
+                            >
+                              <v-btn
+                                icon
+                                dark
+                                @click="dialog_viewer = false"
+                              >
+                                <v-icon>mdi-close</v-icon>
+                              </v-btn>
+                              <v-toolbar-title> {{ experience.title }}</v-toolbar-title>
+                              <v-spacer></v-spacer>
+                            </v-toolbar>
+                            <full-screen-image-viewer
+                              :images="experience.pictures.map(e=>e.url)"></full-screen-image-viewer>
+                          </v-card>
+                        </v-dialog>
                         <v-row class="mx-2 py-1">
                           <v-col v-for="(picture, i) in experience.pictures"
                                  :key="i">
                             <v-progress-linear
                               :model-value="i===model_carousel?100:0"
-                              :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                              :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
                               bg-color="grey lighten-3"
                             ></v-progress-linear>
                           </v-col>
@@ -85,11 +110,11 @@
                         </v-row>
 
                         <v-alert class="mt-4 mb-1 text-subtitle-1 pa-1 px-1 font-weight-bold"
-                                 :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                                 :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
                                  variant="plain">
                           Starting : $ {{ experience.price }}
-                          <v-btn class="float-end" size="x-small" href="#pricing-details"
-                                 :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                          <v-btn class="float-end" size="x-small"
+                                 :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">
                             <v-icon>mdi-cash-multiple</v-icon>
                           </v-btn>
                         </v-alert>
@@ -100,7 +125,7 @@
 
                         <v-alert class="mt-2"
                                  variant="tonal"
-                                 :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                                 :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
                                  density="compact">
                           <v-chip label class="ma-1" size="x-small" variant="flat"><strong>Duration : </strong> {{
                               experience.duration
@@ -141,7 +166,7 @@
               <v-col>
                 <div class="card-dall-parent">
                   <div class="card-dall">
-                    <v-card :color="getTheme(experience.type?experience.type:'nature').color_theme_2">
+                    <v-card :color="getTheme(experience.type?experience.type:'nature')?.color_theme_2">
                       <div v-if="loaded && experience && experience.pictures && experience.pictures.length > 0">
                         <v-card-title>
                           <h4 class="ma-4">
@@ -166,7 +191,7 @@
                             </v-col>
                           </template>
                           <v-col :cols="empty" class="pa-1">
-                            <v-btn variant="outlined" class="w-100 h-100">
+                            <v-btn variant="outlined" class="w-100 h-100" @click="dialog_viewer=true">
                               <br/>
                               <v-icon class="ma-1" color="black">mdi-image-multiple</v-icon>
                             </v-btn>
@@ -182,7 +207,7 @@
               <v-col>
                 <div class="card-dall-parent">
                   <div class="card-dall">
-                    <v-card :color="getTheme(experience.type?experience.type:'nature').color_theme_2" id="description">
+                    <v-card :color="getTheme(experience.type?experience.type:'nature')?.color_theme_2" id="description">
                       <v-card-title>
                         <h4 class="ma-4">
                           <v-icon class="mx-1">mdi-text-long</v-icon>
@@ -190,7 +215,7 @@
                         </h4>
                       </v-card-title>
                       <v-card-text>
-                        <v-alert class="ma-1" :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                        <v-alert class="ma-1" :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">
                           {{ experience.description }}
                         </v-alert>
                       </v-card-text>
@@ -203,7 +228,7 @@
               <v-col>
                 <div class="card-dall-parent">
                   <div class="card-dall">
-                    <v-card :color="getTheme(experience.type?experience.type:'nature').color_theme_2" id="activities">
+                    <v-card :color="getTheme(experience.type?experience.type:'nature')?.color_theme_2" id="activities">
                       <v-card-title>
                         <h4 class="ma-4">
                           <v-icon class="mx-2">mdi-format-list-bulleted-type</v-icon>
@@ -249,7 +274,7 @@
               <v-col>
                 <div class="card-dall-parent">
                   <div class="card-dall">
-                    <v-card :color="getTheme(experience.type?experience.type:'nature').color_theme_2" id="requirements">
+                    <v-card :color="getTheme(experience.type?experience.type:'nature')?.color_theme_2" id="requirements">
                       <v-card-title>
                         <h4 class="ma-4">
                           <v-icon class="mx-2">mdi-exclamation-thick</v-icon>
@@ -260,7 +285,7 @@
                         <div class=" d-flex">
                           <div v-for="requirement in experience.requirements" :key="requirement.id" class="ma-4">
                             <v-chip label variant="flat"
-                                    :color="getTheme(experience.type?experience.type:'nature').color_theme_1">{{
+                                    :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">{{
                                 requirement.name
                               }}
                             </v-chip>
@@ -276,7 +301,7 @@
               <v-col>
                 <div class="card-dall-parent">
                   <div class="card-dall">
-                    <v-card :color="getTheme(experience.type?experience.type:'nature').color_theme_2" id="notices">
+                    <v-card :color="getTheme(experience.type?experience.type:'nature')?.color_theme_2" id="notices">
                       <v-card-title>
                         <h4 class="ma-4">
                           <v-icon class="mx-2">mdi-account-alert-outline</v-icon>
@@ -288,7 +313,7 @@
                                  class="my-1"
                                  v-for="notice in experience.notices"
                                  :key="notice.id"
-                                 :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                                 :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">
                           {{ notice.name }}
                         </v-alert>
                       </v-card-text>
@@ -301,7 +326,7 @@
               <v-col>
                 <div class="card-dall-parent">
                   <div class="card-dall">
-                    <v-card :color="getTheme(experience.type?experience.type:'nature').color_theme_2"
+                    <v-card :color="getTheme(experience.type?experience.type:'nature')?.color_theme_2"
                             id="take-into-account">
                       <v-card-title>
                         <h4 class="ma-4">
@@ -311,7 +336,7 @@
                       </v-card-title>
                       <v-card-text>
                         <v-alert icon="mdi-bell-alert-outline"
-                                 :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                                 :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
                                  v-for="item in experience.take_into_account" :key="item.id" class="my-1 mx-3">
                           {{ item.name }}
                         </v-alert>
@@ -323,112 +348,10 @@
             </v-row>
             <v-row>
               <v-col>
-                <div class="card-dall-parent">
+                <div class="card-dall-parent" id="guide">
                   <v-card class="card-dall"
-                          :style="'background:'+getTheme(experience.type?experience.type:'nature').color_theme_1"
                   >
-                    <div class="d-flex flex-column w-100 pb-10"
-                         style=" background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/Toubkal_Orange.jpg/1920px-Toubkal_Orange.jpg') !important;
-    background-size: 100% 50% ; !important;"
-                    >
-                      <v-avatar
-                        class="mx-auto mt-2"
-                        size="300"
-                        :image="experience.guide.pictures[0].url"
-                        title="Card title"
-                        theme="dark"
-                      ></v-avatar>
-                      <div class="mt-auto w-100">
-                        <v-row style="margin-top:-10px !important;" class="justify-content-center d-flex">
-                          <v-chip :color="getTheme(experience.type?experience.type:'nature').color_theme_3"
-                                  variant="elevated"
-                                  class="mx-auto mt-0"
-                          >
-                            <v-rating
-                              v-model="experience.guide.rating"
-                              color="amber"
-                              density="compact"
-                              half-increments
-                              readonly
-                              size="small"
-                            ></v-rating>
-                          </v-chip>
-                        </v-row>
-                        <v-row class="w-100 mx-auto align-content-center d-flex flex-column mt-5">
-                          <h4 class="text-white mb-2">
-                            <v-icon class="mx-2">mdi-card-account-details</v-icon>
-                            Guide : {{ experience.guide?.name }}
-                          </h4>
-                          <v-alert variant="outlined" color="white">
-                            <v-row>
-                              <v-col cols="12" md="4" class="d-flex justify-content-center">
-                                <strong class="text-white text-center">{{ experience.guide.nbr_participants }} <br/>Participants</strong>
-                              </v-col>
-                              <v-col cols="12" md="4" class="d-flex justify-content-center">
-                                <strong class="text-white text-center">{{ experience.guide.nbr_experiences }} <br/>Experiences</strong>
-                              </v-col>
-                              <v-col cols="12" md="4" class="d-flex justify-content-center">
-                                <strong class="text-white text-center">{{ experience.guide.years_experience }} <br/>Années</strong>
-                              </v-col>
-                            </v-row>
-                          </v-alert>
-                        </v-row>
-                      </div>
-                    </div>
-                    <v-card-text class="text-center text-white">
-                      <v-row>
-                        <v-col cols="12" md="6">
-                          <v-alert class="h-100">
-                            <strong>Activities:</strong> {{ experience.guide?.activities?.join(', ') }}
-                          </v-alert>
-                        </v-col>
-                        <v-col cols="12" md="6">
-                          <v-alert class="h-100">
-                            <strong>Languages:</strong> {{ experience.guide?.languages?.join(', ') }}
-                          </v-alert>
-                        </v-col>
-                        <v-col cols="12" md="6">
-                          <v-alert class="h-100">
-                            <strong>Contact:</strong> {{ experience.guide?.contact?.email }} /
-                            {{ experience.guide?.contact?.phone }}
-                          </v-alert>
-                        </v-col>
-                        <v-col cols="12" md="6">
-                          <v-alert class="h-100">
-                            <strong>Certification:</strong> {{ experience.guide?.certification }}
-                          </v-alert>
-                        </v-col>
-                      </v-row>
-                    </v-card-text>
-                    <hr>
-                    <v-card-actions
-                      :style="'background:'+getTheme(experience.type?experience.type:'nature').color_theme_1"
-                    >
-                      <v-spacer></v-spacer>
-                      <v-btn
-                        variant="flat"
-                      >
-                        Voir le profil
-                      </v-btn>
-                      <v-btn
-                        @click="show = !show"
-                        :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
-                        variant="flat"
-                      >
-                        BIO
-                        <v-icon class="mx-2" :icon="show ? 'mdi-chevron-up' : 'mdi-chevron-down'"></v-icon>
-                      </v-btn>
-                    </v-card-actions>
-                    <v-expand-transition>
-                      <v-card v-show="show" class="mx-5 mt-3"
-                      >
-                        <v-divider></v-divider>
-                        <v-card-text
-                        >
-                          {{ experience.guide?.bio }}
-                        </v-card-text>
-                      </v-card>
-                    </v-expand-transition>
+                    <GuideCard :guide="experience.guide" :color="getTheme(experience.type?experience.type:'nature')?.color_theme_3"></GuideCard>
                   </v-card>
                 </div>
               </v-col>
@@ -437,7 +360,7 @@
               <v-col>
                 <div class="card-dall-parent" id="destination">
                   <div class="card-dall">
-                    <v-card :color="getTheme(experience.type?experience.type:'nature').color_theme_2">
+                    <v-card :color="getTheme(experience.type?experience.type:'nature')?.color_theme_2">
                       <v-card-text>
                         <div class="w-100 h-100" v-if="experience.destination?.location">
                           <MapboxMap
@@ -458,13 +381,13 @@
                         </h4>
                       </v-card-title>
                       <v-card-text>
-                        <v-alert class="my-1" :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                        <v-alert class="my-1" :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">
                           {{
                             experience.destination?.description
                           }}
                         </v-alert>
                         <v-alert icon="mdi-map"
-                                 :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                                 :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">
                           <strong>Location:</strong> {{ experience.destination?.location?.address }},
                           {{ experience.destination?.location?.city }}, {{ experience.destination?.location?.country }}
                         </v-alert>
@@ -484,7 +407,7 @@
                       >
                         <v-tabs
                           v-model="day"
-                          :bg-color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                          :bg-color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
                           show-arrows
                           grow
                         >
@@ -547,26 +470,26 @@
                             :key="step.id"
                             size="x-small"
                           >
-                            <v-card :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                            <v-card :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">
                               <v-card-title class="text-red-lighten-2 mt-3">{{ step.label }}</v-card-title>
                               <v-card-text class="text-black">
                                 {{ step.description }}
                               </v-card-text>
                               <v-card-text>
-                                <v-chip :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                                <v-chip :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">
                                   <strong>Duration: </strong>
                                   {{
                                     step.duration
                                   }}
                                 </v-chip>
-                                <v-chip :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                                <v-chip :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
                                         class="mx-4" label
                                         v-for="activity in step.activities"
                                         :key="activity.id">
                                   {{ activity.name }}
                                 </v-chip>
                                 <v-btn class="float-end"
-                                       :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                                       :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">
                                   <v-icon class="mx-1">mdi-image-multiple</v-icon>
                                 </v-btn>
                               </v-card-text>
@@ -583,13 +506,13 @@
               <v-col>
                 <div class="card-dall-parent">
                   <div class="card-dall">
-                    <v-card :color="getTheme(experience.type?experience.type:'nature').color_theme_2"
+                    <v-card :color="getTheme(experience.type?experience.type:'nature')?.color_theme_2"
                             id="pricing-details">
                       <h3 class="ma-4">
                         <v-icon class="mx-2">mdi-cash-multiple</v-icon>
                         Pricing Details
                       </h3>
-                      <v-toolbar :color="getTheme(experience.type?experience.type:'nature').color_theme_2" class="px-0">
+                      <v-toolbar :color="getTheme(experience.type?experience.type:'nature')?.color_theme_2" class="px-0">
                         <v-tabs
                           v-model="tab_price"
                           color="primary"
@@ -600,7 +523,7 @@
                             v-for="(pricing, index) in experience.pricing_details"
                             :key="index"
                             :value="index"
-                            :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                            :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
                           >
                             Plan A partir de :
                             ${{ pricing.amount }}
@@ -617,7 +540,7 @@
                           <v-card-subtitle>
                             <div class="my-2">
                               <h3>Included:</h3>
-                              <v-alert :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                              <v-alert :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
                                        icon="mdi-check" class="ma-1" label
                                        v-for="(include, index) in pricing.includes"
                                        :key="index">
@@ -684,27 +607,27 @@
                 <div class="card-dall-parent">
                   <div class="card-dall">
                     <v-card id="meeting-point"
-                            :color="getTheme(experience.type?experience.type:'nature').color_theme_2">
+                            :color="getTheme(experience.type?experience.type:'nature')?.color_theme_2">
                       <v-card-title>
                         <h3 class="ma-4">
                           <v-icon class="mx-2">mdi-human-greeting</v-icon>
                           Meeting Point:
                           <v-chip label prepend-icon="mdi-clock" class="float-end"
-                                  :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                                  :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">
                             {{ experience.meetingPoint?.time }}
                           </v-chip>
                         </h3>
 
                       </v-card-title>
                       <v-card-text>
-                        <v-alert :color="getTheme(experience.type?experience.type:'nature').color_theme_1"
+                        <v-alert :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
                                  icon="mdi-car-info">
                           {{ experience.meetingPoint?.instructions }}
                         </v-alert>
                       </v-card-text>
                       <v-card-text>
                         <v-alert icon="mdi-map"
-                                 :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                                 :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">
                           <strong>Address:</strong> {{ experience.meetingPoint?.location?.address }}
                         </v-alert>
                       </v-card-text>
@@ -718,7 +641,7 @@
                 <div class="card-dall-parent">
                   <div class="card-dall">
                     <v-card id="cancellation-policy"
-                            :color="getTheme(experience.type?experience.type:'nature').color_theme_2">
+                            :color="getTheme(experience.type?experience.type:'nature')?.color_theme_2">
                       <v-card-title>
                         <h3 class="ma-4">
                           <v-icon class="mx-2">mdi-file-cancel-outline</v-icon>
@@ -726,12 +649,12 @@
                         </h3>
                       </v-card-title>
                       <v-card-text>
-                        <v-alert :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                        <v-alert :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">
                           <strong>Notice Period :</strong> {{ experience.cancellation_policy?.notice_period }}
                         </v-alert>
                       </v-card-text>
                       <v-card-text>
-                        <v-alert :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                        <v-alert :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">
                           <strong>Refund Percentage :</strong> {{ experience.cancellation_policy?.refund_percentage }}%
                         </v-alert>
                       </v-card-text>
@@ -744,13 +667,13 @@
               <v-col>
                 <div class="card-dall-parent">
                   <div class="card-dall">
-                    <v-card id="user-reviews" :color="getTheme(experience.type?experience.type:'nature').color_theme_2">
+                    <v-card id="user-reviews" :color="getTheme(experience.type?experience.type:'nature')?.color_theme_2">
                       <h2 class="ma-3">
                         User Reviews</h2>
                       <v-card-text>
                         <v-list v-for="review in experience.user_reviews" :key="review.userId" bg-color="transparent">
                           <v-list-item prepend-avatar="https://picsum.photos/800/600?random=12">
-                            <v-alert :color="getTheme(experience.type?experience.type:'nature').color_theme_1">
+                            <v-alert :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1">
                               <v-list-item-title>{{ review.username }}</v-list-item-title>
                               <v-rating v-model="review.rating" readonly></v-rating>
                               <v-list-item-subtitle>{{ review.comment }}</v-list-item-subtitle>
@@ -768,100 +691,128 @@
           <v-col cols="12" md="2">
             <div class="text-xs">
               <v-card class="d-flex flex-column py-2 px-1 " variant="text">
-                <v-chip label :color="getTheme(experience.type?experience.type:'nature').color_theme_1" variant="flat"
-                        block href="#medias" size="small"
-                        class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
-                  class="ma-2 text-xs">
-                  <v-icon class="mx-1">mdi-image-multiple</v-icon>
-                </strong>Medias
+                <v-chip label :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
+                        block
+                        variant="outlined"
+                        href="#medias"
+                        size="small"
+                        class="mx-auto my-1 p- 2 text-decoration-underline text- font-weight-bold xs w-100 justify-content-center">
+                  <strong
+                    class="ma-2 text-xs">
+                    <v-icon class="mx-1">mdi-image-multiple</v-icon>
+                  </strong>Medias
                 </v-chip>
-                <v-chip label :color="getTheme(experience.type?experience.type:'nature').color_theme_1" variant="flat"
+                <v-chip label :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
+                        variant="outlined"
                         block size="small" href="#description"
-                        class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
-                  class="ma-2">
-                  <v-icon class="mx-1">mdi-text-long</v-icon>
-                </strong>Description
+                        class="mx-auto my-1 p- 2 text-decoration-underline text- font-weight-bold xs w-100 justify-content-center">
+                  <strong
+                    class="ma-2">
+                    <v-icon class="mx-1">mdi-text-long</v-icon>
+                  </strong>Description
                 </v-chip>
-                <v-chip label :color="getTheme(experience.type?experience.type:'nature').color_theme_1" variant="flat"
+                <v-chip label :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
+                        variant="outlined"
                         block size="small" href="#activities"
-                        class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
-                  class="ma-2">
-                  <v-icon class="mx-1">mdi-format-list-bulleted-type</v-icon>
-                </strong>Activities
+                        class="mx-auto my-1 p- 2 text-decoration-underline text- font-weight-bold xs w-100 justify-content-center">
+                  <strong
+                    class="ma-2">
+                    <v-icon class="mx-1">mdi-format-list-bulleted-type</v-icon>
+                  </strong>Activities
                 </v-chip>
-                <v-chip label :color="getTheme(experience.type?experience.type:'nature').color_theme_1" variant="flat"
+                <v-chip label :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
+                        variant="outlined"
                         block size="small" href="#requirements"
-                        class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
-                  class="ma-2">
-                  <v-icon class="mx-1">mdi-exclamation-thick</v-icon>
-                </strong>Requirements
+                        class="mx-auto my-1 p- 2 text-decoration-underline text- font-weight-bold xs w-100 justify-content-center">
+                  <strong
+                    class="ma-2">
+                    <v-icon class="mx-1">mdi-exclamation-thick</v-icon>
+                  </strong>Requirements
                 </v-chip>
-                <v-chip label :color="getTheme(experience.type?experience.type:'nature').color_theme_1" variant="flat"
+                <v-chip label :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
+                        variant="outlined"
                         block size="small" href="#notices"
-                        class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
-                  class="ma-2">
-                  <v-icon class="mx-1">mdi-account-alert-outline</v-icon>
-                </strong>Notices
+                        class="mx-auto my-1 p- 2 text-decoration-underline text- font-weight-bold xs w-100 justify-content-center">
+                  <strong
+                    class="ma-2">
+                    <v-icon class="mx-1">mdi-account-alert-outline</v-icon>
+                  </strong>Notices
                 </v-chip>
-                <v-chip label :color="getTheme(experience.type?experience.type:'nature').color_theme_1" variant="flat"
+                <v-chip label :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
+                        variant="outlined"
                         block size="small"
                         href="#take-into-account"
-                        class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
-                  class="ma-2">
-                  <v-icon class="mx-1">mdi-bag-personal</v-icon>
-                </strong>Into
+                        class="mx-auto my-1 p- 2 text-decoration-underline text- font-weight-bold xs w-100 justify-content-center">
+                  <strong
+                    class="ma-2">
+                    <v-icon class="mx-1">mdi-bag-personal</v-icon>
+                  </strong>Into
                   Account
                 </v-chip>
-                <v-chip label :color="getTheme(experience.type?experience.type:'nature').color_theme_1" variant="flat"
+                <v-chip label :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
+                        variant="outlined"
                         block size="small" href="#guide"
-                        class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
-                  class="ma-2">
-                  <v-icon class="mx-2">mdi-card-account-details</v-icon>
-                </strong>Guide
+                        class="mx-auto my-1 p- 2 text-decoration-underline text- font-weight-bold xs w-100 justify-content-center">
+                  <strong
+                    class="ma-2">
+                    <v-icon class="mx-2">mdi-card-account-details</v-icon>
+                  </strong>Guide
                 </v-chip>
-                <v-chip label :color="getTheme(experience.type?experience.type:'nature').color_theme_1" variant="flat"
+                <v-chip label :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
+                        variant="outlined"
                         block size="small" href="#destination"
-                        class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
-                  class="ma-2">
-                  <v-icon class="mx-1">mdi-map-marker</v-icon>
-                </strong>Destination
+                        class="mx-auto my-1 p- 2 text-decoration-underline text- font-weight-bold xs w-100 justify-content-center">
+                  <strong
+                    class="ma-2">
+                    <v-icon class="mx-1">mdi-map-marker</v-icon>
+                  </strong>Destination
                 </v-chip>
-                <v-chip label :color="getTheme(experience.type?experience.type:'nature').color_theme_1" variant="flat"
+                <v-chip label :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
+                        variant="outlined"
                         block size="small" href="#steps"
-                        class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
-                  class="ma-2">
-                  <v-icon class="mx-1">mdi-map-marker-path</v-icon>
-                </strong>Steps
+                        class="mx-auto my-1 p- 2 text-decoration-underline text- font-weight-bold xs w-100 justify-content-center">
+                  <strong
+                    class="ma-2">
+                    <v-icon class="mx-1">mdi-map-marker-path</v-icon>
+                  </strong>Steps
                 </v-chip>
-                <v-chip label :color="getTheme(experience.type?experience.type:'nature').color_theme_1" variant="flat"
+                <v-chip label :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
+                        variant="outlined"
                         block size="small"
                         href="#pricing-details"
-                        class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
-                  class="ma-2">
-                  <v-icon class="mx-1">mdi-cash</v-icon>
-                </strong>Pricing
+                        class="mx-auto my-1 p- 2 text-decoration-underline text- font-weight-bold xs w-100 justify-content-center">
+                  <strong
+                    class="ma-2">
+                    <v-icon class="mx-1">mdi-cash</v-icon>
+                  </strong>Pricing
                 </v-chip>
-                <v-chip label :color="getTheme(experience.type?experience.type:'nature').color_theme_1" variant="flat"
+                <v-chip label :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
+                        variant="outlined"
                         block size="small" href="#meeting-point"
-                        class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
-                  class="ma-2">
-                  <v-icon class="mx-1">mdi-human-greeting</v-icon>
-                </strong>Meeting
+                        class="mx-auto my-1 p- 2 text-decoration-underline text- font-weight-bold xs w-100 justify-content-center">
+                  <strong
+                    class="ma-2">
+                    <v-icon class="mx-1">mdi-human-greeting</v-icon>
+                  </strong>Meeting
                 </v-chip>
-                <v-chip label :color="getTheme(experience.type?experience.type:'nature').color_theme_1" variant="flat"
+                <v-chip label :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
+                        variant="outlined"
                         block size="small"
                         href="#cancellation-policy"
-                        class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
-                  class="ma-2">
-                  <v-icon class="mx-1">mdi-file-cancel-outline</v-icon>
-                </strong>Cancellation
+                        class="mx-auto my-1 p- 2 text-decoration-underline text- font-weight-bold xs w-100 justify-content-center">
+                  <strong
+                    class="ma-2">
+                    <v-icon class="mx-1">mdi-file-cancel-outline</v-icon>
+                  </strong>Cancellation
                 </v-chip>
-                <v-chip label :color="getTheme(experience.type?experience.type:'nature').color_theme_1" variant="flat"
+                <v-chip label :color="getTheme(experience.type?experience.type:'nature')?.color_theme_1"
+                        variant="outlined"
                         block size="small" href="#user-reviews"
-                        class="mx-auto my-1 p-2 text-decoration-underline text-xs w-100 justify-content-center"><strong
-                  class="ma-2">
-                  <v-icon class="mx-1">mdi-message-draw</v-icon>
-                </strong>User
+                        class="mx-auto my-1 p- 2 text-decoration-underline text- font-weight-bold xs w-100 justify-content-center">
+                  <strong
+                    class="ma-2">
+                    <v-icon class="mx-1">mdi-message-draw</v-icon>
+                  </strong>User
                   Reviews
                 </v-chip>
               </v-card>
@@ -878,13 +829,18 @@ import {MapboxMap, MapboxMarker} from '@studiometa/vue-mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import {getTheme, goto} from "@/utils/services";
 import axios from "axios";
+import FullScreenImageViewer from "@/components/Viewer.vue";
+import GuideCard from "@/components/guide/card.vue";
 
 export default {
   components: {
+    GuideCard,
+    FullScreenImageViewer,
     MapboxMap, MapboxMarker
   },
   data() {
     return {
+      dialog_viewer: false,
       loaded: false,
       model_carousel: 0,
       color_theme_1: "#4d5443",
@@ -1074,7 +1030,7 @@ export default {
 
   .card-nature {
     .card-dall-parent-main {
-      background: url(/imgs/nature-pattern.png) !important;
+      //background: url(/imgs/nature-pattern.png) !important;
       background-size: contain !important;
     }
 
@@ -1090,7 +1046,7 @@ export default {
 
   .card-snow {
     .card-dall-parent-main {
-      background: url(/imgs/snow-pattern.png) !important;
+      //background: url(/imgs/snow-pattern.png) !important;
       background-size: contain !important;
     }
 
@@ -1106,7 +1062,7 @@ export default {
 
   .card-surf {
     .card-dall-parent-main {
-      background: url(/imgs/surf-pattern.png) !important;
+      //background: url(/imgs/surf-pattern.png) !important;
       background-size: cover !important;
       background-repeat: no-repeat !important;
     }
@@ -1123,7 +1079,7 @@ export default {
 
   .card-water {
     .card-dall-parent-main {
-      background: url(/imgs/water-pattern.png) !important;
+      //background: url(/imgs/water-pattern.png) !important;
       background-size: cover !important;
       background-repeat: no-repeat !important;
     }

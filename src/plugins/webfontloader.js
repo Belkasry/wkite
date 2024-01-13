@@ -11,7 +11,7 @@ export async function loadFonts() {
 
   webFontLoader.load({
     google: {
-      families: ["Raleway", "Montserrat", "Roboto"],
+      families: ["Raleway", "Montserrat", "Roboto", "Roboto Slab"],
     },
   });
 }

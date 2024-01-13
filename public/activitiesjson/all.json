@@ -1,94 +1,569 @@
 [
   {
     "id": 1,
-    "name": "Climbing",
-    "description": "Climbing is the activity of using one's hands, feet, or any other part of the body to ascend a steep object. It is done recreationally, competitively, in trades that rely on it, and in emergency rescue and military operations. It is done indoors and out, on natural and manmade structures.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Ainhize_Belar_eskalatzen.jpg"
+    "name": "Hiking",
+    "description": "Hiking involves walking in natural environments, often on hiking trails. It is a popular outdoor activity which offers the chance to observe nature and often requires a good physical condition.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/1.svg",
+    "type": "On Foot"
   },
   {
     "id": 2,
-    "name": "Mountaineering",
-    "description": "Mountaineering is the set of activities that involves ascending mountains. Mountaineering-related activities include traditional outdoor climbing, skiing, and traversing via ferratas. Indoor climbing, sport climbing and bouldering are also considered mountaineering by some.",
-    "image":"https://upload.wikimedia.org/wikipedia/commons/d/db/Mt_kenya_austrian_hut_with_nelion.jpg"
+    "name": "Running",
+    "description": "Running is a method of terrestrial locomotion allowing humans and other animals to move rapidly on foot. It is a type of gait characterized by an aerial phase in which all feet are above the ground.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/21.svg",
+    "type": "On Foot"
   },
   {
     "id": 3,
-    "name": "Caving",
-    "description": "Caving – also traditionally known as spelunking in the United States and Canada and potholing in the United Kingdom and Ireland – is the recreational pastime of exploring wild cave systems. In contrast, speleology is the scientific study of caves and the cave environment.",
-    "image":"https://upload.wikimedia.org/wikipedia/commons/7/7a/Alabama_cave_2005-04-24.km.jpg"
-
+    "name": "Walking",
+    "description": "Walking is one of the most fundamental means of transport. It involves traveling by foot at a moderate pace and can be a leisure activity or a sport.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/43.svg",
+    "type": "On Foot"
   },
   {
     "id": 4,
-    "name": "Skiing",
-    "description": "Skiing can be a means of transport, a recreational activity or a competitive winter sport in which the participant uses skis to glide on snow. Many types of competitive skiing events are recognized by the International Olympic Committee (IOC), and the International Ski Federation (FIS).",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Freestyle_skiing_jump2.jpg"
+    "name": "Trail Running",
+    "description": "Trail running is a sport which consists of running and hiking over trails. It differs from road running and track running in that it generally takes place on hiking trails, often in mountainous terrain.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/48.svg",
+    "type": "On Foot"
   },
   {
     "id": 5,
-    "name": "Hiking",
-    "description": "Hiking is a long, vigorous walk, usually on trails or footpaths in the countryside. Walking for pleasure developed in Europe during the eighteenth century. Religious pilgrimages have existed much longer but they involve walking long distances for a spiritual purpose associated with specific religions.",
-    "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg/1920px-Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg"
+    "name": "Alpine Climbing",
+    "description": "Alpine climbing, or mountaineering, involves ascending mountains. Alpine climbing is distinguished by its extended duration and need for versatile skills like navigation, rock climbing, and handling cold weather.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/14.svg",
+    "type": "Climb"
   },
   {
     "id": 6,
-    "name": "Trekking",
-    "description": "Trekking is a form of walking, undertaken with the specific purpose of exploring and enjoying the scenery. It usually takes place on trails in areas of relatively unspoiled wilderness.",
-    "image":"https://upload.wikimedia.org/wikipedia/commons/2/20/Backpacking_in_Grand_Teton_NP-NPS.jpg"
+    "name": "Nordic Walking",
+    "description": "Nordic walking is a total body version of walking that can be done both by non-athletes as a health-promoting physical activity, and by athletes as a sport. The activity is performed with specially designed walking poles similar to ski poles.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/57.svg",
+    "type": "On Foot"
   },
   {
     "id": 7,
-    "name": "Canyoning",
-    "description": "Canyoning is travelling in canyons using a variety of techniques that may include other outdoor activities such as walking, scrambling, climbing, jumping, abseiling (rappelling), and swimming.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Bali_canyoning.jpg/1024px-Bali_canyoning.jpg"
+    "name": "Orienteering",
+    "description": "Orienteering is a group of sports that require navigational skills using a map and compass to navigate from point to point in diverse and usually unfamiliar terrain, and normally moving at speed.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/62.svg",
+    "type": "On Foot"
   },
   {
     "id": 8,
-    "name": "Rafting",
-    "description": "Rafting and white water rafting are recreational outdoor activities which use an inflatable raft to navigate a river or other body of water. This is often done on whitewater or different degrees of rough water.",
-    "image":"https://upload.wikimedia.org/wikipedia/commons/4/4c/AREA_47_Rafting_Imster_Schlucht%2C_2018_%28cropped%29.jpg"
-
+    "name": "Plogging",
+    "description": "Plogging is an eco-friendly exercise which combines jogging with picking up litter. It started as an organized activity in Sweden around 2016 and spread to other countries due to concerns about plastic pollution.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/140.svg",
+    "type": "On Foot"
   },
   {
     "id": 9,
-    "name": "Desert Tour",
-    "description":"Desert tour is a journey through the desert, sometimes for recreational purposes. Historically, deserts are considered to be hostile environments for humans, so tours through deserts, especially in Africa and the Middle East, have been historically rare.",
-    "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Deserto_libico_-_Driving_-_panoramio.jpg/2560px-Deserto_libico_-_Driving_-_panoramio.jpg"
+    "name": "Barefoot",
+    "description": "Barefoot walking or running refers to physical activities performed without shoes, allowing for natural foot movements and a more direct contact with the ground, often thought to provide health benefits.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/65.svg",
+    "type": "On Foot"
+  },
+  {
+    "id": 10,
+    "name": "Mountain Bike",
+    "description": "Mountain biking is a sport of riding bicycles off-road, often over rough terrain, using specially designed mountain bikes. It requires balance, bike handling skills, and endurance.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/2.svg",
+    "type": "Bicycle"
+  },
+  {
+    "id": 11,
+    "name": "Road Bike",
+    "description": "Road biking involves cycling on paved roads, typically using road bicycles which are lightweight and designed for speed and distance. It's a popular form of exercise and can be a competitive sport or a leisure activity.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/29.svg",
+    "type": "Bicycle"
   },
   {
     "id": 12,
-    "name": "Kayaking",
-    "description": "Sea kayaking is the sport of paddling a kayak on open waters of lakes, bays, and the ocean. Sea kayaks are seaworthy small boats with a covered deck and the ability to incorporate a spray deck. They trade off the maneuverability of whitewater kayaks for higher cruising speed, cargo capacity, ease of straight-line paddling, and comfort for long journeys.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/e/e5/Kayak-Valdes-BC.jpg"
+    "name": "Bicycle Touring",
+    "description": "Bicycle touring is a form of cycling where people travel long distances on their bikes, often carrying gear for self-sustained trips. It's a way to see new places and enjoy the outdoors.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/47.svg",
+    "type": "Bicycle"
   },
   {
     "id": 13,
-    "name": "Surfing",
-    "description": "Surfing is a surface water pastime in which the wave rider, referred to as a surfer, rides on the forward part, or face, of a moving wave, which usually carries the surfer towards the shore. Waves suitable for surfing are primarily found in the ocean, but can also be found in lakes or rivers in the form of a standing wave or tidal bore.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Surf_IMG_0949_%283120282731%29.jpg/1280px-Surf_IMG_0949_%283120282731%29.jpg"
+    "name": "Bikepacking",
+    "description": "Bikepacking combines mountain biking and minimalist camping. It involves riding off-road on mountain bikes, carrying only essential gear, and is about exploration and adventure in the wilderness.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/144.svg",
+    "type": "Bicycle"
   },
   {
     "id": 14,
-    "name": "Diving",
-    "description": "Underwater diving, as a human activity, is the practice of descending below the water's surface to interact with the environment. Immersion in water and exposure to high ambient pressure have physiological effects that limit the depths and duration possible in ambient pressure diving.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/9/94/Buzo.jpg"
+    "name": "eBike",
+    "description": "eBiking involves riding bicycles equipped with an electric motor that provides assistance, making it easier to cycle, especially uphill. It's suitable for people who want to ride with less effort.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/118.svg",
+    "type": "Bicycle"
   },
   {
     "id": 15,
-    "name": "Paragliding",
-    "description": "Paragliding is the recreational and competitive adventure sport of flying paragliders: lightweight, free-flying, foot-launched glider aircraft with no rigid primary structure. The pilot sits in a harness or lies supine in a cocoon-like 'speed bag' suspended below a fabric wing.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/0/05/Img20040730_0302_at_neustift.jpg"
+    "name": "Gravel Bike",
+    "description": "Gravel biking involves riding on a variety of surfaces including gravel and dirt. Gravel bikes are designed to handle diverse terrain, combining elements of road and mountain bikes.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/135.svg",
+    "type": "Bicycle"
   },
   {
     "id": 16,
-    "name": "Mountain Biking",
-    "description": "Mountain biking is a sport of riding bicycles off-road, often over rough terrain, usually using specially designed mountain bikes. Mountain bikes share similarities with other bikes but incorporate features designed to enhance durability and performance in rough terrain.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/d/d7/MTB_downhill.jpg "
+    "name": "Downhill MTB",
+    "description": "Downhill mountain biking (MTB) is a genre of mountain biking practiced on steep, rough terrain that often features jumps, drops, rock gardens and other obstacles. It's an extreme and adventurous form of mountain biking.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/117.svg",
+    "type": "Bicycle"
   },
   {
     "id": 17,
-    "name": "Skydiving",
-    "description": "Parachuting, or skydiving, is a method of transiting from a high point to Earth with the aid of gravity, involving the control of speed during the descent using a parachute or parachutes. It may involve more or less free-falling which is a period when the parachute has not yet been deployed and the body gradually accelerates to terminal velocity.",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Canopy_Relative_Work_%28CReW%29.jpg/1920px-Canopy_Relative_Work_%28CReW%29.jpg "
+    "name": "Mountain Unicycle",
+    "description": "Mountain unicycling is an adventure sport that consists of traversing rough terrain on a unicycle. It requires significant skill and balance, and offers a unique challenge compared to traditional bicycling.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/69.svg",
+    "type": "Bicycle"
+  },
+  {
+    "id": 18,
+    "name": "Trailer Bike",
+    "description": "A trailer bike allows children to accompany an adult on longer bike rides. It is essentially a child's bicycle with the front wheel, fork, and headset replaced by a long towbar or boom.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/113.svg",
+    "type": "Bicycle"
+  },
+  {
+    "id": 19,
+    "name": "Handbike",
+    "description": "Handbiking is a form of cycling with a hand-powered bike. It's a popular sport for people with lower limb mobility restrictions, and is also pursued by able-bodied individuals for exercise and recreation.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/115.svg",
+    "type": "Bicycle"
+  },
+  {
+    "id": 20,
+    "name": "Kickbike",
+    "description": "A kickbike is a type of scooter that generally has a larger front wheel than back wheel and a platform for the rider's feet. It is propelled by the rider pushing off the ground with their foot.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/54.svg",
+    "type": "Bicycle"
+  },
+  {
+    "id": 21,
+    "name": "Via Ferrata",
+    "description": "Via Ferrata, Italian for 'iron path', combines hiking and climbing. Participants use steel cables, ladders, and other fixed anchors like iron rungs to climb along routes set into natural rock formations.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/60.svg",
+    "type": "Climb"
+  },
+  {
+    "id": 22,
+    "name": "Canyoneering",
+    "description": "Canyoneering involves exploring canyons through various means such as walking, scrambling, climbing, jumping, abseiling, and swimming. It's an adventurous activity requiring navigation and rope work skills.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/46.svg",
+    "type": "Climb"
+  },
+  {
+    "id": 23,
+    "name": "Rock Climbing",
+    "description": "Rock climbing is an activity in which participants climb up, down, or across natural rock formations or artificial rock walls. It's a mentally and physically demanding sport that tests a climber's strength, endurance, agility, and balance.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/24.svg",
+    "type": "Climb"
+  },
+  {
+    "id": 24,
+    "name": "Spelunking",
+    "description": "Spelunking, or caving, is the exploration of caves. It often involves the challenges of navigating through tight passages, climbing or rappelling, and sometimes swimming or wading in cave waters.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/41.svg",
+    "type": "Climb"
+  },
+  {
+    "id": 25,
+    "name": "Ice Climbing",
+    "description": "Ice climbing involves ascending inclined ice formations. Climbers use ice axes and crampons to climb frozen waterfalls, icefalls, or cliffs and rock slabs covered with ice refrozen from flows of water.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/28.svg",
+    "type": "Climb"
+  },
+  {
+    "id": 26,
+    "name": "Backcountry Ski",
+    "description": "Backcountry skiing, also known as off-piste skiing, involves skiing in the backcountry on unmarked or unpatrolled areas, either outside ski resort boundaries or in remote areas. It combines skiing with mountaineering and typically requires knowledge of avalanche safety.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/40.svg",
+    "type": "Snow"
+  },
+  {
+    "id": 27,
+    "name": "Snowshoe",
+    "description": "Snowshoeing is a form of hiking in the snow with snowshoes, which distribute the weight of the person over a larger area so that the person's foot does not sink completely into the snow. It's a popular winter activity for exploration and fitness.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/17.svg",
+    "type": "Snow"
+  },
+  {
+    "id": 28,
+    "name": "Alpine Ski",
+    "description": "Alpine skiing, or downhill skiing, involves descending a snow-covered hill on skis with fixed-heel bindings. It's a popular winter sport and includes various techniques like turns and jumps.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/4.svg",
+    "type": "Snow"
+  },
+  {
+    "id": 29,
+    "name": "Cross Country Ski",
+    "description": "Cross country skiing is a form of skiing where skiers rely on their own locomotion to move across snow-covered terrain, rather than using ski lifts or other forms of assistance. It's great for aerobic exercise and enjoying scenic landscapes.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/13.svg",
+    "type": "Snow"
+  },
+  {
+    "id": 30,
+    "name": "Snowboarding",
+    "description": "Snowboarding involves descending a snow-covered slope while standing on a snowboard attached to a rider's feet. It's a popular winter sport that combines elements of surfing, skateboarding, and skiing.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/18.svg",
+    "type": "Snow"
+  },
+  {
+    "id": 31,
+    "name": "Snowmobile",
+    "description": "Snowmobiling is riding on a snowmobile, a motorized vehicle designed for winter travel and recreation on snow. It's popular in areas where snow remains for long periods and can range from leisure to competitive racing.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/12.svg",
+    "type": "Snow"
+  },
+  {
+    "id": 32,
+    "name": "Splitboard",
+    "description": "Splitboarding is a type of snowboarding where the board divides into two separate skis for uphill travel (similar to ski touring). The halves can then be reconnected for downhill riding. It's popular for backcountry snowboarding.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/134.svg",
+    "type": "Snow"
+  },
+  {
+    "id": 33,
+    "name": "Freeride Ski",
+    "description": "Freeride skiing is a style of skiing performed on natural, un-groomed terrain, without a set course, goals or rules. It emphasizes creativity, fluidity, and exploration, often in challenging terrain.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/109.svg",
+    "type": "Snow"
+  },
+  {
+    "id": 34,
+    "name": "Kite Ski",
+    "description": "Kite skiing is a snow sport using a kite to pull the rider through the snow on skis. It combines elements of snowboarding, windsurfing, surfing, paragliding, and skateboarding. It's an emerging sport gaining popularity in snowy regions.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/52.svg",
+    "type": "Snow"
+  },
+  {
+    "id": 35,
+    "name": "Sledding",
+    "description": "Sledding involves sliding down snow-covered hills using a sled. It's a popular winter activity, especially among children, and can range from casual play to formal racing events.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/53.svg",
+    "type": "Snow"
+  },
+  {
+    "id": 36,
+    "name": "Kayak/Canoe",
+    "description": "Kayaking and canoeing are activities involving paddling a kayak or canoe, both small, narrow watercraft propelled by means of a double-bladed paddle (kayak) or a single-bladed paddle (canoe). These activities are enjoyed in various water settings from calm lakes to white-water rivers.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/11.svg",
+    "type": "Water"
+  },
+  {
+    "id": 37,
+    "name": "Motorboat",
+    "description": "Motorboating involves traveling over water in a motorboat, which is a boat powered by an engine. Some motorboats are fitted for leisure, like cruising or fishing, while others are designed for sports or fast speeds.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/111.svg",
+    "type": "Water"
+  },
+  {
+    "id": 38,
+    "name": "Swimming",
+    "description": "Swimming is the self-propulsion of a person through water, usually for recreation, sport, exercise, or survival. It's an important life skill and a major competitive sport as well.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/61.svg",
+    "type": "Water"
+  },
+  {
+    "id": 39,
+    "name": "Sail Boat",
+    "description": "Sailing involves using sailboats for sporting or recreational purposes. Sailing boats are propelled partly or entirely by sails and are used on seas, lakes, or rivers.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/9.svg",
+    "type": "Water"
+  },
+  {
+    "id": 40,
+    "name": "Stand up Paddle",
+    "description": "Stand up paddleboarding (SUP) is an offshoot of surfing that originated in Hawaii. Unlike traditional surfing where the rider sits until a wave comes, stand up paddle boarders stand on their boards and use a paddle to propel themselves through the water.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/64.svg",
+    "type": "Water"
+  },
+  {
+    "id": 41,
+    "name": "Rowing",
+    "description": "Rowing is the act of propelling a boat using the motion of oars in the water. It can be done for recreational purposes, as a competitive sport, or as a means of transportation.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/49.svg",
+    "type": "Water"
+  },
+  {
+    "id": 42,
+    "name": "Jet Ski",
+    "description": "Jet skiing involves riding a jet ski, which is a small, jet-propelled vehicle that skims across the surface of water and is ridden in a similar way to a motorcycle. It is a popular water sport known for speed and agility.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/114.svg",
+    "type": "Water"
+  },
+  {
+    "id": 43,
+    "name": "Kitesurfing",
+    "description": "Kitesurfing, also known as kiteboarding, combines aspects of wakeboarding, windsurfing, surfing, paragliding, and gymnastics into one extreme sport. A kitesurfer harnesses the power of the wind with a large controllable kite to be propelled across the water on a kiteboard.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/51.svg",
+    "type": "Water"
+  },
+  {
+    "id": 44,
+    "name": "Diving",
+    "description": "Diving involves submerging underwater using equipment like scuba gear, which includes an independent breathing apparatus. It allows for greater mobility and extended time underwater for recreation, scientific research, or underwater photography.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/19.svg",
+    "type": "Water"
+  },
+  {
+    "id": 45,
+    "name": "Airboat",
+    "description": "Airboat riding involves operating a flat-bottomed boat that is propelled by an aircraft-type propeller and is powered by either an aircraft or automotive engine. It's commonly used for fishing, hunting, and ecotourism, especially in shallow, swampy areas.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/106.svg",
+    "type": "Water"
+  },
+  {
+    "id": 46,
+    "name": "Rafting",
+    "description": "Rafting is an outdoor activity which uses an inflatable raft to navigate a river or other body of water. This is often done on whitewater or different degrees of rough water, challenging the rafters to work as a team to maneuver the raft.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/116.svg",
+    "type": "Water"
+  },
+  {
+    "id": 47,
+    "name": "Horseback Riding",
+    "description": "Horseback riding, or equestrianism, involves the skill of riding, driving, or vaulting with horses. This broad description includes the use of horses for practical working purposes, transportation, recreational activities, artistic or cultural exercises, and competitive sport.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/27.svg",
+    "type": "With Animals"
+  },
+  {
+    "id": 48,
+    "name": "Canicross",
+    "description": "Canicross is the sport of cross country running with dogs. Originating in Europe as off-season training for the mushing (dog sledding) community, it has become popular as a stand-alone sport all over Europe, especially in the UK.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/66.svg",
+    "type": "With Animals"
+  },
+  {
+    "id": 49,
+    "name": "Birdwatching",
+    "description": "Birdwatching is a form of wildlife observation in which the observation of birds is a recreational activity or citizen science. It can be done with the naked eye, through a visual enhancement device like binoculars and telescopes, or by listening for bird sounds.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/112.svg",
+    "type": "With Animals"
+  },
+  {
+    "id": 50,
+    "name": "Wildlife Watching",
+    "description": "Wildlife watching involves observing and studying animals in their natural habitat as a recreational activity. It can include observing birds, mammals, insects, and other wildlife and is often done with the aid of binoculars or cameras.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/137.svg",
+    "type": "With Animals"
+  },
+  {
+    "id": 51,
+    "name": "Dog Sledding",
+    "description": "Dog sledding is a form of transportation or sport where sled dogs, typically in teams, pull a sled on snow. It's a popular activity in regions with snow cover and is also pursued competitively in dog sled races.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/39.svg",
+    "type": "With Animals"
+  },
+  {
+    "id": 52,
+    "name": "Camel",
+    "description": "Camel riding involves riding camels, either as a means of transportation or for recreational purposes. It's often associated with travel in desert regions and offers a unique way to explore such landscapes.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/108.svg",
+    "type": "With Animals"
+  },
+  {
+    "id": 53,
+    "name": "Skating",
+    "description": "Skating generally refers to moving on ice by using ice skates. It can be done for leisure, travel, or various sports including speed skating, figure skating, ice hockey, and touring.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/37.svg",
+    "type": "On Wheels"
+  },
+  {
+    "id": 54,
+    "name": "Inline Skate",
+    "description": "Inline skating is a multi-disciplinary sport and can refer to a number of activities practiced using Inline skates. Inline skates typically have 2 to 5 polyurethane wheels, arranged in a single line by a metal or plastic frame on the underside of a boot.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/55.svg",
+    "type": "On Wheels"
+  },
+  {
+    "id": 55,
+    "name": "Segway",
+    "description": "Riding a Segway involves using a two-wheeled, self-balancing personal transporter. It's often used for leisurely tours or short-distance travel in urban settings and is known for its ease of use and maneuverability.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/107.svg",
+    "type": "On Wheels"
+  },
+  {
+    "id": 56,
+    "name": "Longboard/Skateboard",
+    "description": "Longboarding and skateboarding are sports that involve riding and performing tricks using a longboard or skateboard. Longboarding is often faster due to larger wheels and is used for cruising, downhill racing, slalom racing, sliding, dancing, and transport.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/68.svg",
+    "type": "On Wheels"
+  },
+  {
+    "id": 57,
+    "name": "Scooter",
+    "description": "Riding a scooter involves a two-wheeled vehicle with a step-through frame and a platform for the rider's feet. It can refer to both motor scooters and push scooters, used for both transportation and recreation.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/136.svg",
+    "type": "On Wheels"
+  },
+  {
+    "id": 58,
+    "name": "Roller Ski",
+    "description": "Roller skiing is an off-season, cross-training activity that mimics cross-country skiing. It's done on roller skis, which are wheeled ski-like apparatuses. It provides a snow-free training method for skiers.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/67.svg",
+    "type": "On Wheels"
+  },
+  {
+    "id": 59,
+    "name": "Baby Stroller",
+    "description": "Pushing a baby stroller involves walking or jogging while pushing a baby stroller. It is a way for parents to maintain fitness and share outdoor experiences with their infants or toddlers.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/133.svg",
+    "type": "On Wheels"
+  },
+  {
+    "id": 60,
+    "name": "Handbike",
+    "description": "Handbiking, similar to earlier listed, is a form of cycling with a hand-powered bike. It's a popular sport for people with lower limb mobility restrictions, and is also pursued by able-bodied individuals for exercise and recreation.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/115.svg",
+    "type": "On Wheels"
+  },
+  {
+    "id": 61,
+    "name": "Reduced Mobility",
+    "description": "Activities for those with reduced mobility often include adaptive methods or equipment, allowing individuals to enjoy a range of sports and recreational activities, regardless of physical limitations.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/44.svg",
+    "type": "Accessible"
+  },
+  {
+    "id": 62,
+    "name": "Blind People",
+    "description": "This category includes various activities adapted for blind or visually impaired individuals. These activities are modified to ensure safety and accessibility, allowing blind individuals to participate fully.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/56.svg",
+    "type": "Accessible"
+  },
+  {
+    "id": 63,
+    "name": "Joëlette",
+    "description": "A Joëlette is a one-wheeled all-terrain chair maneuvered by two or more people, designed for individuals with reduced mobility. It allows them to participate in hiking or running on trails not accessible with regular wheelchairs.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/121.svg",
+    "type": "Accessible"
+  },
+  {
+    "id": 64,
+    "name": "Car",
+    "description": "Car driving as a recreational activity can include road trips, touring, racing, and off-roading. It offers a way to explore distant places, enjoy the thrill of driving, and participate in automotive sports.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/50.svg",
+    "type": "Motor"
+  },
+  {
+    "id": 65,
+    "name": "Off Road",
+    "description": "Off-roading is driving on unsurfaced roads or tracks, made of materials such as sand, gravel, riverbeds, mud, snow, rocks, and other natural terrain. It often involves modified vehicles specifically designed to overcome difficult terrains.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/3.svg",
+    "type": "Motor"
+  },
+  {
+    "id": 66,
+    "name": "Road Motorbike",
+    "description": "Road motorbiking involves riding motorcycles on paved roads. It can range from short rides to long-distance touring and can include high-speed racing. Road motorbikes are designed for speed, agility, and long-distance comfort.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/8.svg",
+    "type": "Motor"
+  },
+  {
+    "id": 67,
+    "name": "Dual-sport Motorcycle",
+    "description": "Dual-sport motorcycling involves motorcycles that are designed to be ridden off-road as well as on pavement. These bikes are often well-suited for both dirt and asphalt, making them versatile for different terrains.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/38.svg",
+    "type": "Motor"
+  },
+  {
+    "id": 68,
+    "name": "Quad",
+    "description": "Riding a quad, or ATV (All-Terrain Vehicle), involves a vehicle that travels on low-pressure tires, with a seat straddled by the operator, and handlebars for steering control. Quads are used for recreation and in some industries.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/6.svg",
+    "type": "Motor"
+  },
+  {
+    "id": 69,
+    "name": "Enduro Motorcycle",
+    "description": "Enduro motorcycling is a form of motorcycle sport run on extended cross-country, off-road courses. Enduro consists of many different obstacles and challenges and is timed, with riders expected to maintain a strict schedule.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/59.svg",
+    "type": "Motor"
+  },
+  {
+    "id": 70,
+    "name": "Motorhome",
+    "description": "Traveling in a motorhome involves using a type of self-propelled recreational vehicle (RV) which offers living accommodation combined with a vehicle engine. It's popular for road trips and nomadic lifestyles, allowing travelers to bring the comforts of home with them.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/105.svg",
+    "type": "Motor"
+  },
+  {
+    "id": 71,
+    "name": "Motorcycle Trials",
+    "description": "Motorcycle trials is a non-speed event on specialized motorcycles. The sport is about riding through an obstacle course without setting foot on the ground. It requires immense skill and balance to control the bike while navigating the course.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/58.svg",
+    "type": "Motor"
+  },
+  {
+    "id": 72,
+    "name": "Plane",
+    "description": "Flying a plane involves operating an aircraft, and it ranges from small private planes to larger commercial flights. Aviation can be a hobby, a sport, or a profession and offers a unique perspective of the world from above.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/26.svg",
+    "type": "Air"
+  },
+  {
+    "id": 73,
+    "name": "Paragliding",
+    "description": "Paragliding is a recreational and competitive flying sport. A paraglider is a free-flying, foot-launched aircraft. The pilot sits in a harness suspended below a fabric wing, resembling a parachute, to catch thermals and soar through the sky.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/20.svg",
+    "type": "Air"
+  },
+  {
+    "id": 74,
+    "name": "Hot Air Balloon",
+    "description": "Hot air ballooning is the activity of flying hot air balloons. It offers a serene and gentle flying experience, often used for recreational and sightseeing purposes. The balloon is propelled by wind and the pilot controls altitude by managing the hot air.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/16.svg",
+    "type": "Air"
+  },
+  {
+    "id": 75,
+    "name": "Hang Gliding",
+    "description": "Hang gliding is an air sport in which a pilot flies a light and non-motorized foot-launchable aircraft called a hang glider. This activity is known for its ability to achieve sustained flight with unpowered gliders.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/15.svg",
+    "type": "Air"
+  },
+  {
+    "id": 76,
+    "name": "Drone",
+    "description": "Flying a drone involves operating a small unmanned aerial vehicle (UAV) for recreational or professional purposes. Drones are used for photography, videography, racing, and just for the fun of flying.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/110.svg",
+    "type": "Air"
+  },
+  {
+    "id": 77,
+    "name": "BASE Jumping",
+    "description": "BASE jumping is a form of skydiving. Instead of jumping from a plane, BASE jumpers leap from fixed objects like buildings, antennae, spans (bridges), and earth (cliffs) using a parachute to break their fall.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/120.svg",
+    "type": "Air"
+  },
+  {
+    "id": 78,
+    "name": "Flora Observation",
+    "description": "Flora observation involves studying or admiring plant life in its natural environment. This can be a leisure activity or a more serious field of study, often involving hiking or walking in nature.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/138.svg",
+    "type": "Nature"
+  },
+  {
+    "id": 79,
+    "name": "Train",
+    "description": "Traveling by train can be both a mode of transportation and a leisure activity. It offers a chance to see landscapes and explore different areas, sometimes with historic or scenic train routes.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/45.svg",
+    "type": "Other"
+  },
+  {
+    "id": 80,
+    "name": "Multisport",
+    "description": "Multisport refers to athletic contests that involve participating in more than one sport, such as triathlons, which include swimming, cycling, and running. It's a test of endurance and versatility.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/63.svg",
+    "type": "Other"
+  },
+  {
+    "id": 81,
+    "name": "Golf",
+    "description": "Golf is a sport in which players use various clubs to hit balls into a series of holes on a course in as few strokes as possible. It is one of the few ball games that do not require a standardized playing area.",
+    "image": "https://sc.wklcdn.com/wikiloc/images/pictograms/svg/70.svg",
+    "type": "Other"
   }
 ]

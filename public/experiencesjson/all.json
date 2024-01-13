@@ -27,14 +27,14 @@
         "id": 5,
         "name": "Hiking",
         "description": "Hiking is a long, vigorous walk, usually on trails or footpaths in the countryside. Walking for pleasure developed in Europe during the eighteenth century. Religious pilgrimages have existed much longer but they involve walking long distances for a spiritual purpose associated with specific religions.",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg/1920px-Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg/1920px-Hiking_to_the_Ice_Lakes._San_Juan_National_Forest%2C_Colorado.jpg",
         "icon": "mdi-hiking"
       },
       {
         "id": 6,
         "name": "Trekking",
         "description": "Trekking is a form of walking, undertaken with the specific purpose of exploring and enjoying the scenery. It usually takes place on trails in areas of relatively unspoiled wilderness.",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/2/20/Backpacking_in_Grand_Teton_NP-NPS.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/2/20/Backpacking_in_Grand_Teton_NP-NPS.jpg",
         "icon": "mdi-walk"
       },
       {
@@ -48,7 +48,7 @@
         "id": 2,
         "name": "Mountaineering",
         "description": "Mountaineering is the set of activities that involves ascending mountains. Mountaineering-related activities include traditional outdoor climbing, skiing, and traversing via ferratas. Indoor climbing, sport climbing and bouldering are also considered mountaineering by some.",
-        "image":"https://upload.wikimedia.org/wikipedia/commons/d/db/Mt_kenya_austrian_hut_with_nelion.jpg",
+        "image": "https://upload.wikimedia.org/wikipedia/commons/d/db/Mt_kenya_austrian_hut_with_nelion.jpg",
         "icon": "mdi-image-filter-hdr"
       }
     ],
@@ -86,7 +86,7 @@
         "name": "Bring sunscreen and a hat to protect from the sun."
       }
     ],
-    "guide":{
+    "guide": {
       "id": 1,
       "name": "Rime Machiche",
       "nbr_experiences": 10,
@@ -153,7 +153,8 @@
       ],
       "nbr_participants": 100
     },
-    "destination": {
+    "destination":
+    {
       "id": 1,
       "label": "Mount Toubkal",
       "description": "Mount Toubkal is the highest peak in the Atlas Mountains and North Africa. It is located in Toubkal National Park, about 60 km south of Marrakesh. The mountain is a popular destination for trekkers and climbers due to its accessibility and stunning views. The summit offers panoramic views of the surrounding mountains and valleys. The mountain is also home to a variety of wildlife, including Barbary sheep, wild boar, and the endangered Barbary macaque.",
@@ -2091,6 +2092,430 @@
         "username": "NatureLover",
         "rating": 5,
         "comment": "Absolutely loved it! The guide, the kayaking, the landscapes – everything was top-notch!",
+        "date": "2023-06-15"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "type": "safari",
+    "title": "4 days Kenya Nairobi to Mombasa Safari",
+    "description": "Experience a captivating 4-day safari from Nairobi to Mombasa, offering a unique blend of wildlife adventure and beach relaxation. Highlights include views of Mt. Kilimanjaro, game drives in Tsavo East National Park, and encountering the iconic red elephants. This journey is ideal for those looking to immerse themselves in the diverse landscapes and wildlife of Kenya while enjoying the comforts of well-appointed lodges.",
+    "start_at": "2024-02-13",
+    "end_at": "2024-02-17",
+    "price": 1200,
+    "max_participants": 10,
+    "booked_nbr": 25,
+    "difficulty": 2,
+    "rating": 4.5,
+    "rater_count": 100,
+    "flexible": true,
+    "duration": 4,
+    "unit_duration": "day",
+    "activities": [
+      {
+        "id": 7,
+        "name": "Wildlife Safari",
+        "description": "Experience the thrill of wildlife safari in Kenya's famous national parks, with opportunities to see a diverse range of animals in their natural habitat.",
+        "image": "https://example.com/wildlife_safari_image.jpg",
+        "icon": "mdi-jeepney"
+      },
+      {
+        "id": 8,
+        "name": "Cultural Tour",
+        "description": "Explore the rich cultural heritage of Kenya with visits to local villages and interactions with the Maasai tribe, offering insights into their traditional way of life.",
+        "image": "https://example.com/cultural_tour_image.jpg",
+        "icon": "mdi-culture"
+      },
+      {
+        "id": 9,
+        "name": "Beach Relaxation",
+        "description": "Unwind on the beautiful beaches of Mombasa, enjoying the serene coastal ambiance and engaging in various beach activities.",
+        "image": "https://example.com/beach_relaxation_image.jpg",
+        "icon": "mdi-beach"
+      }
+    ],
+    "requirements": [
+      {
+        "id": 4,
+        "name": "Passport"
+      },
+      {
+        "id": 5,
+        "name": "Visa (if applicable)"
+      },
+      {
+        "id": 6,
+        "name": "Vaccination Certificate"
+      }
+    ],
+    "notices": [
+      {
+        "id": 3,
+        "name": "Wildlife viewing is subject to natural conditions and cannot be guaranteed."
+      },
+      {
+        "id": 4,
+        "name": "Respect local customs and wildlife during the safari."
+      }
+    ],
+    "take_into_account": [
+      {
+        "id": 3,
+        "name": "Pack comfortable clothing and sturdy footwear suitable for safaris."
+      },
+      {
+        "id": 4,
+        "name": "Carry sunscreen, hats, and sunglasses for protection against the sun."
+      }
+    ],
+    "guide": {
+      "id": 5,
+      "name": "John Doe",
+      "bio": "I'm John, a professional safari guide with over 10 years of experience leading expeditions in Kenya. My goal is to share the thrill of wildlife safari with enthusiasts from all over the world. Fluent in English, French, and Arabic, I specialize in helping beginners find their confidence on the water and guiding experienced kayakers to new challenges.",
+      "expertise": [
+        "Wildlife Safari",
+        "Cultural Tour"
+      ],
+      "languages": [
+        "English",
+        "French"
+      ],
+      "contact": {
+        "email": "j@d.com",
+        "phone": "456-789-0123"
+      },
+      "certification": "Certified Safari Guide",
+      "years_experience": 10,
+      "pictures": [
+        {
+          "id": 1,
+          "url": "https://picsum.photos/500/300?kenya_safari1"
+        },
+        {
+          "id": 2,
+          "url": "https://picsum.photos/500/300?kenya_safari2"
+        }
+      ],
+      "videos": [
+        {
+          "id": 1,
+          "url": "https://example.com/videos/kenya_safari.mp4"
+        }
+      ],
+      "360_views": [
+        {
+          "id": 1,
+          "url": "https://example.com/360/kenya_panorama.html"
+        }
+      ],
+      "reviews": [
+        {
+          "id": 1,
+          "username": "MountainExplorer",
+          "rating": 5,
+          "comment": "This safari experience was unforgettable! The guide was knowledgeable and the scenery was breathtaking. Highly recommend!",
+          "date": "2023-06-10"
+        },
+        {
+          "id": 2,
+          "username": "AdventureSeeker",
+          "rating": 4,
+          "comment": "Great experience overall. The food could have been better, but the safari itself was amazing!",
+          "date": "2023-06-12"
+        },
+        {
+          "id": 3,
+          "username": "NatureLover",
+          "rating": 5,
+          "comment": "Absolutely loved it! The guide, the safari, the landscapes – everything was top-notch!",
+          "date": "2023-06-15"
+        }
+      ]
+    },
+    "destination": {
+      "id": 5,
+      "label": "Kenya",
+      "description": "Kenya is a country in East Africa with coastline on the Indian Ocean. It encompasses savannah, lakelands, the dramatic Great Rift Valley, mountain highlands and abundant wildlife such as lions, elephants and rhinos. From Nairobi, the capital, safaris visit the Maasai Mara Reserve, known for its annual wildebeest migrations, and Amboseli National Park, offering views of Tanzania's 5,895m Mt. Kilimanjaro.",
+      "location": {
+        "id": 5,
+        "label": "Kenya",
+        "country": "Kenya",
+        "city": "Nairobi",
+        "address": "Nairobi, Kenya",
+        "lat": -1.292066,
+        "lon": 36.821946
+      }
+    },
+    "pictures": [
+      {
+        "id": 1,
+        "url": "https://picsum.photos/300/600?kenya1",
+        "format": "portrait"
+      },
+      {
+        "id": 2,
+        "url": "https://picsum.photos/300/600?kenya2",
+        "format": "portrait"
+      },
+      {
+        "id": 3,
+        "url": "https://picsum.photos/300/600?kenya3",
+        "format": "portrait"
+      },
+      {
+        "id": 4,
+        "url": "https://picsum.photos/800/300?kenya4",
+        "format": "landscape"
+      }
+    ],
+    "picture_url": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Mount_Kenya.jpg",
+    "steps": [
+      {
+        "id": 1,
+        "label": "Arrival in Nairobi",
+        "day": 1,
+        "description": "Arrive in Nairobi and transfer to the hotel. The rest of the day is free to explore the city and prepare for the safari.",
+        "duration": "PT6H",
+        "activities": [
+          {
+            "id": 8,
+            "name": "Cultural Tour"
+          }
+        ],
+        "start_at": "2024-02-13T09:00:00Z",
+        "destination": {
+          "id": 5,
+          "label": "Nairobi",
+          "location": {
+            "id": 5,
+            "label": "Nairobi",
+            "country": "Kenya",
+            "city": "Nairobi",
+            "address": "Nairobi, Kenya",
+            "lat": -1.292066,
+            "lon": 36.821946
+          }
+        },
+        "pictures": [
+          {
+            "id": 1,
+            "url": "https://picsum.photos/800/600?kenya_safari_day1"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "label": "Nairobi to Tsavo East National Park",
+        "day": 2,
+        "description": "Depart Nairobi and drive to Tsavo East National Park. Enjoy a game drive in the afternoon.",
+        "duration": "PT8H",
+        "activities": [
+          {
+            "id": 7,
+            "name": "Wildlife Safari"
+          }
+        ],
+        "start_at": "2024-02-14T08:00:00Z",
+        "destination": {
+          "id": 6,
+          "label": "Tsavo East National Park",
+          "location": {
+            "id": 6,
+            "label": "Tsavo East National Park",
+            "country": "Kenya",
+            "city": "Tsavo East National Park",
+            "address": "Tsavo East National Park, Kenya",
+            "lat": -2.983333,
+            "lon": 38.466667
+          }
+        },
+        "pictures": [
+          {
+            "id": 2,
+            "url": "https://picsum.photos/800/600?kenya_safari_day2"
+          },
+          {
+            "id": 3,
+            "url": "https://picsum.photos/800/600?kenya_safari_day2_2"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "label": "Tsavo East National Park to Mombasa",
+        "day": 3,
+        "description": "Depart Tsavo East National Park and drive to Mombasa. Enjoy a game drive in the afternoon.",
+        "duration": "PT8H",
+        "activities": [
+          {
+            "id": 7,
+            "name": "Wildlife Safari"
+          }
+        ],
+        "start_at": "2024-02-15T08:00:00Z",
+        "destination": {
+          "id": 7,
+          "label": "Mombasa",
+          "location": {
+            "id": 7,
+            "label": "Mombasa",
+            "country": "Kenya",
+            "city": "Mombasa",
+            "address": "Mombasa, Kenya",
+            "lat": -4.043477,
+            "lon": 39.668206
+          }
+        },
+        "pictures": [
+          {
+            "id": 4,
+            "url": "https://picsum.photos/800/600?kenya_safari_day3"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "label": "Mombasa",
+        "day": 4,
+        "description": "Enjoy a free day in Mombasa to relax on the beach and explore the city.",
+        "duration": "PT6H",
+        "activities": [
+          {
+            "id": 9,
+            "name": "Beach Relaxation"
+          }
+        ],
+        "start_at": "2024-02-16T08:00:00Z",
+        "destination": {
+          "id": 7,
+          "label": "Mombasa",
+          "location": {
+            "id": 7,
+            "label": "Mombasa",
+            "country": "Kenya",
+            "city": "Mombasa",
+            "address": "Mombasa, Kenya",
+            "lat": -4.043477,
+            "lon": 39.668206
+          }
+        }
+      }
+    ],
+    "pricing_details": [
+      {
+        "id": 1,
+        "description": "Basic Safari Package",
+        "amount": 1200,
+        "includes": [
+          "Accommodation",
+          "Daily Breakfast and Lunch",
+          "Game Drives"
+        ],
+        "optional_add_ons": [
+          {
+            "id": 1,
+            "description": "Photography Package",
+            "amount": 100
+          },
+          {
+            "id": 2,
+            "description": "Evening Meals",
+            "amount": 150
+          }
+        ],
+        "date_based_pricing": [
+          {
+            "start_date": "2023-05-01",
+            "end_date": "2023-06-30",
+            "amount": 1100
+          },
+          {
+            "start_date": "2023-07-01",
+            "end_date": "2023-08-31",
+            "amount": 1200
+          },
+          {
+            "start_date": "2023-09-01",
+            "end_date": "2023-10-31",
+            "amount": 1150
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "description": "Premium Safari Experience",
+        "amount": 1500,
+        "includes": [
+          "Accommodation",
+          "All Meals (Breakfast, Lunch, Dinner)",
+          "Game Drives",
+          "Private Safari Guide"
+        ],
+        "optional_add_ons": [
+          {
+            "id": 3,
+            "description": "Private Safari Photography Session",
+            "amount": 200
+          },
+          {
+            "id": 4,
+            "description": "Cultural Tour of Mombasa",
+            "amount": 120
+          }
+        ],
+        "date_based_pricing": [
+          {
+            "start_date": "2023-05-01",
+            "end_date": "2023-06-30",
+            "amount": 1400
+          },
+          {
+            "start_date": "2023-07-01",
+            "end_date": "2023-08-31",
+            "amount": 1500
+          },
+          {
+            "start_date": "2023-09-01",
+            "end_date": "2023-10-31",
+            "amount": 1450
+          }
+        ]
+      }
+    ],
+    "meetingPoint": {
+      "location": {
+        "lat": -4.043477,
+        "lon": 39.668206,
+        "address": "Mombasa, Kenya"
+      },
+      "time": "2024-02-15T07:00:00Z",
+      "instructions": "Participants will gather at the Mombasa. Look for the guide holding a sign with 'Kenya Safari' written on it. Please be there 15 minutes prior to departure for a brief introduction and to answer any last-minute questions."
+    },
+    "cancellation_policy": {
+      "notice_period": "48 hours",
+      "refund_percentage": 50
+    },
+    "user_reviews": [
+      {
+        "userId": "a123",
+        "username": "MountainExplorer",
+        "rating": 5,
+        "comment": "This safari experience was unforgettable! The guide was knowledgeable and the scenery was breathtaking. Highly recommend!",
+        "date": "2023-06-10"
+      },
+      {
+        "userId": "b456",
+        "username": "AdventureSeeker",
+        "rating": 4,
+        "comment": "Great experience overall. The food could have been better, but the safari itself was amazing!",
+        "date": "2023-06-12"
+      },
+      {
+        "userId": "c789",
+        "username": "NatureLover",
+        "rating": 5,
+        "comment": "Absolutely loved it! The guide, the safari, the landscapes – everything was top-notch!",
         "date": "2023-06-15"
       }
     ]
